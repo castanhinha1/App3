@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#3a8f3e">
+
+    <ConfigClasses.MyProfilePictureView
+        android:id="@+id/profile_picture"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"></ConfigClasses.MyProfilePictureView>
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_picture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/nameTV"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:fontFamily="sans-serif-condensed" />
+
+    <TextView
+        android:text="Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/locationTV"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:fontFamily="sans-serif-condensed" />
+
+    <Button
+        android:text="Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/trainerCheckBox"
+        android:layout_marginTop="15dp"
+        android:id="@+id/logoutButton"
+        android:onClick="logoutButtonClicked"
+        android:textColor="@android:color/white"
+        android:background="@color/com_facebook_blue" />
+
+    <CheckBox
+        android:text="Trainer?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationTV"
+        android:layout_marginTop="13dp"
+        android:id="@+id/trainerCheckBox"
+        android:textColor="#FFF"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20sp"
+        android:buttonTint="#FFF"
+        android:checked="false"
+        android:layout_marginLeft="125dp" />
+
+</RelativeLayout>

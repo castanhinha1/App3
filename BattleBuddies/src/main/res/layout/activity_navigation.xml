@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.parse.starter.ViewControllers.NavigationController"
+    android:background="#3a8f3e">
+
+    <include layout="@layout/tool_bar"
+        android:id="@+id/toolbar_layout" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_layout"
+            android:layout_above="@+id/holder">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/holder"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+        </FrameLayout>
+
+        <com.roughike.bottombar.BottomBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/palette_texticonscolor"
+            app:bb_activeTabColor="@color/palette_primarycolor"
+            app:bb_inActiveTabColor="@color/palette_secondarytextcolor"
+            app:bb_tabXmlResource="@xml/bottombar_tabs" >
+        </com.roughike.bottombar.BottomBar>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_popup"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_above="@+id/holder">
+
+        <FrameLayout
+            android:id="@+id/fragment_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_bottom"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

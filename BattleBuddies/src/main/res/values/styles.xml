@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFFDFDFD</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:textColorPrimary">#4bae4f</item>
+        <item name="android:textColorSecondary">#4bae4f</item>
+        <item name="colorPrimaryDark">#e0e0e0</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="adduserbutton" parent="Widget.AppCompat.ImageButton">
+    </style>
+
+</resources>

@@ -1,0 +1,7 @@
+#Thu Jun 22 11:05:02 EDT 2017
+base.0=C\:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1bc3ad85a85810a155d182699c04d1ce5f004f59
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_f3e4ca7f45a61148d96cdb200a7ab142a6f612d8\\classes.dex
+base.1=C\:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_f3e4ca7f45a61148d96cdb200a7ab142a6f612d8
+file.0=C\:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1bc3ad85a85810a155d182699c04d1ce5f004f59\\classes.dex

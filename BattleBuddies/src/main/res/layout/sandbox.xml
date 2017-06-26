@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/border"
-    tools:context="com.parse.starter.ViewControllers.TrainerViewController">
+    tools:context="com.parse.starter.AppViewControllers.TrainerViewController">
 
     <GridLayout
         android:id="@+id/GridLayout1"

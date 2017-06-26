@@ -4,7 +4,6 @@ package FragmentControllers;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +14,10 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.parse.ParseException;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
-import com.parse.starter.ViewControllers.LoginController;
+import com.parse.starter.AppViewControllers.LoginController;
 
 import ConfigClasses.MyProfilePictureView;
 import Models.User;

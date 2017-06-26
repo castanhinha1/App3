@@ -18,6 +18,8 @@ ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\Andr
 uses-sdk
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:13:5-16:48
 MERGED from [com.facebook.android:facebook-android-sdk:4.5.0] C:\Users\Dylan Castanhinha\.android\build-cache\1cb63630e49237d6be0ef5547a09e62ee61eb82b\output\AndroidManifest.xml:24:5-26:41
+MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:8:5-10:41
+MERGED from [net.cachapa.expandablelayout:expandablelayout:2.9.1] C:\Users\Dylan Castanhinha\.android\build-cache\9255d908468f1bc6d1eb6d075fe97f2bb046559e\output\AndroidManifest.xml:8:5-10:41
 MERGED from [com.parse:parsefacebookutils-v4-android:1.10.3] C:\Users\Dylan Castanhinha\.android\build-cache\3a2b82366e8715abf927f0ac8da775b6691cfe88\output\AndroidManifest.xml:16:5-18:41
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Dylan Castanhinha\.android\build-cache\ea38eac148dc89aa615c1325dc73b689a8c27c61\output\AndroidManifest.xml:5:5-7:41
 MERGED from [com.parse:parseui-widget-android:0.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\8544be5b29b245ef36f894808058b7bd5f1c7df6\output\AndroidManifest.xml:27:5-29:41
@@ -85,7 +87,7 @@ MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Cas
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:21:5-23:58
-MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\2e4d0def302f4d1112804868ff86989f53aa8fd2\output\AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:16:9-45
 	android:targetSdkVersion
@@ -114,6 +116,7 @@ MERGED from [com.google.android.gms:play-services-maps:10.2.1] C:\Users\Dylan Ca
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:18:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:19:5-79
+MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:13:5-79
 MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\dbca5bbcacab9edd1f65baac8931b092f7dbec36\output\AndroidManifest.xml:20:5-78
 MERGED from [com.google.android.gms:play-services-analytics:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\f7c3d7b8dd1681c12a44676d7d13ec5b3d3f321a\output\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-nearby:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\123ca50ef86aa853338f5860434bf66ce6647723\output\AndroidManifest.xml:4:5-78
@@ -123,7 +126,6 @@ MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] C:\Users\Dylan 
 MERGED from [com.google.firebase:firebase-iid:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\2d6dacd2b3f6553f452463e9a3b294ca77e13f41\output\AndroidManifest.xml:19:5-78
 MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\5b72bdbcd1eea748b28078906db515f9f5a13ecf\output\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-maps:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\d1742e7bfbc09c34c54504a0f65c2341caa8364f\output\AndroidManifest.xml:19:5-78
-MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:13:5-79
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:19:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -151,6 +153,7 @@ MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.
 application
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:33:5-77:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.5.0] C:\Users\Dylan Castanhinha\.android\build-cache\1cb63630e49237d6be0ef5547a09e62ee61eb82b\output\AndroidManifest.xml:28:5-20
+MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:18:5-28:19
 MERGED from [com.parse:parsefacebookutils-v4-android:1.10.3] C:\Users\Dylan Castanhinha\.android\build-cache\3a2b82366e8715abf927f0ac8da775b6691cfe88\output\AndroidManifest.xml:20:5-20
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Dylan Castanhinha\.android\build-cache\ea38eac148dc89aa615c1325dc73b689a8c27c61\output\AndroidManifest.xml:9:5-20
 MERGED from [com.parse:parseui-widget-android:0.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\8544be5b29b245ef36f894808058b7bd5f1c7df6\output\AndroidManifest.xml:31:5-20
@@ -207,7 +210,7 @@ MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Cas
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:29:5-20
-MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:18:5-28:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\2e4d0def302f4d1112804868ff86989f53aa8fd2\output\AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:37:9-41
 	android:allowBackup
@@ -276,6 +279,32 @@ ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\Andr
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:75:13-52
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:74:13-58
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:26:13-120
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:22:5-24:34
@@ -521,29 +550,3 @@ ADDED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\Dylan
 		ADDED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\4a2b92ef4380ac9f532f73bb3a316950a1ec4de8\output\AndroidManifest.xml:20:66-119
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\Dylan Castanhinha\.android\build-cache\4a2b92ef4380ac9f532f73bb3a316950a1ec4de8\output\AndroidManifest.xml:20:20-65
-uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:5-98
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:22-95
-uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
-ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:16:5-94
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:16:22-91
-service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
-ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:19:9-21:40
-	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:21:13-37
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:20:13-132
-service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
-ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:22:9-24:40
-	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:24:13-37
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:23:13-127
-service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
-ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:25:9-27:40
-	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:26:13-120

@@ -3,6 +3,7 @@ package com.parse.starter.ViewControllers;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -77,6 +78,7 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
 
     @Override
     public void onAddUserClicked() {
+
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         if (findViewById(R.id.fragment_container) != null) {

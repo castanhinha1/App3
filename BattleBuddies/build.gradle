@@ -21,11 +21,15 @@ android {
 }
 
 dependencies {
-    compile ('com.facebook.android:facebook-android-sdk:4.5.0') {
+    compile('com.facebook.android:facebook-android-sdk:4.5.0') {
         exclude group: 'com.parse.bolts'
     }
 
-
+    compile 'com.android.support:design:25.3.1'
+    compile('io.nlopez.smartlocation:library:3.3.1') {
+        transitive = false
+    }
+    compile 'net.cachapa.expandablelayout:expandablelayout:2.9.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.parse.bolts:bolts-tasks:1.4.0'
@@ -39,8 +43,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.1'
     compile 'com.google.android.gms:play-services-location:10.2.1'
     compile 'com.google.android.gms:play-services:10.2.1'
-    compile 'com.android.support:design:25.3.1'
-    compile ('io.nlopez.smartlocation:library:3.3.1') {
-        transitive = false
-    }
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

@@ -50,6 +50,8 @@ import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
+import net.cachapa.expandablelayout.ExpandableLayout;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -79,6 +81,11 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     SwipeRefreshLayout swipeContainer;
     OnAddNewUserButtonClicked activityCallback;
     AddFriends.OnUserSelected activityCallBack;
+    ExpandableLayout expandableLayoutTop;
+    ExpandableLayout expandableLayoutBottom;
+
+
+
 
     public interface OnAddNewUserButtonClicked {
         void onAddUserClicked();
@@ -110,9 +117,11 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         addUserButton.setImageResource(R.drawable.ic_add_user_green);
         addUserButton.setOnClickListener(new AddNewClientButtonListener());
         //ListView
-        View rootView = inflater.inflate(R.layout.fragment_current_clients, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
         listview = (ListView) rootView.findViewById(R.id.current_client_list_view);
+        expandableLayoutTop = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_top);
+        expandableLayoutBottom = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_bottom);
         adapter = new CurrentClients(getActivity());
         listview.setAdapter(adapter);
         swipeContainer.setOnRefreshListener(new SwipeToRefresh());
@@ -176,6 +185,12 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
                         (currentLocation, 12));
             }
         }
+        googleMap.setOnCameraMoveStartedListener(new GoogleMap.OnCameraMoveStartedListener() {
+            @Override
+            public void onCameraMoveStarted(int i) {
+                expandableLayoutBottom.collapse();
+            }
+        });
     }
 
     @Override

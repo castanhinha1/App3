@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewControllers.SignUpController" />
-        <activity android:name=".ViewControllers.NavigationController" />
+        <activity android:name=".ViewControllers.FragmentNavigationController" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

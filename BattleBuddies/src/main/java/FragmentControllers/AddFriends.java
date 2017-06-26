@@ -26,7 +26,7 @@ import Models.User;
  * Created by Dylan Castanhinha on 3/31/2017.
  */
 
-public class AddNewClientsOrTrainerFragment extends Fragment {
+public class AddFriends extends Fragment {
 
     TextView labelTV;
     ListView listview;

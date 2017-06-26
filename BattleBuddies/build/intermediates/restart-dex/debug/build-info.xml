@@ -6,37 +6,37 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1498144234218"
+    timestamp="1498482666760"
     token="-933263632499977593"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="479" />
+        duration="3068" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="292" />
     <task
         name="verifier"
-        duration="10" />
+        duration="99" />
 
     <artifact
         location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
+    <artifact
+        location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\outputs\apk\BattleBuddies-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1498143895816"
+        timestamp="1498480276618"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\outputs\apk\BattleBuddies-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
@@ -67,22 +67,26 @@
         <artifact
             location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1498144144171"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\outputs\apk\BattleBuddies-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1498144234218"
+        timestamp="1498482666760"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\outputs\apk\BattleBuddies-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

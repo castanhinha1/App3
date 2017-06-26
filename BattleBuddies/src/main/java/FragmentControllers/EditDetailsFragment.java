@@ -3,31 +3,19 @@ package FragmentControllers;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-import com.parse.ParseQueryAdapter;
-import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import ConfigClasses.MyProfilePictureView;
-import ConfigClasses.ParseAdapterCustomList;
-import Models.CurrentDetails;
 import Models.User;
 
 /**

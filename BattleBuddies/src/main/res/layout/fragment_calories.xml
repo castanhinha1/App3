@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.parse.starter.AppViewControllers.CurrentDetailsController">
+    tools:context="com.parse.starter.ViewControllers.CurrentDetailsController">
 
     <TextView
         android:text="Enter Current Details"

@@ -17,7 +17,7 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
-import com.parse.starter.AppViewControllers.LoginController;
+import com.parse.starter.ViewControllers.LoginController;
 
 import ConfigClasses.MyProfilePictureView;
 import Models.User;

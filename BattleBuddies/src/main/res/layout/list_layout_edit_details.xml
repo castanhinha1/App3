@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:background="@color/palette_darkprimarycolor"
-    tools:context="com.parse.starter.AppViewControllers.TrainerViewController">
+    tools:context="com.parse.starter.ViewControllers.TrainerViewController">
 
     <GridLayout
         android:id="@+id/GridLayout1"

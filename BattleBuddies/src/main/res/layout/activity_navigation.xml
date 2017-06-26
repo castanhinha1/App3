@@ -5,7 +5,7 @@
     android:id="@+id/activity_navigation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.parse.starter.AppViewControllers.FragmentNavigationController"
+    tools:context="com.parse.starter.ViewControllers.NavigationController"
     android:background="#3a8f3e">
 
     <include layout="@layout/tool_bar"

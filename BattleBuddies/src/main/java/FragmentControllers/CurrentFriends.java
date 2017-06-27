@@ -92,9 +92,7 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     public interface OnAddNewUserButtonClicked {
         void onAddUserClicked();
     }
-    public interface OnUserSelected {
-        void onUserSelected(String userId);
-    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -271,11 +269,15 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         return addressText;
     }
 
-    protected void placeMarkerOnMap(LatLng location) {
-        MarkerOptions markerOptions = new MarkerOptions().position(location);
-        String titleStr = getAddress(location);  // add these two lines
+    protected void placeMarkerOnMap(User user) {
+        LatLng latLng = user.getLatLng();
+        MarkerOptions markerOptions = new MarkerOptions().position(latLng);
+        String titleStr = user.getFullName();  // add these two lines
         markerOptions.title(titleStr);
         googleMap.addMarker(markerOptions);
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
+                (latLng, 12));
+
     }
 
     protected void startLocationUpdates() {
@@ -421,6 +423,7 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
                 @Override
                 public void onClick(View v) {
                     activityCallBack.onUserSelected(user.getObjectId());
+                    placeMarkerOnMap(user);
                 }
             });
             return v;

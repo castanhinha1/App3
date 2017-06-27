@@ -2,6 +2,7 @@ package Models;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Location;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -17,6 +18,8 @@ import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
  * Created by Dylan Castanhinha on 3/30/2017.
@@ -156,6 +159,11 @@ public class User extends ParseUser {
                 Log.i("AppInfo", "Percent Done: "+percentDone.toString());
             }
         });
+    }
+
+    public LatLng getLatLng(){
+        LatLng latLng = new LatLng(getGeopoint().getLatitude(), getGeopoint().getLongitude());
+        return latLng;
     }
 }
 

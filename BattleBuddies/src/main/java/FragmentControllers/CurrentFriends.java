@@ -83,6 +83,8 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     AddFriends.OnUserSelected activityCallBack;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
+    Toolbar toolbar;
+    ImageButton leftToolbarButton;
 
 
 
@@ -110,12 +112,12 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         currentUser = (User) ParseUser.getCurrentUser();
         //Toolbar top
-        final Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.custom_toolbar);
+        toolbar = (Toolbar) getActivity().findViewById(R.id.custom_toolbar);
         TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText(currentUser.getFirstName() + "'s "+"Clients");
-        ImageButton addUserButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
-        addUserButton.setImageResource(R.drawable.ic_add_user_green);
-        addUserButton.setOnClickListener(new AddNewClientButtonListener());
+        leftToolbarButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
+        leftToolbarButton.setImageResource(R.drawable.ic_add_user_green);
+        leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());
         //ListView
         View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
@@ -188,9 +190,20 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         googleMap.setOnCameraMoveStartedListener(new GoogleMap.OnCameraMoveStartedListener() {
             @Override
             public void onCameraMoveStarted(int i) {
+                leftToolbarButton.setImageResource(R.drawable.ic_back_button);
+                leftToolbarButton.setOnClickListener(new BackButtonListener());
                 expandableLayoutBottom.collapse();
             }
         });
+    }
+
+    private class BackButtonListener implements ImageButton.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            expandableLayoutBottom.expand();
+            leftToolbarButton.setImageResource(R.drawable.ic_add_user_green);
+            leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());
+        }
     }
 
     @Override

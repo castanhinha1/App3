@@ -92,8 +92,6 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             fragmentTransaction
                     .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right, R.animator.slide_in_right, R.animator.slide_out_left)
                     .replace(R.id.fragment_container, addFriends)
-                    .addToBackStack("mapFragment")
-                    .addToBackStack("firstFragment")
                     .commit();
         }
     }

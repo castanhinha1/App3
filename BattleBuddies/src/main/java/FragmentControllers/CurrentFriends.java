@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -40,6 +41,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -299,11 +302,12 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         return addressText;
     }
 
-    protected void placeMarkerOnMap(User user) {
+    public void placeMarkerOnMap(User user) {
         LatLng latLng = user.getLatLng();
         MarkerOptions markerOptions = new MarkerOptions().position(latLng);
         String titleStr = user.getFullName();  // add these two lines
         markerOptions.title(titleStr);
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(user.getProfilePicture()));
         googleMap.addMarker(markerOptions);
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
                 (latLng, 12));
@@ -428,6 +432,12 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
             Log.i("AppInfo", "Loaded");
         }
 
+        public String calculateDistance(User user) {
+            double distance = Math.round(user.getGeopoint().distanceInMilesTo(currentUser.getGeopoint()));
+            String distanceInMiles = String.valueOf(distance);
+            return distanceInMiles;
+        }
+
 
         @Override
         public View getItemView(final User user, View v, ViewGroup parent){
@@ -440,9 +450,13 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
             TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
             nameTextView.setText(user.getFullName());
 
-            //Add the objectid
-            TextView objectId = (TextView) v.findViewById(R.id.current_client_object_id);
-            objectId.setText(user.getLocation());
+            //Add the Location label
+            TextView location = (TextView) v.findViewById(R.id.current_client_object_id);
+            location.setText(user.getLocation());
+
+            //Add the distance label
+            TextView distanceLabel = (TextView) v.findViewById(R.id.distanceLabel);
+            distanceLabel.setText(calculateDistance(user)+" miles");
 
             //Add the image
             MyProfilePictureView imageView = (MyProfilePictureView) v.findViewById(R.id.imageView3);

@@ -75,16 +75,6 @@
                 android:text="Location"
                 android:textSize="12sp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:paddingRight="5dp"
-                android:textColor="@color/palette_primarycolor"
-                android:id="@+id/distanceLabel"
-                android:text="Distance"
-                android:textSize="15sp"/>
-
         </RelativeLayout>
 
     </android.support.design.widget.BottomNavigationView>

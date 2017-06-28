@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp">
+
+    <ConfigClasses.MyProfilePictureView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/com_facebook_profile_picture_blank_square" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/current_client_text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="20sp"
+        android:text="New Text"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/current_client_object_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_client_text_view_name"
+        android:textSize="15sp"
+        android:text="New Text"
+        android:layout_toRightOf="@+id/thumbnail"/>
+
+</RelativeLayout>

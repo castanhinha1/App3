@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.parse.ParseException;
@@ -36,8 +37,12 @@ public class YourProfileFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_your_profile, container, false);
         //Find variable references
         currentUser = (User) ParseUser.getCurrentUser();
+        //Toolbar top
         TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText("Your Profile");
+        ImageButton backButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
+        backButton.setImageResource(R.drawable.ic_back_button);
+        backButton.setOnClickListener(new BackButtonListener());
         profilepicture = (MyProfilePictureView) rootView.findViewById(R.id.profile_picture);
         nameTV = (TextView) rootView.findViewById(R.id.nameTV);
         locationTV = (TextView) rootView.findViewById(R.id.locationTV);
@@ -47,6 +52,13 @@ public class YourProfileFragment extends Fragment {
         trainerCheckbox.setOnCheckedChangeListener(new TrainerCheckBoxListener());
         setUserData();
         return rootView;
+    }
+
+    private class BackButtonListener implements ImageButton.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            getFragmentManager().popBackStack();
+        }
     }
 
     public void setUserData(){

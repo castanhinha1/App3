@@ -34,7 +34,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:el_duration="0"
-            app:el_expanded="true">
+            app:el_expanded="true"
+            app:el_parallax="0.5">
 
             <android.support.v4.widget.SwipeRefreshLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"

@@ -24,8 +24,9 @@ import com.parse.starter.R;
 
 import FragmentControllers.AddFriends;
 import FragmentControllers.CurrentFriends;
+import FragmentControllers.YourProfileFragment;
 
-public class NavigationController extends AppCompatActivity implements CurrentFriends.OnAddNewUserButtonClicked, AddFriends.OnUserSelected{
+public class NavigationController extends AppCompatActivity implements CurrentFriends.OnAddNewUserButtonClicked, CurrentFriends.OnProfileButtonClicked, AddFriends.OnUserSelected{
 
     private Toolbar toolbar;
     private PopupMenu mPopupMenu;
@@ -92,6 +93,27 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             fragmentTransaction
                     .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right, R.animator.slide_in_right, R.animator.slide_out_left)
                     .replace(R.id.fragment_container, addFriends)
+                    .addToBackStack("firstFragment")
+                    .commit();
+        }
+    }
+
+    @Override
+    public void onProfileButtonClicked() {
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        if (findViewById(R.id.fragment_container) != null) {
+            if (savedInstanceState1 != null) {
+                return;
+            }
+
+            // Create a new Fragment to be placed in the activity layout
+            YourProfileFragment profileFragment = new YourProfileFragment();
+            // Add the fragment to the 'fragment_container' FrameLayout
+            fragmentTransaction
+                    .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
+                    .replace(R.id.fragment_container, profileFragment)
+                    .addToBackStack("firstFragment")
                     .commit();
         }
     }

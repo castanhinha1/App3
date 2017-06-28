@@ -16,26 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbar_layout"
-            android:layout_above="@+id/holder">
+            android:layout_above="@+id/bottom_navigation_navbar">
         </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/holder"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true">
-        </FrameLayout>
-
-        <com.roughike.bottombar.BottomBar
-            android:id="@+id/bottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/palette_texticonscolor"
-            app:bb_activeTabColor="@color/palette_primarycolor"
-            app:bb_inActiveTabColor="@color/palette_secondarytextcolor"
-            app:bb_tabXmlResource="@xml/bottombar_tabs" >
-        </com.roughike.bottombar.BottomBar>
 
     <FrameLayout
         android:id="@+id/fragment_container_popup"
@@ -45,28 +27,56 @@
         android:layout_centerVertical="true">
     </FrameLayout>
 
-    <LinearLayout
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation_navbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="5"
-        android:layout_below="@+id/toolbar_layout"
-        android:layout_above="@+id/holder">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorPrimary">
 
-        <FrameLayout
-            android:id="@+id/fragment_top"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2">
-        </FrameLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
 
-        <FrameLayout
-            android:id="@+id/fragment_bottom"
-            android:layout_width="match_parent"
-            android:layout_weight="3"
-            android:layout_height="wrap_content">
-        </FrameLayout>
+            <LinearLayout android:id="@+id/thumbnail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp">
 
-    </LinearLayout>
+                <ConfigClasses.MyProfilePictureView
+                    android:id="@+id/profile_picture_navbar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical">
+                </ConfigClasses.MyProfilePictureView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail2"
+                android:layout_toRightOf="@+id/thumbnail2"
+                android:textColor="@color/palette_primarycolor"
+                android:id="@+id/nameLabel"
+                android:text="Name"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameLabel"
+                android:layout_toRightOf="@+id/thumbnail2"
+                android:textColor="@color/palette_primarycolor"
+                android:id="@+id/locationLabel"
+                android:text="Location"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>

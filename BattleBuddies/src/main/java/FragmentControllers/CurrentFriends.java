@@ -11,6 +11,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
@@ -80,17 +81,27 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     User currentUser;
     SwipeRefreshLayout swipeContainer;
     OnAddNewUserButtonClicked activityCallback;
+    OnProfileButtonClicked activityCallback2;
     AddFriends.OnUserSelected activityCallBack;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
     Toolbar toolbar;
     ImageButton leftToolbarButton;
+    //NavBar
+    BottomNavigationView bottomNavigationView;
+    MyProfilePictureView myProfilePictureView;
+    TextView nameLabel;
+    TextView locationLabel;
 
 
 
 
     public interface OnAddNewUserButtonClicked {
         void onAddUserClicked();
+    }
+
+    public interface OnProfileButtonClicked {
+        void onProfileButtonClicked();
     }
 
     @Override
@@ -100,6 +111,7 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         try {
             activityCallback = (OnAddNewUserButtonClicked) context;
             activityCallBack = (AddFriends.OnUserSelected) context;
+            activityCallback2 = (OnProfileButtonClicked) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString()
                     + " must implement OnHeadlineSelectedListener");
@@ -125,6 +137,16 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         adapter = new CurrentClients(getActivity());
         listview.setAdapter(adapter);
         swipeContainer.setOnRefreshListener(new SwipeToRefresh());
+        //NavBar
+        bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.bottom_navigation_navbar);
+        bottomNavigationView.setOnClickListener(new BottomNavClickListener());
+        myProfilePictureView = (MyProfilePictureView) getActivity().findViewById(R.id.profile_picture_navbar);
+        nameLabel = (TextView) getActivity().findViewById(R.id.nameLabel);
+        locationLabel = (TextView) getActivity().findViewById(R.id.locationLabel);
+        myProfilePictureView.setImageBitmap(myProfilePictureView.getRoundedBitmap(currentUser.getProfilePicture()));
+        nameLabel.setText(currentUser.getFullName());
+        locationLabel.setText(currentUser.getLocation());
+
         // Configure the refreshing colors
         swipeContainer.setColorSchemeResources(android.R.color.holo_green_light);
         //MapView
@@ -161,6 +183,14 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
 
         createLocationRequest();
         return rootView;
+    }
+
+    private class BottomNavClickListener implements BottomNavigationView.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            activityCallback2.onProfileButtonClicked();
+        }
     }
 
     //MAPVIEW METHODS
@@ -402,7 +432,7 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         @Override
         public View getItemView(final User user, View v, ViewGroup parent){
             if (v == null){
-                v = View.inflate(getContext(), R.layout.list_layout_current_clients, null);
+                v = View.inflate(getContext(), R.layout.list_layout_current_friends, null);
             }
             super.getItemView(user, v, parent);
 

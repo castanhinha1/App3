@@ -110,7 +110,7 @@ public class AddFriends extends Fragment {
         @Override
         public View getItemView(final User user, View v, ViewGroup parent) {
             if (v == null){
-                v = View.inflate(getContext(), R.layout.list_layout_current_clients, null);
+                v = View.inflate(getContext(), R.layout.list_layout_current_friends, null);
             }
             super.getItemView(user, v, parent);
 

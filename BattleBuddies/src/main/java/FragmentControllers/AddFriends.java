@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
@@ -21,6 +22,8 @@ import java.util.List;
 import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
 import Models.User;
+
+import static android.os.Build.VERSION_CODES.M;
 
 /**
  * Created by Dylan Castanhinha on 3/31/2017.
@@ -56,11 +59,40 @@ public class AddFriends extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_add_new_clients, container, false);
         getActivity().invalidateOptionsMenu();
         //Toolbar top
-        TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
+        final TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText("Local Clients");
         ImageButton backButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
         backButton.setImageResource(R.drawable.ic_back_button);
         backButton.setOnClickListener(new BackButtonListener());
+        ImageButton rightButton = (ImageButton) getActivity().findViewById(R.id.toolbar_right_button);
+        rightButton.setImageResource(R.drawable.ic_action_action_search);
+
+        //Searchview
+        MaterialSearchView searchView = (MaterialSearchView) getActivity().findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
+        searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
+            @Override
+            public void onSearchViewShown() {
+                titleTextView.setVisibility(View.INVISIBLE);
+
+            }
+
+            @Override
+            public void onSearchViewClosed() {
+
+            }
+        });
 
         //View items
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_container_for_new_client);

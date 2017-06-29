@@ -31,12 +31,18 @@
             android:textSize="28sp"
             android:layout_gravity="center"/>
 
-            <ImageButton
-                android:id="@+id/toolbar_right_button"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_gravity="right"
-                style="@style/Widget.AppCompat.ActionButton" />
+        <ImageButton
+            android:id="@+id/toolbar_right_button"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            style="@style/Widget.AppCompat.ActionButton" />
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </FrameLayout>
 
 </android.support.v7.widget.Toolbar>

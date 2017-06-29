@@ -188,6 +188,8 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         return rootView;
     }
 
+
+
     private class BottomNavClickListener implements BottomNavigationView.OnClickListener{
 
         @Override
@@ -381,6 +383,7 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     @Override
     public void onResume() {
         super.onResume();
+        bottomNavigationView.setVisibility(View.VISIBLE);
         if (mGoogleApiClient.isConnected() && !mLocationUpdateState) {
             startLocationUpdates();
         }

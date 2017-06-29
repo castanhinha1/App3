@@ -24,6 +24,10 @@ import com.parse.starter.R;
 import Models.Relation;
 import Models.User;
 
+import static com.parse.starter.R.id.firstNumberPicker;
+import static com.parse.starter.R.id.secondNumberPicker;
+import static com.parse.starter.R.id.singleNumberPicker;
+
 /**
  * Created by Dylan Castanhinha on 4/13/2017.
  */
@@ -40,15 +44,9 @@ public class ChangeDetailsFragment extends DialogFragment {
     RelativeLayout textViewRR;
     RelativeLayout numberPickerRR;
     RelativeLayout dualNumberPickerRR;
-    NumberPicker singleNumberPicker;
-    NumberPicker firstNumberPicker;
-    NumberPicker secondNumberPicker;
     EditText changeText;
     DismissEditDialogListener activityCallback;
     int updatedValue;
-    String[] valuesSex = {"Male", "Female", "Other"};
-    String[] valuesHeightFt = {"3 ft", "4 ft", "5 ft", "6 ft", "7ft"};
-    String[] valuesHeightInches = {"0 in", "1 in", "2 in", "3 in", "4in", "5 in", "6 in", "7 in", "8 in", "9in", "10 in", "11 in"};
 
     public ChangeDetailsFragment(){
     }
@@ -81,17 +79,8 @@ public class ChangeDetailsFragment extends DialogFragment {
         saveButton = (TextView) rootView.findViewById(R.id.change_details_save_button);
         photoRR = (RelativeLayout) rootView.findViewById(R.id.change_details_photo_relative_layout);
         textViewRR = (RelativeLayout) rootView.findViewById(R.id.change_details_text_view_relative_layout);
-        numberPickerRR = (RelativeLayout) rootView.findViewById(R.id.change_details_number_picker_relative_layout);
-        dualNumberPickerRR = (RelativeLayout) rootView.findViewById(R.id.change_details_dual_number_picker_relative_layout);
-        singleNumberPicker = (NumberPicker) rootView.findViewById(R.id.singleNumberPicker);
-        firstNumberPicker = (NumberPicker) rootView.findViewById(R.id.firstNumberPicker);
-        secondNumberPicker = (NumberPicker) rootView.findViewById(R.id.secondNumberPicker);
-        numberPickerLabel = (TextView) rootView.findViewById(R.id.change_details_single_number_picker_label);
-        numberPickerLabel.setText("");
         photoRR.setVisibility(View.INVISIBLE);
         textViewRR.setVisibility(View.INVISIBLE);
-        numberPickerRR.setVisibility(View.INVISIBLE);
-        dualNumberPickerRR.setVisibility(View.INVISIBLE);
         changeText = (EditText) rootView.findViewById(R.id.change_details_edit_text);
         chooseCorrectRelativeLayout();
         cancelButton.setOnClickListener(new CancelClickListener());
@@ -118,86 +107,6 @@ public class ChangeDetailsFragment extends DialogFragment {
                 label.setText("Edit Name");
                 break;
             }
-            case 2: {
-                numberPickerRR.setVisibility(View.VISIBLE);
-                singleNumberPicker.setMinValue(0);
-                singleNumberPicker.setMaxValue(valuesSex.length-1);
-                singleNumberPicker.setDisplayedValues(valuesSex);
-                singleNumberPicker.setWrapSelectorWheel(true);
-                singleNumberPicker.setOnValueChangedListener(new NumberPickerListener());
-                label.setText("Edit Sex");
-                break;
-            }
-            case 3: {
-                label.setText("Edit Age");
-                numberPickerLabel.setText("Years");
-                numberPickerRR.setVisibility(View.VISIBLE);
-                singleNumberPicker.setMinValue(0);
-                singleNumberPicker.setMaxValue(120);
-                singleNumberPicker.setWrapSelectorWheel(true);
-                singleNumberPicker.setOnValueChangedListener(new NumberPickerListener());
-                int defaultValue;
-                try {
-                    defaultValue = Integer.parseInt(currentUser.getAge());
-                    singleNumberPicker.setValue(defaultValue);
-                } catch(NumberFormatException nfe) {
-                    Log.i("AppInfo", nfe.getMessage());
-                }
-                break;
-            }
-            case 4: {
-                label.setText("Edit Weight");
-                dualNumberPickerRR.setVisibility(View.VISIBLE);
-                break;
-            }
-            case 5: {
-                label.setText("Edit Height");
-                dualNumberPickerRR.setVisibility(View.VISIBLE);
-                firstNumberPicker.setMinValue(0);
-                firstNumberPicker.setMaxValue(valuesHeightFt.length-1);
-                firstNumberPicker.setDisplayedValues(valuesHeightFt);
-                firstNumberPicker.setWrapSelectorWheel(true);
-                secondNumberPicker.setMinValue(0);
-                secondNumberPicker.setMaxValue(valuesHeightInches.length-1);
-                secondNumberPicker.setDisplayedValues(valuesHeightInches);
-                secondNumberPicker.setWrapSelectorWheel(true);
-                firstNumberPicker.setOnValueChangedListener(new NumberPickerListener());
-                secondNumberPicker.setOnValueChangedListener(new NumberPickerListener());
-                break;
-            }
-            case 6: {
-                dualNumberPickerRR.setVisibility(View.VISIBLE);
-                label.setText("Edit Body Fat%");
-                break;
-            }
-            case 7: {
-                break;
-            }
-            case 8: {
-                //Show trainer view
-                ParseQuery<Relation> query = ParseQuery.getQuery(Relation.class);
-                query.whereEqualTo("trainer", currentUser);
-                query.getFirstInBackground(new GetCallback<Relation>() {
-                    @Override
-                    public void done(Relation object, ParseException e) {
-                        if (e == null) {
-                            object.deleteInBackground(new DeleteCallback() {
-                                @Override
-                                public void done(ParseException e) {
-                                    if (e == null){
-                                        Log.i("AppInfo", "Deleted");
-                                    } else {
-                                        Log.i("AppInfo", e.getMessage());
-                                    }
-                                }
-                            });
-                        } else {
-                            Log.i("AppInfo", e.getMessage());
-                        }
-                    }
-                });
-                break;
-            }
         }
     }
 
@@ -218,43 +127,6 @@ public class ChangeDetailsFragment extends DialogFragment {
                 }
                 case 1: {
                     currentUser.setFullName(String.valueOf(changeText.getText()));
-                    break;
-                }
-                case 2: {
-                    if (updatedValue != -1) {
-                        currentUser.setSex(valuesSex[updatedValue]);
-                    } else {
-                        currentUser.setSex(valuesSex[singleNumberPicker.getValue()]);
-                    }
-                    break;
-                }
-                case 3: {
-                    if (updatedValue != -1) {
-                        currentUser.setAge(String.valueOf(updatedValue));
-                    } else {
-                        currentUser.setAge(String.valueOf(singleNumberPicker.getValue()));
-                    }
-                    break;
-                }
-                case 4: {
-                    currentUser.setWeight(String.valueOf(updatedValue));
-                    break;
-                }
-                case 5: {
-                    String height = valuesHeightFt[firstNumberPicker.getValue()]+" "+valuesHeightInches[secondNumberPicker.getValue()];
-                    currentUser.setHeight(height);
-                    break;
-                }
-                case 6: {
-                    currentUser.setBodyFat(String.valueOf(updatedValue));
-                    break;
-                }
-                case 7: {
-
-                    break;
-                }
-                case 8: {
-
                     break;
                 }
             }

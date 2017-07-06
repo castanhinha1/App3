@@ -22,6 +22,8 @@ import android.widget.ImageButton;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
+import net.alhazmy13.mediapicker.Image.ImagePicker;
+
 import FragmentControllers.AddFriends;
 import FragmentControllers.ChangeDetailsFragment;
 import FragmentControllers.CurrentFriends;
@@ -188,6 +190,21 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             getFragmentManager().popBackStack();
         }
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == ImagePicker.IMAGE_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
+            Log.i("AppInfo", "Success!");
+
+            Bundle bundle = new Bundle();
+
+            /*Bundle extras = data.getExtras();
+            Bitmap image = (Bitmap) extras.get("data");
+            selectedPicture.setImageBitmap(image);*/
+        }
     }
 
 }

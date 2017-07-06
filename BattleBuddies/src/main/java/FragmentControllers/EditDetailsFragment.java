@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,10 @@ import com.parse.ParseGeoPoint;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
+import net.alhazmy13.mediapicker.Image.ImagePicker;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import Models.User;
 
@@ -263,7 +267,7 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
     @Override
     public void onPause() {
         super.onPause();
-        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+        //LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
     }
 
     @Override
@@ -299,7 +303,6 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
             switch(position){
                 case 0: {
                     details.setText("Profile Photo");
-                    userDescription.setText("");
                     break;
                 }
                 case 1: {

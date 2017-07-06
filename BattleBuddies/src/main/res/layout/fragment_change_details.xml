@@ -77,8 +77,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_row="1"
-                android:visibility="visible">
+                android:layout_row="1">
 
                 <RelativeLayout
                     android:id="@+id/change_details_photo_relative_layout"
@@ -86,9 +85,11 @@
                     android:layout_height="match_parent"
                     android:visibility="invisible">
 
-                    <TextView
+                    <ImageView
+                        android:id="@+id/selectedPicture"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
 
                 </RelativeLayout>
 
@@ -102,57 +103,6 @@
                         android:id="@+id/change_details_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/change_details_number_picker_relative_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="invisible">
-
-                    <NumberPicker
-                        android:id="@+id/singleNumberPicker"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_centerHorizontal="true"
-                        android:descendantFocusability="blocksDescendants">
-                    </NumberPicker>
-
-                    <TextView
-                        android:id="@+id/change_details_single_number_picker_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="60dp"
-                        android:text="Years" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/change_details_dual_number_picker_relative_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <NumberPicker
-                        android:id="@+id/firstNumberPicker"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="60dp"
-                        android:descendantFocusability="blocksDescendants">
-                    </NumberPicker>
-
-                    <NumberPicker
-                        android:id="@+id/secondNumberPicker"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="60dp"
-                        android:descendantFocusability="blocksDescendants">
-                    </NumberPicker>
-
 
                 </RelativeLayout>
 

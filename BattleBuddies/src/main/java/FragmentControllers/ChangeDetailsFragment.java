@@ -2,31 +2,35 @@ package FragmentControllers;
 
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.NumberPicker;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.parse.DeleteCallback;
-import com.parse.GetCallback;
 import com.parse.ParseException;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
 
-import Models.Relation;
+import net.alhazmy13.mediapicker.Image.ImagePicker;
+
+import java.io.IOException;
+
+import ConfigClasses.MyProfilePictureView;
 import Models.User;
 
-import static com.parse.starter.R.id.firstNumberPicker;
-import static com.parse.starter.R.id.secondNumberPicker;
-import static com.parse.starter.R.id.singleNumberPicker;
+import static android.app.Activity.RESULT_OK;
 
 /**
  * Created by Dylan Castanhinha on 4/13/2017.
@@ -38,15 +42,12 @@ public class ChangeDetailsFragment extends DialogFragment {
     TextView cancelButton;
     TextView label;
     TextView saveButton;
-    TextView numberPickerLabel;
     User currentUser;
     RelativeLayout photoRR;
     RelativeLayout textViewRR;
-    RelativeLayout numberPickerRR;
-    RelativeLayout dualNumberPickerRR;
     EditText changeText;
+    ImageView selectedPicture;
     DismissEditDialogListener activityCallback;
-    int updatedValue;
 
     public ChangeDetailsFragment(){
     }
@@ -79,6 +80,7 @@ public class ChangeDetailsFragment extends DialogFragment {
         saveButton = (TextView) rootView.findViewById(R.id.change_details_save_button);
         photoRR = (RelativeLayout) rootView.findViewById(R.id.change_details_photo_relative_layout);
         textViewRR = (RelativeLayout) rootView.findViewById(R.id.change_details_text_view_relative_layout);
+        selectedPicture = (ImageView) rootView.findViewById(R.id.selectedPicture);
         photoRR.setVisibility(View.INVISIBLE);
         textViewRR.setVisibility(View.INVISIBLE);
         changeText = (EditText) rootView.findViewById(R.id.change_details_edit_text);
@@ -99,6 +101,15 @@ public class ChangeDetailsFragment extends DialogFragment {
             case 0: {
                 photoRR.setVisibility(View.VISIBLE);
                 label.setText("Change Photo");
+                new ImagePicker.Builder(getActivity())
+                        .mode(ImagePicker.Mode.CAMERA_AND_GALLERY)
+                        .compressLevel(ImagePicker.ComperesLevel.MEDIUM)
+                        .directory(ImagePicker.Directory.DEFAULT)
+                        .extension(ImagePicker.Extension.PNG)
+                        .scale(600, 600)
+                        .allowMultipleImages(false)
+                        .enableDebuggingMode(true)
+                        .build();
 
                 break;
             }
@@ -110,13 +121,6 @@ public class ChangeDetailsFragment extends DialogFragment {
         }
     }
 
-    private class NumberPickerListener implements NumberPicker.OnValueChangeListener{
-
-        @Override
-        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-            updatedValue = newVal;
-        }
-    }
     private class SaveButtonClickListener implements TextView.OnClickListener{
         @Override
         public void onClick(View v) {

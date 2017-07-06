@@ -47,6 +47,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
@@ -88,8 +89,10 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
     AddFriends.OnUserSelected activityCallBack;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
+    //Toolbar
     Toolbar toolbar;
     ImageButton leftToolbarButton;
+    ImageButton rightToolbarbutton;
     //NavBar
     BottomNavigationView bottomNavigationView;
     MyProfilePictureView myProfilePictureView;
@@ -131,6 +134,37 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
         leftToolbarButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
         leftToolbarButton.setImageResource(R.drawable.ic_add_user_green);
         leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());
+        rightToolbarbutton = (ImageButton) getActivity().findViewById(R.id.toolbar_right_button);
+        rightToolbarbutton.setImageResource(R.drawable.ic_action_action_search);
+        rightToolbarbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MaterialSearchView searchView = new MaterialSearchView(getActivity());
+                searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
+                    @Override
+                    public void onSearchViewShown() {
+
+                    }
+
+                    @Override
+                    public void onSearchViewClosed() {
+
+                    }
+                });
+
+                searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        return false;
+                    }
+                });
+            }
+        });
         //ListView
         View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);

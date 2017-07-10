@@ -4,30 +4,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:orientation="vertical">
 
-        <LinearLayout
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/profileMapViewFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </com.google.android.gms.maps.MapView>
 
-            <com.google.android.gms.maps.MapView
-                android:id="@+id/profileMapViewFragment"
+        <FrameLayout
+            android:id="@+id/profile_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ConfigClasses.MyProfilePictureView
+                android:id="@+id/profile_picture"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"></ConfigClasses.MyProfilePictureView>
+
+            <TextView
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_picture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:id="@+id/nameTV"
+                android:textSize="20sp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:text="Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameTV"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:id="@+id/locationTV"
+                android:textSize="20sp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-condensed" />
+
+            <Button
+                android:text="Logout"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-            </com.google.android.gms.maps.MapView>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/trainerCheckBox"
+                android:layout_marginTop="15dp"
+                android:id="@+id/logoutButton"
+                android:onClick="logoutButtonClicked"
+                android:textColor="@android:color/white"
+                android:background="@color/com_facebook_blue" />
 
-            <ListView
-                android:id="@+id/edit_details_list_view"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"/>
-        </LinearLayout>
+            <CheckBox
+                android:text="Trainer?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationTV"
+                android:layout_marginTop="13dp"
+                android:id="@+id/trainerCheckBox"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20sp"
+                android:buttonTint="#FFF"
+                android:checked="false"
+                android:layout_marginLeft="125dp" />
 
-    </ScrollView>
+        </FrameLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -25,12 +25,10 @@ import com.parse.starter.R;
 import net.alhazmy13.mediapicker.Image.ImagePicker;
 
 import FragmentControllers.AddFriends;
-import FragmentControllers.ChangeDetailsFragment;
-import FragmentControllers.CurrentFriends;
-import FragmentControllers.EditDetailsFragment;
-import FragmentControllers.YourProfileFragment;
+import FragmentControllers.CurrentFriendsFragment;
+import FragmentControllers.ProfileFragment;
 
-public class NavigationController extends AppCompatActivity implements CurrentFriends.OnAddNewUserButtonClicked, CurrentFriends.OnProfileButtonClicked, AddFriends.OnUserSelected, EditDetailsFragment.OnRowSelected, ChangeDetailsFragment.DismissEditDialogListener{
+public class NavigationController extends AppCompatActivity implements CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked {
 
     private Toolbar toolbar;
     private PopupMenu mPopupMenu;
@@ -72,7 +70,7 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
                 return;
             }
             // Create a new Fragment to be placed in the activity layout
-            CurrentFriends firstFragment = new CurrentFriends();
+            CurrentFriendsFragment firstFragment = new CurrentFriendsFragment();
             // Add the fragment to the 'fragment_container' FrameLayout
             fragmentTransaction
                     .setCustomAnimations(R.animator.fade_in, R.animator.fade_out)
@@ -112,35 +110,18 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             }
 
             // Create a new Fragment to be placed in the activity layout
-            EditDetailsFragment editDetailsFragment = new EditDetailsFragment();
+            ProfileFragment profileFragment = new ProfileFragment();
             // Add the fragment to the 'fragment_container' FrameLayout
             fragmentTransaction
                     .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
-                    .replace(R.id.fragment_container, editDetailsFragment)
+                    .replace(R.id.fragment_container, profileFragment)
                     .addToBackStack("firstFragment")
                     .commit();
         }
     }
 
-    @Override
-    public void onUserSelected(String userId) {
 
-        //Go to this users location
-        Log.i("AppInfo", userId);
 
-    }
-
-    @Override
-    public void onRowSelected(int position) {
-        FragmentManager fm = getFragmentManager();
-        ChangeDetailsFragment changeDetailsFragment = ChangeDetailsFragment.newInstance(position);
-        changeDetailsFragment.show(fm, "fragment_selected_user");
-    }
-
-    @Override
-    public void onEditDialogDismissal() {
-        Log.i("AppInfo", String.valueOf(getFragmentManager().findFragmentById(R.id.fragment_container)));
-    }
 
     private class MenuButtonClickListener implements ImageButton.OnClickListener{
         @Override

@@ -66,7 +66,7 @@ import Models.User;
 
 import static android.app.Activity.RESULT_OK;
 
-public class CurrentFriends extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, GoogleMap.OnMarkerClickListener, LocationListener {
+public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, GoogleMap.OnMarkerClickListener, LocationListener {
 
     //MapView
     private GoogleMap googleMap;
@@ -116,7 +116,6 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
 
         try {
             activityCallback = (OnAddNewUserButtonClicked) context;
-            activityCallBack = (AddFriends.OnUserSelected) context;
             activityCallback2 = (OnProfileButtonClicked) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString()
@@ -503,7 +502,6 @@ public class CurrentFriends extends Fragment implements GoogleApiClient.Connecti
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    activityCallBack.onUserSelected(user.getObjectId());
                     placeMarkerOnMap(user);
                 }
             });

@@ -16,6 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -39,28 +42,33 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.starter.R;
+import com.parse.starter.ViewControllers.LoginController;
 
 import net.alhazmy13.mediapicker.Image.ImagePicker;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ConfigClasses.MyProfilePictureView;
 import Models.User;
 
 import static android.app.Activity.RESULT_OK;
+import static com.parse.starter.R.id.locationTV;
+import static com.parse.starter.R.id.logoutButton;
+import static com.parse.starter.R.id.nameTV;
 
 /**
  * Created by Dylan Castanhinha on 4/12/2017.
  */
 
-public class EditDetailsFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class ProfileFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
-    ListView listview;
     User currentUser;
-    EditDetailsAdapter adapter;
     OnRowSelected activityCallBack;
     BottomNavigationView bottomNavigationView;
 
@@ -74,6 +82,13 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
     private static final int REQUEST_CHECK_SETTINGS = 2;
     MapView mMapView;
 
+    //ProfileView
+    TextView nameTV;
+    TextView locationTV;
+    CheckBox trainerCheckbox;
+    MyProfilePictureView profilepicture;
+    Button logoutButton;
+
     public interface OnRowSelected{
         void onRowSelected(int position);
     }
@@ -81,7 +96,6 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        activityCallBack = (OnRowSelected) context;
     }
 
     @Override
@@ -97,6 +111,16 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
         bottomNavigationView = (BottomNavigationView)getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setVisibility(View.GONE);
         View rootView = inflater.inflate(R.layout.fragment_edit_details, container, false);
+        //ProfileView
+        currentUser = (User) ParseUser.getCurrentUser();
+        profilepicture = (MyProfilePictureView) rootView.findViewById(R.id.profile_picture);
+        nameTV = (TextView) rootView.findViewById(R.id.nameTV);
+        locationTV = (TextView) rootView.findViewById(R.id.locationTV);
+        logoutButton = (Button) rootView.findViewById(R.id.logoutButton);
+        logoutButton.setOnClickListener(new LogoutButtonListener());
+        trainerCheckbox = (CheckBox) rootView.findViewById(R.id.trainerCheckBox);
+        trainerCheckbox.setOnCheckedChangeListener(new TrainerCheckBoxListener());
+        setUserData();
         //MapView
         mMapView = (MapView) rootView.findViewById(R.id.profileMapViewFragment);
         mMapView.onCreate(savedInstanceState);
@@ -130,15 +154,59 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
 
         createLocationRequest();
 
-
-        ArrayList<User> users = new ArrayList<User>();
-        listview = (ListView) rootView.findViewById(R.id.edit_details_list_view);
-        adapter = new EditDetailsAdapter(getActivity().getApplicationContext(), users);
-        listview.setAdapter(adapter);
-        for (int i = 0; i < 2; i++){
-            adapter.add(currentUser);
-        }
         return rootView;
+    }
+
+    public void setUserData(){
+        profilepicture.setImageBitmap(profilepicture.getRoundedBitmap(currentUser.getProfilePicture()));
+        nameTV.setText(currentUser.getFullName());
+        locationTV.setText(currentUser.getLocation());
+        //Trainer or Not
+        if (currentUser.getTrainerStatus()){
+            trainerCheckbox.setChecked(true);
+        } else {
+            trainerCheckbox.setChecked(false);
+        }
+    }
+
+    private class LogoutButtonListener implements Button.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            ParseUser.getCurrentUser().logOut();
+            Intent intent = new Intent(getActivity(), LoginController.class);
+            startActivity(intent);
+        }
+    }
+
+    private class TrainerCheckBoxListener implements CheckBox.OnCheckedChangeListener{
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (isChecked) {
+                currentUser.setTrainerStatus(true);
+                currentUser.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                        } else {
+                            Log.i("AppInfo", e.getMessage());
+                        }
+                    }
+                });
+            } else {
+                currentUser.setTrainerStatus(false);
+                currentUser.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                        } else {
+                            Log.i("AppInfo", e.getMessage());
+                        }
+                    }
+                });
+            }
+        }
     }
 
     //MapView Methods
@@ -287,41 +355,4 @@ public class EditDetailsFragment extends Fragment implements GoogleApiClient.Con
         }
     }
 
-    public class EditDetailsAdapter extends ArrayAdapter<User>{
-        public EditDetailsAdapter(Context context, ArrayList<User> users){
-            super(context,0, users);
-        }
-        @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
-            User user = getItem(position);
-
-            if (convertView == null){
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_layout_edit_details, parent, false);
-            }
-            TextView details = (TextView) convertView.findViewById(R.id.edit_details_text_view);
-            TextView userDescription = (TextView) convertView.findViewById(R.id.edit_details_row_details);
-            switch(position){
-                case 0: {
-                    details.setText("Profile Photo");
-                    break;
-                }
-                case 1: {
-                    details.setText("Name");
-                    if (user.getFullName() != null){
-                        userDescription.setText(user.getFullName());
-                    } else {
-                        userDescription.setText("");
-                    }
-                    break;
-                }
-            }
-            convertView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    activityCallBack.onRowSelected(position);
-                }
-            });
-            return convertView;
-        }
-    }
 }

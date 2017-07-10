@@ -24,7 +24,7 @@ import com.parse.starter.R;
 
 import net.alhazmy13.mediapicker.Image.ImagePicker;
 
-import FragmentControllers.AddFriends;
+import FragmentControllers.AddFriendsFragment;
 import FragmentControllers.CurrentFriendsFragment;
 import FragmentControllers.ProfileFragment;
 
@@ -90,11 +90,11 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             }
 
             // Create a new Fragment to be placed in the activity layout
-            AddFriends addFriends = new AddFriends();
+            AddFriendsFragment addFriendsFragment = new AddFriendsFragment();
             // Add the fragment to the 'fragment_container' FrameLayout
             fragmentTransaction
                     .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right, R.animator.slide_in_right, R.animator.slide_out_left)
-                    .replace(R.id.fragment_container, addFriends)
+                    .replace(R.id.fragment_container, addFriendsFragment)
                     .addToBackStack("firstFragment")
                     .commit();
         }

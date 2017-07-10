@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/profileMapViewFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </com.google.android.gms.maps.MapView>
+
+        <FrameLayout
+            android:id="@+id/profile_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ConfigClasses.MyProfilePictureView
+                    android:id="@+id/profile_picture"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp">
+                </ConfigClasses.MyProfilePictureView>
+
+                <TextView
+                    android:text="Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_picture"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/nameTV"
+                    android:textSize="20sp"
+                    android:textColor="#FFF"
+                    android:fontFamily="sans-serif-condensed" />
+
+                <TextView
+                    android:text="Location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameTV"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/locationTV"
+                    android:textSize="20sp"
+                    android:textColor="#FFF"
+                    android:fontFamily="sans-serif-condensed" />
+
+                <Button
+                    android:text="Logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/logoutButton"
+                    android:onClick="logoutButtonClicked"
+                    android:textColor="@android:color/white"
+                    android:background="@color/com_facebook_blue" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

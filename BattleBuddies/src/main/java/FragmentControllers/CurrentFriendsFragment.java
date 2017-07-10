@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -41,7 +40,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -86,7 +84,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     SwipeRefreshLayout swipeContainer;
     OnAddNewUserButtonClicked activityCallback;
     OnProfileButtonClicked activityCallback2;
-    AddFriends.OnUserSelected activityCallBack;
+    AddFriendsFragment.OnUserSelected activityCallBack;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
     //Toolbar

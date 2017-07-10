@@ -15,12 +15,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -49,18 +47,10 @@ import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.ViewControllers.LoginController;
 
-import net.alhazmy13.mediapicker.Image.ImagePicker;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import ConfigClasses.MyProfilePictureView;
 import Models.User;
 
 import static android.app.Activity.RESULT_OK;
-import static com.parse.starter.R.id.locationTV;
-import static com.parse.starter.R.id.logoutButton;
-import static com.parse.starter.R.id.nameTV;
 
 /**
  * Created by Dylan Castanhinha on 4/12/2017.
@@ -110,7 +100,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         //Navbar Bottom
         bottomNavigationView = (BottomNavigationView)getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setVisibility(View.GONE);
-        View rootView = inflater.inflate(R.layout.fragment_edit_details, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
         //ProfileView
         currentUser = (User) ParseUser.getCurrentUser();
         profilepicture = (MyProfilePictureView) rootView.findViewById(R.id.profile_picture);
@@ -118,8 +108,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         locationTV = (TextView) rootView.findViewById(R.id.locationTV);
         logoutButton = (Button) rootView.findViewById(R.id.logoutButton);
         logoutButton.setOnClickListener(new LogoutButtonListener());
-        trainerCheckbox = (CheckBox) rootView.findViewById(R.id.trainerCheckBox);
-        trainerCheckbox.setOnCheckedChangeListener(new TrainerCheckBoxListener());
         setUserData();
         //MapView
         mMapView = (MapView) rootView.findViewById(R.id.profileMapViewFragment);
@@ -161,12 +149,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         profilepicture.setImageBitmap(profilepicture.getRoundedBitmap(currentUser.getProfilePicture()));
         nameTV.setText(currentUser.getFullName());
         locationTV.setText(currentUser.getLocation());
-        //Trainer or Not
-        if (currentUser.getTrainerStatus()){
-            trainerCheckbox.setChecked(true);
-        } else {
-            trainerCheckbox.setChecked(false);
-        }
     }
 
     private class LogoutButtonListener implements Button.OnClickListener{
@@ -176,36 +158,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
             ParseUser.getCurrentUser().logOut();
             Intent intent = new Intent(getActivity(), LoginController.class);
             startActivity(intent);
-        }
-    }
-
-    private class TrainerCheckBoxListener implements CheckBox.OnCheckedChangeListener{
-
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            if (isChecked) {
-                currentUser.setTrainerStatus(true);
-                currentUser.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e == null) {
-                        } else {
-                            Log.i("AppInfo", e.getMessage());
-                        }
-                    }
-                });
-            } else {
-                currentUser.setTrainerStatus(false);
-                currentUser.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e == null) {
-                        } else {
-                            Log.i("AppInfo", e.getMessage());
-                        }
-                    }
-                });
-            }
         }
     }
 

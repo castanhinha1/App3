@@ -23,13 +23,11 @@ import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
 import Models.User;
 
-import static android.os.Build.VERSION_CODES.M;
-
 /**
  * Created by Dylan Castanhinha on 3/31/2017.
  */
 
-public class AddFriends extends Fragment {
+public class AddFriendsFragment extends Fragment {
 
     TextView labelTV;
     ListView listview;
@@ -56,7 +54,7 @@ public class AddFriends extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_add_new_clients, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_add_friends, container, false);
         getActivity().invalidateOptionsMenu();
         //Toolbar top
         final TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);

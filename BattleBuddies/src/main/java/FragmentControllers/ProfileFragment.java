@@ -11,16 +11,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
-import android.text.InputType;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -44,17 +44,24 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
+import com.parse.ParseQuery;
+import com.parse.ParseQueryAdapter;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.ViewControllers.LoginController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ConfigClasses.MyProfilePictureView;
+import ConfigClasses.ParseAdapterCustomList;
 import Models.User;
 
-import static android.R.attr.background;
-import static android.R.attr.name;
 import static android.app.Activity.RESULT_OK;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static com.parse.starter.R.id.swipeContainer;
 
 /**
  * Created by Dylan Castanhinha on 4/12/2017.
@@ -63,7 +70,6 @@ import static android.app.Activity.RESULT_OK;
 public class ProfileFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     User currentUser;
-    OnRowSelected activityCallBack;
     BottomNavigationView bottomNavigationView;
 
     //MapView
@@ -77,18 +83,13 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     MapView mMapView;
 
     //ProfileView
-    EditText nameTV;
-    EditText locationTV;
-    CheckBox trainerCheckbox;
+    ListView listview;
     MyProfilePictureView profilepicture;
+    CurrentDetailsAdapter adapter;
     Button logoutButton;
-    ImageButton editOrSaveButton;
     boolean buttonState;
-
-    public interface OnRowSelected{
-        void onRowSelected(int position);
-    }
-
+    String newName;
+    String newLocation;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -100,9 +101,15 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         //Toolbar top
         TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText("Me");
-        ImageButton doneButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
-        doneButton.setImageResource(R.drawable.ic_back_button);
+        Button backButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
+        backButton.setText("Cancel");
+        backButton.setOnClickListener(new BackButtonClickListener());
+        Button doneButton = (Button) getActivity().findViewById(R.id.toolbar_right_button_text);
+        doneButton.setText("Done");
         doneButton.setOnClickListener(new DoneButtonClickListener());
+        ImageButton leftButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
+        leftButton.setImageResource(0);
+        leftButton.setClickable(false);
         //Navbar Bottom
         bottomNavigationView = (BottomNavigationView)getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setVisibility(View.GONE);
@@ -110,18 +117,18 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         //ProfileView
         currentUser = (User) ParseUser.getCurrentUser();
         profilepicture = (MyProfilePictureView) rootView.findViewById(R.id.profile_picture);
-        nameTV = (EditText) rootView.findViewById(R.id.nameTV);
-        nameTV.setFocusableInTouchMode(false);
-        nameTV.setFocusable(false);
-        locationTV = (EditText) rootView.findViewById(R.id.locationTV);
-        locationTV.setFocusableInTouchMode(false);
-        locationTV.setFocusable(false);
         logoutButton = (Button) rootView.findViewById(R.id.logoutButton);
         logoutButton.setOnClickListener(new LogoutButtonListener());
-        editOrSaveButton = (ImageButton) rootView.findViewById(R.id.edit_or_save_button);
-        editOrSaveButton.setOnClickListener(new EditOrSaveButtonClickListener());
         buttonState = true;
-        setUserData();
+        profilepicture.setImageBitmap(profilepicture.getRoundedBitmap(currentUser.getProfilePicture()));
+        //User Details List View
+        ArrayList<User> users = new ArrayList<User>();
+        listview = (ListView) rootView.findViewById(R.id.profile_details_list_view);
+        adapter = new CurrentDetailsAdapter(getActivity().getApplicationContext(), users);
+        listview.setAdapter(adapter);
+        for (int i = 0; i < 2; i++){
+            adapter.add(currentUser);
+        }
         //MapView
         mMapView = (MapView) rootView.findViewById(R.id.profileMapViewFragment);
         mMapView.onCreate(savedInstanceState);
@@ -158,59 +165,54 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         return rootView;
     }
 
-    public void setUserData(){
-        profilepicture.setImageBitmap(profilepicture.getRoundedBitmap(currentUser.getProfilePicture()));
-        nameTV.setText(currentUser.getFullName());
-        locationTV.setText(currentUser.getLocation());
-    }
-
     private class LogoutButtonListener implements Button.OnClickListener{
 
         @Override
         public void onClick(View v) {
+            //TODO add dialog to check if user really wants to logout
             ParseUser.getCurrentUser().logOut();
             Intent intent = new Intent(getActivity(), LoginController.class);
             startActivity(intent);
         }
     }
 
-    public class EditOrSaveButtonClickListener implements ImageButton.OnClickListener{
 
-        @Override
-        public void onClick(View v) {
-            if (buttonState) {
-                editOrSaveButton.setImageResource(R.drawable.ic_done_button_white);
-                buttonState = false;
-                highlightFields();
-            }else {
-                editOrSaveButton.setImageResource(R.drawable.ic_edit_button);
-                buttonState = true;
-                saveNewInformation();
-            }
+    public class CurrentDetailsAdapter extends ArrayAdapter<User>{
+        public CurrentDetailsAdapter(Context context, ArrayList<User> users){
+            super(context,0, users);
         }
+        @Override
+        public View getView(final int position, View convertView, ViewGroup parent) {
+            User user = getItem(position);
 
+            if (convertView == null){
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_layout_profile_details, parent, false);
+            }
+            final EditText details = (EditText) convertView.findViewById(R.id.profile_details_text_view);
+            ImageButton button = (ImageButton) convertView.findViewById(R.id.profile_details_image_button);
+            switch(position){
+                case 0: {
+                    details.setText(user.getFullName());
+                    button.setImageResource(R.drawable.ic_user_buttpn);
+                    break;
+                }
+                case 1: {
+                    details.setText(user.getLocation());
+                    button.setImageResource(R.drawable.ic_user_location);
+                    break;
+                }
+            }
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    details.setFocusable(true);
+                    details.setClickable(true);
+                    details.setInputType(96);
+                }
+            });
+            return convertView;
+        }
     }
-
-    private void highlightFields() {
-        nameTV.setFocusableInTouchMode(true);
-        nameTV.setFocusable(true);
-        nameTV.setBackgroundResource(R.color.bb_tabletRightBorderDark);
-
-        locationTV.setFocusableInTouchMode(true);
-        locationTV.setFocusable(true);
-        locationTV.setBackgroundResource(R.color.bb_tabletRightBorderDark);
-    }
-
-    private void saveNewInformation() {
-        nameTV.setFocusableInTouchMode(false);
-        nameTV.setFocusable(false);
-        nameTV.setBackgroundResource(0);
-
-        locationTV.setFocusableInTouchMode(false);
-        locationTV.setFocusable(false);
-        locationTV.setBackgroundResource(0);
-    }
-
 
     //MapView Methods
     private void setUpMap() {
@@ -351,11 +353,19 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
 
     //ListView
 
-    public class DoneButtonClickListener implements ImageButton.OnClickListener{
+    public class BackButtonClickListener implements ImageButton.OnClickListener{
         @Override
         public void onClick(View v) {
             getFragmentManager().popBackStack();
         }
     }
+
+    public class DoneButtonClickListener implements ImageButton.OnClickListener{
+        @Override
+        public void onClick(View v) {
+
+        }
+    }
+
 
 }

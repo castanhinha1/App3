@@ -4,7 +4,7 @@
     android:id="@+id/custom_toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="?attr/colorPrimary"
+    android:background="@color/palette_lightwhite"
     app:contentInsetStart="0dp"
     app:layout_scrollFlags="scroll|enterAlways"
     app:layout_collapseMode="pin">
@@ -21,6 +21,14 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="left" />
 
+        <Button
+            android:id="@+id/toolbar_left_button_text"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="left"
+            android:textColor="@color/palette_primarycolor"/>
+
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
@@ -28,7 +36,8 @@
             android:gravity="center"
             android:text="Clients"
             android:textColor="@color/palette_primarycolor"
-            android:textSize="28sp"
+            android:textSize="22sp"
+            android:textStyle="bold"
             android:layout_gravity="center"/>
 
         <ImageButton
@@ -37,6 +46,14 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="right"
             style="@style/Widget.AppCompat.ActionButton" />
+
+        <Button
+            android:id="@+id/toolbar_right_button_text"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            android:textColor="@color/palette_primarycolor"/>
 
         <com.miguelcatalan.materialsearchview.MaterialSearchView
             android:id="@+id/search_view"

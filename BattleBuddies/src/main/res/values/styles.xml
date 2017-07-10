@@ -5,8 +5,8 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#FFFDFDFD</item>
         <item name="windowActionBar">false</item>
-        <item name="android:textColorPrimary">#4bae4f</item>
-        <item name="android:textColorSecondary">#4bae4f</item>
+        <item name="android:textColorPrimary">#fdfdfd</item>
+        <item name="android:textColorSecondary">#fdfdfd</item>
         <item name="colorPrimaryDark">#e0e0e0</item>
         <item name="windowNoTitle">true</item>
     </style>

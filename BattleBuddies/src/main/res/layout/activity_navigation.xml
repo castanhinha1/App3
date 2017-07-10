@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.parse.starter.ViewControllers.NavigationController"
-    android:background="#3a8f3e">
+    android:background="@color/palette_darkwhite">
 
     <include layout="@layout/tool_bar"
         android:id="@+id/toolbar_layout" />
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?attr/colorPrimary">
+        android:background="@color/palette_lightwhite">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -63,7 +63,8 @@
                 android:textColor="@color/palette_primarycolor"
                 android:id="@+id/nameLabel"
                 android:text="Name"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -73,7 +74,8 @@
                 android:textColor="@color/palette_primarycolor"
                 android:id="@+id/locationLabel"
                 android:text="Location"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textStyle="bold"/>
 
         </RelativeLayout>
 

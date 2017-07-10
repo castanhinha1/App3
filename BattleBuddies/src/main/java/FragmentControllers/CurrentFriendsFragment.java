@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -126,6 +127,12 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         currentUser = (User) ParseUser.getCurrentUser();
         //Toolbar top
         toolbar = (Toolbar) getActivity().findViewById(R.id.custom_toolbar);
+        Button backButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
+        backButton.setText("");
+        backButton.setClickable(false);
+        Button doneButton = (Button) getActivity().findViewById(R.id.toolbar_right_button_text);
+        doneButton.setText("");
+        doneButton.setClickable(false);
         TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText(currentUser.getFirstName() + "'s "+"Clients");
         leftToolbarButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);

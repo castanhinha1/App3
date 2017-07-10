@@ -27,17 +27,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/edit_or_save_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@null"
-                    app:srcCompat="@drawable/ic_edit_button" />
-
                 <ConfigClasses.MyProfilePictureView
                     android:id="@+id/profile_picture"
                     android:layout_width="160dp"
@@ -46,31 +35,14 @@
                     android:layout_marginTop="20dp">
                 </ConfigClasses.MyProfilePictureView>
 
-                <EditText
-                    android:text="Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_picture"
-                    android:layout_centerHorizontal="true"
+                <ListView
                     android:layout_marginTop="20dp"
-                    android:id="@+id/nameTV"
-                    android:textSize="20sp"
-                    android:textColor="#FFF"
-                    android:fontFamily="sans-serif-condensed"
-                    android:background="@null"/>
-
-                <EditText
-                    android:text="Location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nameTV"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:id="@+id/locationTV"
-                    android:textSize="20sp"
-                    android:textColor="#FFF"
-                    android:fontFamily="sans-serif-condensed"
-                    android:background="@null"/>
+                    android:id="@+id/profile_details_list_view"
+                    android:layout_below="@id/profile_picture"
+                    android:layout_above="@+id/logoutButton">
+                </ListView>
 
                 <Button
                     android:text="Logout"
@@ -80,8 +52,9 @@
                     android:layout_alignParentBottom="true"
                     android:id="@+id/logoutButton"
                     android:onClick="logoutButtonClicked"
-                    android:textColor="@android:color/white"
-                    android:background="@color/com_facebook_blue" />
+                    android:textColor="@color/palette_primarycolor"
+                    android:textStyle="bold"
+                    android:background="@color/palette_lightwhite" />
 
             </RelativeLayout>
 

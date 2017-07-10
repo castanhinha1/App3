@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\55c2fa94d844542ce1c62ed1fdb21ac54028dd1f\\output\\res\\drawable-hdpi\\ic_suggestion.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\com_facebook_tooltip_black_topnub.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable-hdpi\\com_facebook_tooltip_black_topnub.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_user_location.png",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-hdpi\\ic_user_location.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\com_facebook_tooltip_black_topnub.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable-hdpi\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_button.png",

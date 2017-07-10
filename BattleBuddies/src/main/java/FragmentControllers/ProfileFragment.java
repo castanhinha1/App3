@@ -1,7 +1,9 @@
 package FragmentControllers;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
@@ -169,10 +171,19 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
 
         @Override
         public void onClick(View v) {
-            //TODO add dialog to check if user really wants to logout
-            ParseUser.getCurrentUser().logOut();
-            Intent intent = new Intent(getActivity(), LoginController.class);
-            startActivity(intent);
+            new AlertDialog.Builder(getActivity())
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Log Out?")
+                    .setMessage("Are you sure you want to log out?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            currentUser.logOut();
+                            getActivity().finish();
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
         }
     }
 

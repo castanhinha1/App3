@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -50,6 +52,8 @@ import com.parse.starter.ViewControllers.LoginController;
 import ConfigClasses.MyProfilePictureView;
 import Models.User;
 
+import static android.R.attr.background;
+import static android.R.attr.name;
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -73,11 +77,13 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     MapView mMapView;
 
     //ProfileView
-    TextView nameTV;
-    TextView locationTV;
+    EditText nameTV;
+    EditText locationTV;
     CheckBox trainerCheckbox;
     MyProfilePictureView profilepicture;
     Button logoutButton;
+    ImageButton editOrSaveButton;
+    boolean buttonState;
 
     public interface OnRowSelected{
         void onRowSelected(int position);
@@ -104,10 +110,17 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         //ProfileView
         currentUser = (User) ParseUser.getCurrentUser();
         profilepicture = (MyProfilePictureView) rootView.findViewById(R.id.profile_picture);
-        nameTV = (TextView) rootView.findViewById(R.id.nameTV);
-        locationTV = (TextView) rootView.findViewById(R.id.locationTV);
+        nameTV = (EditText) rootView.findViewById(R.id.nameTV);
+        nameTV.setFocusableInTouchMode(false);
+        nameTV.setFocusable(false);
+        locationTV = (EditText) rootView.findViewById(R.id.locationTV);
+        locationTV.setFocusableInTouchMode(false);
+        locationTV.setFocusable(false);
         logoutButton = (Button) rootView.findViewById(R.id.logoutButton);
         logoutButton.setOnClickListener(new LogoutButtonListener());
+        editOrSaveButton = (ImageButton) rootView.findViewById(R.id.edit_or_save_button);
+        editOrSaveButton.setOnClickListener(new EditOrSaveButtonClickListener());
+        buttonState = true;
         setUserData();
         //MapView
         mMapView = (MapView) rootView.findViewById(R.id.profileMapViewFragment);
@@ -160,6 +173,44 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
             startActivity(intent);
         }
     }
+
+    public class EditOrSaveButtonClickListener implements ImageButton.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            if (buttonState) {
+                editOrSaveButton.setImageResource(R.drawable.ic_done_button_white);
+                buttonState = false;
+                highlightFields();
+            }else {
+                editOrSaveButton.setImageResource(R.drawable.ic_edit_button);
+                buttonState = true;
+                saveNewInformation();
+            }
+        }
+
+    }
+
+    private void highlightFields() {
+        nameTV.setFocusableInTouchMode(true);
+        nameTV.setFocusable(true);
+        nameTV.setBackgroundResource(R.color.bb_tabletRightBorderDark);
+
+        locationTV.setFocusableInTouchMode(true);
+        locationTV.setFocusable(true);
+        locationTV.setBackgroundResource(R.color.bb_tabletRightBorderDark);
+    }
+
+    private void saveNewInformation() {
+        nameTV.setFocusableInTouchMode(false);
+        nameTV.setFocusable(false);
+        nameTV.setBackgroundResource(0);
+
+        locationTV.setFocusableInTouchMode(false);
+        locationTV.setFocusable(false);
+        locationTV.setBackgroundResource(0);
+    }
+
 
     //MapView Methods
     private void setUpMap() {

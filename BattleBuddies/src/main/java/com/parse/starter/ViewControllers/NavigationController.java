@@ -154,7 +154,7 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
         int count = getFragmentManager().getBackStackEntryCount();
         if (count == 0){
             new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ic_disclaimer)
                     .setTitle("Log Out?")
                     .setMessage("Are you sure you want to log out?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

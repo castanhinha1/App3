@@ -172,7 +172,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         @Override
         public void onClick(View v) {
             new AlertDialog.Builder(getActivity())
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ic_disclaimer)
                     .setTitle("Log Out?")
                     .setMessage("Are you sure you want to log out?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

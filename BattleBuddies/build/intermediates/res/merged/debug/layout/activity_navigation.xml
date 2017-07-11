@@ -34,6 +34,13 @@
         android:layout_alignParentBottom="true"
         android:background="@color/palette_lightwhite">
 
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            app:srcCompat="@drawable/collpaseup" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -29,18 +29,27 @@
 
                 <ConfigClasses.MyProfilePictureView
                     android:id="@+id/profile_picture"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp">
                 </ConfigClasses.MyProfilePictureView>
 
+                <Button
+                    android:id="@+id/change_photo_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_picture"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:text="Change Photo"
+                    android:textColor="@color/com_facebook_blue"/>
+
                 <ListView
-                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/profile_details_list_view"
-                    android:layout_below="@id/profile_picture"
+                    android:layout_below="@id/change_photo_button"
                     android:layout_above="@+id/logoutButton">
                 </ListView>
 

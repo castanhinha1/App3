@@ -44,6 +44,14 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable-xxhdpi\\com_facebook_button_icon.png"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_disclaimer.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xxhdpi\\ic_disclaimer.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_up_icon.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xxhdpi\\ic_up_icon.png"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_navigation_close_inverted.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\55c2fa94d844542ce1c62ed1fdb21ac54028dd1f\\output\\res\\drawable-xxhdpi\\ic_action_navigation_close_inverted.png"
     },

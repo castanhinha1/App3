@@ -102,7 +102,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         currentUser = (User) ParseUser.getCurrentUser();
         //Toolbar top
         TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
-        titleTextView.setText("Me");
+        titleTextView.setText("Edit Profile");
         Button backButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
         backButton.setText("Cancel");
         backButton.setOnClickListener(new BackButtonClickListener());

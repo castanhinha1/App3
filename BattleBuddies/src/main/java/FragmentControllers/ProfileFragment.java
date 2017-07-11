@@ -73,6 +73,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
 
     User currentUser;
     BottomNavigationView bottomNavigationView;
+    OnRowSelected activityCallBack;
 
     //MapView
     private GoogleMap googleMap;
@@ -90,11 +91,15 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     CurrentDetailsAdapter adapter;
     Button logoutButton;
     boolean buttonState;
-    String newName;
-    String newLocation;
+
+    public interface OnRowSelected{
+        void onRowSelected(int position);
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        activityCallBack = (OnRowSelected) context;
     }
 
     @Override
@@ -216,9 +221,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    details.setFocusable(true);
-                    details.setClickable(true);
-                    details.setInputType(96);
+                    activityCallBack.onRowSelected(position);
                 }
             });
             return convertView;

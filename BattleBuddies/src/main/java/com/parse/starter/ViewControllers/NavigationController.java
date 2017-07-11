@@ -26,9 +26,10 @@ import net.alhazmy13.mediapicker.Image.ImagePicker;
 
 import FragmentControllers.AddFriendsFragment;
 import FragmentControllers.CurrentFriendsFragment;
+import FragmentControllers.EditProfileFragment;
 import FragmentControllers.ProfileFragment;
 
-public class NavigationController extends AppCompatActivity implements CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked {
+public class NavigationController extends AppCompatActivity implements CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
     private Toolbar toolbar;
     private PopupMenu mPopupMenu;
@@ -120,7 +121,25 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
         }
     }
 
+    @Override
+    public void onRowSelected(int position) {
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        if (findViewById(R.id.fragment_container) != null) {
+            if (savedInstanceState1 != null) {
+                return;
+            }
+            Bundle bundle = new Bundle();
+            bundle.putInt("position", position);
+            EditProfileFragment editProfileFragment = new EditProfileFragment();
+            editProfileFragment.setArguments(bundle);
+            fragmentTransaction
+                    .replace(R.id.fragment_container, editProfileFragment)
+                    .addToBackStack(null)
+                    .commit();
 
+        }
+    }
 
 
     private class MenuButtonClickListener implements ImageButton.OnClickListener{

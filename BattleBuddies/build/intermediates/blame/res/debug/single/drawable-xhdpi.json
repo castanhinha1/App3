@@ -100,12 +100,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_exit_window.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_exit_window.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_up_icon.png",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_up_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_exit_window.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_exit_window.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_done_button.png",

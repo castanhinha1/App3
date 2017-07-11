@@ -14,7 +14,7 @@
         android:layout_gravity="center_vertical">
 
         <LinearLayout android:id="@+id/thumbnail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="3dp"
             android:layout_alignParentLeft="true"
@@ -27,15 +27,14 @@
                 android:layout_gravity="center_vertical"
                 android:background="@null"/>
 
-            <TextView
-                android:inputType="none"
-                android:id="@+id/profile_details_text_view"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/profile_details_edit_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/thumbnail"
                 android:layout_gravity="center_vertical"
                 android:textSize="15sp"
-                android:text="New Text" />
+                android:text="" />
 
         </LinearLayout>
 

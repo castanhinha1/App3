@@ -134,7 +134,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         doneButton.setText("");
         doneButton.setClickable(false);
         TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
-        titleTextView.setText(currentUser.getFirstName() + "'s "+"Clients");
+        titleTextView.setText(currentUser.getFirstName() + "'s "+"Buddies");
         leftToolbarButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
         leftToolbarButton.setImageResource(R.drawable.ic_add_user_green);
         leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());

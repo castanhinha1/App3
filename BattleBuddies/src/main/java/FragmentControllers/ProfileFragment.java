@@ -204,7 +204,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
             if (convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_layout_profile_details, parent, false);
             }
-            final EditText details = (EditText) convertView.findViewById(R.id.profile_details_text_view);
+            final TextView details = (TextView) convertView.findViewById(R.id.profile_details_text_view);
             ImageButton button = (ImageButton) convertView.findViewById(R.id.profile_details_image_button);
             switch(position){
                 case 0: {

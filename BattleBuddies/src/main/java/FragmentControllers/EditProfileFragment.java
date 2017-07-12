@@ -16,7 +16,9 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.starter.R;
 
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ public class EditProfileFragment extends Fragment {
     int positionFromProfile;
     Button backButton;
     TextView titleTextView;
+    EditText details;
 
     public EditProfileFragment(){
 
@@ -78,7 +81,7 @@ public class EditProfileFragment extends Fragment {
             if (convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_layout_edit_profile_details, parent, false);
             }
-            final EditText details = (EditText) convertView.findViewById(R.id.profile_details_edit_text);
+            details = (EditText) convertView.findViewById(R.id.profile_details_edit_text);
             ImageButton button = (ImageButton) convertView.findViewById(R.id.profile_details_image_button);
 
             switch(positionFromProfile){
@@ -105,20 +108,41 @@ public class EditProfileFragment extends Fragment {
         }
     }
 
+    public void goBack(){
+        backButton.setVisibility(View.VISIBLE);
+        getFragmentManager().popBackStack();
+    }
+
     public class PreviousButtonClickListener implements ImageButton.OnClickListener{
         @Override
         public void onClick(View v) {
-            backButton.setVisibility(View.VISIBLE);
-            getFragmentManager().popBackStack();
+            goBack();
         }
     }
 
     public class DoneButtonClickListener implements ImageButton.OnClickListener{
         @Override
         public void onClick(View v) {
-
+            switch (positionFromProfile) {
+                case 0: {
+                    currentUser.setFullName(details.getText().toString());
+                    break;
+                }
+                case 1: {
+                    currentUser.setLocation(details.getText().toString());
+                    break;
+                }
+            }
+            currentUser.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e == null){
+                        goBack();
+                    } else {
+                        Log.i("AppInfo", e.getMessage());
+                    }
+                }
+            });
         }
     }
-
-
 }

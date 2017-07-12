@@ -90,6 +90,7 @@ MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Casta
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.codinguser.android:contactpicker:3.0.0] C:\Users\Dylan Castanhinha\.android\build-cache\88895621a34685b1c966bad8ea556677059065f1\output\AndroidManifest.xml:30:5-32:41
 	tools:overrideLibrary
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:16:9-45
 	android:targetSdkVersion
@@ -592,3 +593,7 @@ ADDED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.
 		ADDED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.android\build-cache\56c006b921b27867422e2402cbe9723639bcea30\output\AndroidManifest.xml:31:17-55
 	android:name
 		ADDED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.android\build-cache\56c006b921b27867422e2402cbe9723639bcea30\output\AndroidManifest.xml:30:17-67
+uses-permission#android.permission.READ_CONTACTS
+ADDED from [com.codinguser.android:contactpicker:3.0.0] C:\Users\Dylan Castanhinha\.android\build-cache\88895621a34685b1c966bad8ea556677059065f1\output\AndroidManifest.xml:34:5-72
+	android:name
+		ADDED from [com.codinguser.android:contactpicker:3.0.0] C:\Users\Dylan Castanhinha\.android\build-cache\88895621a34685b1c966bad8ea556677059065f1\output\AndroidManifest.xml:34:22-69

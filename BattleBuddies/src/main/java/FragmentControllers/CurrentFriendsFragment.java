@@ -17,6 +17,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -77,17 +78,23 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     private static final int REQUEST_CHECK_SETTINGS = 2;
     MapView mMapView;
 
-    //ListView
-    TextView labelTV;
-    ListView listview;
-    CurrentClients adapter;
-    User currentUser;
-    SwipeRefreshLayout swipeContainer;
     OnAddNewUserButtonClicked activityCallback;
     OnProfileButtonClicked activityCallback2;
     AddFriendsFragment.OnUserSelected activityCallBack;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
+
+    //ListView Friends sharing location with you
+    ListView listview;
+    CurrentClients adapter;
+    User currentUser;
+    SwipeRefreshLayout swipeContainer;
+
+    //ListView Friends that you are sharing location with
+    ListView listview2;
+    CurrentClients adapter2;
+    SwipeRefreshLayout swipeContainer2;
+
     //Toolbar
     Toolbar toolbar;
     ImageButton leftToolbarButton;
@@ -97,8 +104,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     MyProfilePictureView myProfilePictureView;
     TextView nameLabel;
     TextView locationLabel;
-
-
 
 
     public interface OnAddNewUserButtonClicked {
@@ -169,15 +174,30 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
                 });
             }
         });
-        //ListView
+        //ListView Friend Sharing Location with You
         View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
+        TextView textView = new TextView(getActivity());
+        textView.setText("Friends Sharing Location With You");
         listview = (ListView) rootView.findViewById(R.id.current_client_list_view);
+        listview.addHeaderView(textView);
         expandableLayoutTop = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_top);
         expandableLayoutBottom = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_bottom);
         adapter = new CurrentClients(getActivity());
         listview.setAdapter(adapter);
         swipeContainer.setOnRefreshListener(new SwipeToRefresh());
+
+        //ListView Friends you are sharing location with
+        swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
+        TextView textView2 = new TextView(getActivity());
+        textView2.setText("Friends With Your Location");
+        listview2 = (ListView) rootView.findViewById(R.id.friends_with_your_location_list_view);
+        listview2.addHeaderView(textView2);
+        adapter = new CurrentClients(getActivity());
+        listview2.setAdapter(adapter);
+        swipeContainer.setOnRefreshListener(new SwipeToRefresh());
+
+
         //NavBar
         bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setOnClickListener(new BottomNavClickListener());
@@ -226,6 +246,93 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         return rootView;
     }
 
+
+    //LISTVIEW METHODS
+
+    private class SwipeToRefresh implements SwipeRefreshLayout.OnRefreshListener{
+
+        @Override
+        public void onRefresh() {
+            adapter.loadObjects();
+        }
+    }
+
+    private class AddNewClientButtonListener implements ImageButton.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            activityCallback.onAddUserClicked();
+        }
+    }
+
+
+    private class CurrentClients extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener {
+        Context context;
+        private CurrentClients(final Context context){
+            super(context, new ParseQueryAdapter.QueryFactory<User>(){
+                public ParseQuery<User> create() {
+                    ParseRelation<User> relation = currentUser.getRelation("client");
+                    ParseQuery<User> query = relation.getQuery();
+                    query.whereEqualTo("objectId", false);
+                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
+                    return query;
+                }
+            });
+            addOnQueryLoadListener(this);
+        }
+
+
+        @Override
+        public void onLoading() {
+            swipeContainer.setRefreshing(true);
+            Log.i("AppInfo", "Loading");
+        }
+
+        @Override
+        public void onLoaded(List objects, Exception e) {
+            swipeContainer.setRefreshing(false);
+            Log.i("AppInfo", "Loaded");
+        }
+
+        public String calculateDistance(User user) {
+            double distance = Math.round(user.getGeopoint().distanceInMilesTo(currentUser.getGeopoint()));
+            String distanceInMiles = String.valueOf(distance);
+            return distanceInMiles;
+        }
+
+
+        @Override
+        public View getItemView(final User user, View v, ViewGroup parent){
+            if (v == null){
+                v = View.inflate(getContext(), R.layout.list_layout_current_friends, null);
+            }
+            super.getItemView(user, v, parent);
+
+            //Add the title view
+            TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
+            nameTextView.setText(user.getFullName());
+
+            //Add the Location label
+            TextView location = (TextView) v.findViewById(R.id.current_client_object_id);
+            location.setText(user.getLocation());
+
+            //Add the distance label
+            TextView distanceLabel = (TextView) v.findViewById(R.id.distanceLabel);
+            distanceLabel.setText(calculateDistance(user)+" miles");
+
+            //Add the image
+            MyProfilePictureView imageView = (MyProfilePictureView) v.findViewById(R.id.imageView3);
+            imageView.setImageBitmap(imageView.getRoundedBitmap(user.getProfilePicture()));
+
+            //On click listener for selection
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    placeMarkerOnMap(user);
+                }
+            });
+            return v;
+        }
+    }
 
 
     private class BottomNavClickListener implements BottomNavigationView.OnClickListener{
@@ -424,93 +531,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         bottomNavigationView.setVisibility(View.VISIBLE);
         if (mGoogleApiClient.isConnected() && !mLocationUpdateState) {
             startLocationUpdates();
-        }
-    }
-
-    //LISTVIEW METHODS
-
-    private class SwipeToRefresh implements SwipeRefreshLayout.OnRefreshListener{
-
-        @Override
-        public void onRefresh() {
-            adapter.loadObjects();
-        }
-    }
-
-    private class AddNewClientButtonListener implements ImageButton.OnClickListener{
-        @Override
-        public void onClick(View v) {
-            activityCallback.onAddUserClicked();
-        }
-    }
-
-
-    private class CurrentClients extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener {
-        Context context;
-        private CurrentClients(final Context context){
-            super(context, new ParseQueryAdapter.QueryFactory<User>(){
-               public ParseQuery<User> create() {
-                   ParseRelation<User> relation = currentUser.getRelation("client");
-                   ParseQuery<User> query = relation.getQuery();
-                   query.whereEqualTo("objectId", false);
-                   query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
-                   return query;
-               }
-            });
-            addOnQueryLoadListener(this);
-        }
-
-
-        @Override
-        public void onLoading() {
-            swipeContainer.setRefreshing(true);
-            Log.i("AppInfo", "Loading");
-        }
-
-        @Override
-        public void onLoaded(List objects, Exception e) {
-            swipeContainer.setRefreshing(false);
-            Log.i("AppInfo", "Loaded");
-        }
-
-        public String calculateDistance(User user) {
-            double distance = Math.round(user.getGeopoint().distanceInMilesTo(currentUser.getGeopoint()));
-            String distanceInMiles = String.valueOf(distance);
-            return distanceInMiles;
-        }
-
-
-        @Override
-        public View getItemView(final User user, View v, ViewGroup parent){
-            if (v == null){
-                v = View.inflate(getContext(), R.layout.list_layout_current_friends, null);
-            }
-            super.getItemView(user, v, parent);
-
-            //Add the title view
-            TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
-            nameTextView.setText(user.getFullName());
-
-            //Add the Location label
-            TextView location = (TextView) v.findViewById(R.id.current_client_object_id);
-            location.setText(user.getLocation());
-
-            //Add the distance label
-            TextView distanceLabel = (TextView) v.findViewById(R.id.distanceLabel);
-            distanceLabel.setText(calculateDistance(user)+" miles");
-
-            //Add the image
-            MyProfilePictureView imageView = (MyProfilePictureView) v.findViewById(R.id.imageView3);
-            imageView.setImageBitmap(imageView.getRoundedBitmap(user.getProfilePicture()));
-
-            //On click listener for selection
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    placeMarkerOnMap(user);
-                }
-            });
-            return v;
         }
     }
 }

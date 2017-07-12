@@ -45,7 +45,7 @@ public class AddFriendsFragment extends Fragment {
         super.onAttach(context);
         setHasOptionsMenu(true);
         try {
-            activityCallBack = (OnUserSelected) context;
+            //activityCallBack = (OnUserSelected) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString()
                     + " must implement OnHeadlineSelectedListener");

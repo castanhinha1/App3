@@ -104,6 +104,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\activity_navigation.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_select_checkbox.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_select_checkbox.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
@@ -138,6 +142,14 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_contact_list_item.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_contact_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_group_list.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_group_list.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
@@ -180,6 +192,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_contact_list.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_contact_list.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_layout_tab_text.xml"
     },
@@ -212,6 +228,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\vertical_recycler_fast_scroller_layout.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\d444f2208da37d495c1601e5baae24d5e53394f0\\output\\res\\layout\\vertical_recycler_fast_scroller_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\95f865517be875a6a3020f35e4a265bd291c91bf\\output\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
@@ -226,6 +246,10 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\88895621a34685b1c966bad8ea556677059065f1\\output\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\section_indicator_with_title.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\d444f2208da37d495c1601e5baae24d5e53394f0\\output\\res\\layout\\section_indicator_with_title.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\video_capture.xml",
@@ -270,6 +294,10 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_row_layout.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\bcecf50c94704d9594fc655f503723d73d461ca0\\output\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_group_list_item.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_group_list_item.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\suggest_item.xml",
@@ -366,6 +394,10 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_contact_tab_layout.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_contact_tab_layout.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",

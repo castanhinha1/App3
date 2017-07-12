@@ -92,6 +92,11 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     Button logoutButton;
     boolean buttonState;
 
+    //Friends with location ListView
+    ListView friendsWithLocationListView;
+    FriendsWithLocationAdapter friendsWithLocationAdapter;
+
+
     public interface OnRowSelected{
         void onRowSelected(int position);
     }
@@ -136,6 +141,11 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         for (int i = 0; i < 2; i++){
             adapter.add(currentUser);
         }
+        //Friends with current location listview
+        friendsWithLocationListView = (ListView) rootView.findViewById(R.id.profile_friends_with_location_list_view);
+        friendsWithLocationAdapter = new FriendsWithLocationAdapter(getActivity());
+        friendsWithLocationListView.setAdapter(friendsWithLocationAdapter);
+
         //MapView
         mMapView = (MapView) rootView.findViewById(R.id.profileMapViewFragment);
         mMapView.onCreate(savedInstanceState);
@@ -189,6 +199,74 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
                     })
                     .setNegativeButton("No", null)
                     .show();
+        }
+    }
+
+
+    public class FriendsWithLocationAdapter extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener{
+        Context context;
+        private FriendsWithLocationAdapter(final Context context){
+            super(context, new ParseQueryAdapter.QueryFactory<User>(){
+                public ParseQuery<User> create() {
+                    ParseRelation<User> relation = currentUser.getRelation("client");
+                    ParseQuery<User> query = relation.getQuery();
+                    query.whereEqualTo("objectId", false);
+                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
+                    return query;
+                }
+            });
+            addOnQueryLoadListener(this);
+        }
+
+
+        @Override
+        public void onLoading() {
+            Log.i("AppInfo", "Loading");
+        }
+
+        @Override
+        public void onLoaded(List objects, Exception e) {
+            Log.i("AppInfo", "Loaded");
+        }
+
+        public String calculateDistance(User user) {
+            double distance = Math.round(user.getGeopoint().distanceInMilesTo(currentUser.getGeopoint()));
+            String distanceInMiles = String.valueOf(distance);
+            return distanceInMiles;
+        }
+
+
+        @Override
+        public View getItemView(final User user, View v, ViewGroup parent){
+            if (v == null){
+                v = View.inflate(getContext(), R.layout.list_layout_current_friends, null);
+            }
+            super.getItemView(user, v, parent);
+
+            //Add the title view
+            TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
+            nameTextView.setText(user.getFullName());
+
+            //Add the Location label
+            TextView location = (TextView) v.findViewById(R.id.current_client_object_id);
+            location.setText(user.getLocation());
+
+            //Add the distance label
+            TextView distanceLabel = (TextView) v.findViewById(R.id.distanceLabel);
+            distanceLabel.setText(calculateDistance(user)+" miles");
+
+            //Add the image
+            MyProfilePictureView imageView = (MyProfilePictureView) v.findViewById(R.id.imageView3);
+            imageView.setImageBitmap(imageView.getRoundedBitmap(user.getProfilePicture()));
+
+            //On click listener for selection
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Load user info
+                }
+            });
+            return v;
         }
     }
 

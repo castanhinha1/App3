@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_user_location.png"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_search.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\88895621a34685b1c966bad8ea556677059065f1\\output\\res\\drawable-xhdpi\\ic_action_search.png"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_navigation_arrow_back.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\55c2fa94d844542ce1c62ed1fdb21ac54028dd1f\\output\\res\\drawable-xhdpi\\ic_action_navigation_arrow_back.png"
     },
@@ -74,6 +78,10 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_back_button.png",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_back_button.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add_white_48dp.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\88895621a34685b1c966bad8ea556677059065f1\\output\\res\\drawable-xhdpi\\ic_person_add_white_48dp.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\messenger_bubble_large_white.png",

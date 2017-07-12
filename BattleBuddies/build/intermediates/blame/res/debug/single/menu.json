@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\menu\\cp_contact_picker.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\menu\\cp_contact_picker.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\menu\\menu_main.xml"
     },

@@ -188,6 +188,12 @@
     <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
+    <color name="contact_badge_line_dark">#ff000000</color>
+    <color name="contact_badge_line_light">#ffffffff</color>
+    <color name="contact_badge_overlay_dark">#aa888888</color>
+    <color name="contact_badge_overlay_light">#aa888888</color>
+    <color name="contact_badge_triangle_dark">#cc888888</color>
+    <color name="contact_badge_triangle_light">#cc1f1f1f</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -236,8 +242,6 @@
     <color name="place_autocomplete_search_hint">#BDBDBD</color>
     <color name="place_autocomplete_search_text">#212121</color>
     <color name="place_autocomplete_separator">#1F000000</color>
-    <color name="primary">#3f51b5</color>
-    <color name="primary_dark">#303f9f</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -257,6 +261,10 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="text_color_primary_dark">#FFFAFAFA</color>
+    <color name="text_color_primary_light">#FF212121</color>
+    <color name="text_color_secondary_dark">#FF9E9E9E</color>
+    <color name="text_color_secondary_light">#FFBDBDBD</color>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
     <color name="wallet_bright_foreground_holo_light">#ff000000</color>
@@ -268,6 +276,8 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
+    <declare-styleable name="AbsRecyclerViewFastScroller"><attr format="reference" name="rfs_fast_scroller_layout"/><attr format="color|reference" name="rfs_barColor"/><attr format="reference" name="rfs_barBackground"/><attr format="color|reference" name="rfs_handleColor"/><attr format="reference" name="rfs_handleBackground"/></declare-styleable>
+    <declare-styleable name="AbsSectionIndicator"><attr format="reference" name="rfs_section_indicator_layout"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
             
             <enum name="normal" value="0"/>
@@ -411,6 +421,7 @@
         </attr></declare-styleable>
     <declare-styleable name="ConstraintLayout_Layout"><attr name="android:orientation"/><attr name="android:minWidth"/><attr name="android:minHeight"/><attr name="android:maxWidth"/><attr name="android:maxHeight"/><attr name="layout_optimizationLevel"/><attr name="constraintSet"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/></declare-styleable>
     <declare-styleable name="ConstraintSet"><attr name="android:orientation"/><attr name="android:id"/><attr name="android:visibility"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_marginStart"/><attr name="android:layout_marginBottom"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginEnd"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/></declare-styleable>
+    <declare-styleable name="ContactPicker"><attr format="color|reference" name="cp_textColorPrimary"/><attr format="color|reference" name="cp_textColorSecondary"/><attr format="reference" name="cp_badgeLineColor"/><attr format="reference" name="cp_badgeTriangleColor"/><attr format="reference" name="cp_badgeOverlayColor"/><attr format="reference" name="cp_actionIconOK"/><attr format="reference" name="cp_actionIconCancel"/><attr format="reference" name="cp_actionIconCheckAll"/><attr format="reference" name="cp_actionIconSearch"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="reference" name="statusBarBackground"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout_Layout"><attr name="android:layout_gravity"/><attr format="string" name="layout_behavior"/><attr format="reference" name="layout_anchor"/><attr format="integer" name="layout_keyline"/><attr name="layout_anchorGravity">
             
@@ -612,6 +623,7 @@
 <enum name="index_entity_types" value="6"/>
 
 </attr></declare-styleable>
+    <declare-styleable name="SectionTitleIndicator"><attr format="color|reference" name="rfs_textColor"/><attr format="color|reference" name="rfs_backgroundColor"/></declare-styleable>
     <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
 <enum name="standard" value="0"/>
 
@@ -951,6 +963,12 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_height">68dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_icon_size">24dp</dimen>
     <dimen name="mr_controller_volume_group_list_max_height">288dp</dimen>
@@ -1040,6 +1058,10 @@
     <integer name="mr_controller_volume_group_list_fade_out_duration_ms">200</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <plurals name="cp_group_description">
+        <item quantity="one">(%1$d contact)</item>
+        <item quantity="other">(%1$d contacts)</item>
+    </plurals>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -1151,6 +1173,12 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="cp_actionmode_selected">%d selected</string>
+    <string name="cp_contact_tab_title">Contacts</string>
+    <string name="cp_group_tab_title">Groups</string>
+    <string name="cp_limit_reached">You can\'t pick more than %d contacts!</string>
+    <string name="cp_no_contacts">No Contacts</string>
+    <string name="cp_no_groups">No Groups</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="debug_menu_ad_information">Ad Information</string>
@@ -1165,8 +1193,6 @@
     </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello World!</string>
-    <string name="label_multiple_numbers">Multiple numbers</string>
-    <string name="label_search">Search</string>
     <string name="media_picker_camera">Camera</string>
     <string name="media_picker_cancel">Cancel</string>
     <string name="media_picker_gallery">Gallery</string>
@@ -2320,18 +2346,37 @@
 <item name="castPlayButtonDrawable">@drawable/cast_ic_mini_controller_play</item>
 <item name="castShowImageThumbnail">true</item>
 </style>
+    <style name="ContactPicker_Theme_Dark" parent="@style/Theme.AppCompat">
+        <item name="cp_textColorPrimary">@color/text_color_primary_dark</item>
+        <item name="cp_textColorSecondary">@color/text_color_secondary_dark</item>
+
+        <item name="cp_badgeLineColor">@color/contact_badge_line_dark</item>
+        <item name="cp_badgeTriangleColor">@color/contact_badge_triangle_dark</item>
+        <item name="cp_badgeOverlayColor">@color/contact_badge_overlay_dark</item>
+
+        <item name="cp_actionIconOK">@drawable/ic_done_white_24dp</item>
+        <item name="cp_actionIconCancel">@drawable/ic_close_white_24dp</item>
+        <item name="cp_actionIconCheckAll">@drawable/ic_apps_white_24dp</item>
+        <item name="cp_actionIconSearch">@drawable/ic_search_white_24dp</item>
+    </style>
+    <style name="ContactPicker_Theme_Light" parent="@style/Theme.AppCompat.Light">
+        <item name="cp_textColorPrimary">@color/text_color_primary_light</item>
+        <item name="cp_textColorSecondary">@color/text_color_secondary_light</item>
+
+        <item name="cp_badgeLineColor">@color/contact_badge_line_light</item>
+        <item name="cp_badgeTriangleColor">@color/contact_badge_triangle_light</item>
+        <item name="cp_badgeOverlayColor">@color/contact_badge_overlay_light</item>
+
+        <item name="cp_actionIconOK">@drawable/ic_done_black_24dp</item>
+        <item name="cp_actionIconCancel">@drawable/ic_close_black_24dp</item>
+        <item name="cp_actionIconCheckAll">@drawable/ic_apps_black_24dp</item>
+        <item name="cp_actionIconSearch">@drawable/ic_search_black_24dp</item>
+    </style>
     <style name="CustomCastTheme">
 <item name="castExpandedControllerStyle">@style/CastExpandedController</item>
 <item name="castIntroOverlayStyle">@style/CastIntroOverlay</item>
 <item name="castMiniControllerStyle">@style/CastMiniController</item>
 </style>
-    <style name="ListItem">
-        <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingRight">10dp</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-    </style>
     <style name="MSV_ImageButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>

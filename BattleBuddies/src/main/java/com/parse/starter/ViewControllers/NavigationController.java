@@ -1,9 +1,13 @@
 package com.parse.starter.ViewControllers;
 
+import android.Manifest;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +23,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
+import com.onegravity.contactpicker.contact.ContactDescription;
+import com.onegravity.contactpicker.contact.ContactSortOrder;
+import com.onegravity.contactpicker.core.ContactPickerActivity;
+import com.onegravity.contactpicker.picture.ContactPictureType;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
@@ -31,6 +39,7 @@ import FragmentControllers.ProfileFragment;
 
 public class NavigationController extends AppCompatActivity implements CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
+    private static final int GET_PHONE_NUMBER = 3007;
     private Toolbar toolbar;
     private PopupMenu mPopupMenu;
     Bundle savedInstanceState1;
@@ -82,8 +91,8 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
 
     @Override
     public void onAddUserClicked() {
-
-        FragmentManager fm = getFragmentManager();
+        
+        /*FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         if (findViewById(R.id.fragment_container) != null) {
             if (savedInstanceState1 != null) {
@@ -98,7 +107,7 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
                     .replace(R.id.fragment_container, addFriendsFragment)
                     .addToBackStack("firstFragment")
                     .commit();
-        }
+        }*/
     }
 
     @Override

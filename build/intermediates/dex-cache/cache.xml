@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="a332a2ba05ebefc1280bf46e0cd108f49dd31fb7">
+        sha1="c90ffb84604cd26426fb3ea6649f8129e55ac6b2">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1bc3ad85a85810a155d182699c04d1ce5f004f59\classes.dex" />
     </item>
     <item
@@ -165,6 +165,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Dylan Castanhinha\.android\build-cache\a44975a06b5c5669330aba234a7aa60eea44f4b1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="47ad5e855f2f53a8e91a381989d729a900982926">
+        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4a15f9368ffcd844ce68191574de9d27d28ec6a6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Dylan Castanhinha\.android\build-cache\e36dd7641eef24362e499f02bab45a708e4ff896\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -180,15 +189,6 @@
         revision="25.0.1"
         sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_59801850ddac4e792d911b7a108dba1c80c7714c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Dylan Castanhinha\.android\build-cache\88895621a34685b1c966bad8ea556677059065f1\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="a1cf9cadf5b9898394864e09db0749a2fa5c145b">
-        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0de42209ee4511b57f184f84bcf7d6eee9b3cbb2\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -570,6 +570,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Dylan Castanhinha\.android\build-cache\d444f2208da37d495c1601e5baae24d5e53394f0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="752bfaeaf44b9c4b63c98ceca421348a20ff10be">
+        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_789a2b65645b0e892e3d4bef323de68780c36818\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Dylan Castanhinha\.android\build-cache\2945bbd5867c343266abc46c909f9cc375781c1b\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -927,6 +936,15 @@
         revision="25.0.1"
         sha1="d0a843615f3b5fa3a080497709f5436696149a09">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\BattleBuddy\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_31555becadf5f310bdfd11310c7bea617831179a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dylan Castanhinha\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-3.0.0_65638693bed6a1a3742162a12d4351dace362fdf\classes.dex" />
     </item>
     <item
         is-multidex="true"

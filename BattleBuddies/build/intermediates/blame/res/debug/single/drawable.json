@@ -260,6 +260,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\bcecf50c94704d9594fc655f503723d73d461ca0\\output\\res\\drawable\\cast_ic_expanded_controller_pause.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\section_indicator_background_default_rounded.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\d444f2208da37d495c1601e5baae24d5e53394f0\\output\\res\\drawable\\section_indicator_background_default_rounded.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_rewind30.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\bcecf50c94704d9594fc655f503723d73d461ca0\\output\\res\\drawable\\cast_ic_expanded_controller_rewind30.xml"
     },
@@ -486,6 +490,10 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward30.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\bcecf50c94704d9594fc655f503723d73d461ca0\\output\\res\\drawable\\cast_ic_notification_forward30.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\fast_scroller_handle_rounded.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\d444f2208da37d495c1601e5baae24d5e53394f0\\output\\res\\drawable\\fast_scroller_handle_rounded.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_mute.xml",

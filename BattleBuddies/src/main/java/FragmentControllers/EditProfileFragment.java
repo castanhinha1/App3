@@ -57,7 +57,7 @@ public class EditProfileFragment extends Fragment {
         backButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
         backButton.setVisibility(View.INVISIBLE);
         Button doneButton = (Button) getActivity().findViewById(R.id.toolbar_right_button_text);
-        doneButton.setText("Done");
+        doneButton.setText("Save");
         doneButton.setOnClickListener(new DoneButtonClickListener());
 
         //Edit Details List View

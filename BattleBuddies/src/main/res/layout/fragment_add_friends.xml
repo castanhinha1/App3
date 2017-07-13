@@ -4,19 +4,6 @@
     android:id="@+id/trainer_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3a8f3e">
-
-    <android.support.v4.widget.SwipeRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/swipe_container_for_new_client"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/add_new_client_list_view" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+    android:background="@color/palette_darkwhite">
 
 </RelativeLayout>

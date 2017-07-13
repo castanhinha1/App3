@@ -86,7 +86,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     SwipeRefreshLayout swipeContainer;
     OnAddNewUserButtonClicked activityCallback;
     OnProfileButtonClicked activityCallback2;
-    AddFriendsFragment.OnUserSelected activityCallBack;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
     //Toolbar
@@ -138,6 +137,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         titleTextView.setText(currentUser.getFirstName() + "'s "+"Buddies");
         leftToolbarButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
         leftToolbarButton.setImageResource(R.drawable.ic_add_user_green);
+        leftToolbarButton.setVisibility(View.VISIBLE);
         leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());
         rightToolbarbutton = (ImageButton) getActivity().findViewById(R.id.toolbar_right_button);
         rightToolbarbutton.setImageResource(R.drawable.ic_action_action_search);

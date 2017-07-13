@@ -92,7 +92,7 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
     @Override
     public void onAddUserClicked() {
         
-        /*FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         if (findViewById(R.id.fragment_container) != null) {
             if (savedInstanceState1 != null) {
@@ -103,11 +103,11 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             AddFriendsFragment addFriendsFragment = new AddFriendsFragment();
             // Add the fragment to the 'fragment_container' FrameLayout
             fragmentTransaction
-                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right, R.animator.slide_in_right, R.animator.slide_out_left)
+                    .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
                     .replace(R.id.fragment_container, addFriendsFragment)
                     .addToBackStack("firstFragment")
                     .commit();
-        }*/
+        }
     }
 
     @Override

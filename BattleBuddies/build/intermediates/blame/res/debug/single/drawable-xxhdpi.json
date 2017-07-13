@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_edit_button_green.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xxhdpi\\ic_edit_button_green.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_add_user_green.png",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xxhdpi\\ic_add_user_green.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_edit_button_green.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xxhdpi\\ic_edit_button_green.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_edit_button.png",

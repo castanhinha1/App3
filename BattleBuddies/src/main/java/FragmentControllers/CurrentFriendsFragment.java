@@ -69,6 +69,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
 
     //MapView
     private GoogleMap googleMap;
+    private Marker marker;
     private GoogleApiClient mGoogleApiClient;
     private Location mLastLocation;
     private LocationRequest mLocationRequest;
@@ -347,11 +348,19 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         MarkerOptions markerOptions = new MarkerOptions().position(latLng);
         String titleStr = user.getFullName();  // add these two lines
         markerOptions.title(titleStr);
-        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(user.getProfilePicture()));
-        googleMap.addMarker(markerOptions);
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
-                (latLng, 12));
-
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(myProfilePictureView.getRoundedBitmap(user.getProfilePicture())));
+        if (marker != null) {
+            marker.remove();
+            marker = googleMap.addMarker(markerOptions);
+            marker.showInfoWindow();
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
+                    (latLng, 12));
+        } else {
+            marker = googleMap.addMarker(markerOptions);
+            marker.showInfoWindow();
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
+                    (latLng, 12));
+        }
     }
 
     protected void startLocationUpdates() {

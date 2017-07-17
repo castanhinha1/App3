@@ -80,17 +80,18 @@ MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Dylan Castanhi
 MERGED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.android\build-cache\56c006b921b27867422e2402cbe9723639bcea30\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.1gravity:android-contactpicker:1.3.2] C:\Users\Dylan Castanhinha\.android\build-cache\a44975a06b5c5669330aba234a7aa60eea44f4b1\output\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\dd01ba0eff7459522d40d54e6751a649fcbc35ca\output\AndroidManifest.xml:20:5-44
 MERGED from [xyz.danoz:recyclerviewfastscroller:0.1.3] C:\Users\Dylan Castanhinha\.android\build-cache\d444f2208da37d495c1601e5baae24d5e53394f0\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:20:5-43
+MERGED from [com.nex3z:toggle-button-group:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\3b01886921d66582e7d04e789435f2496e06f6b5\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:16:9-45
@@ -217,18 +218,21 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Dy
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Dylan Castanhinha\.android\build-cache\55c2fa94d844542ce1c62ed1fdb21ac54028dd1f\output\AndroidManifest.xml:11:5-20
 MERGED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.android\build-cache\56c006b921b27867422e2402cbe9723639bcea30\output\AndroidManifest.xml:14:5-33:19
 MERGED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:transition:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\dd01ba0eff7459522d40d54e6751a649fcbc35ca\output\AndroidManifest.xml:26:5-20
+MERGED from [com.nex3z:toggle-button-group:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\3b01886921d66582e7d04e789435f2496e06f6b5\output\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:40:9-41
+	android:supportsRtl
+		ADDED from [com.nex3z:toggle-button-group:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\3b01886921d66582e7d04e789435f2496e06f6b5\output\AndroidManifest.xml:14:9-35
 	android:allowBackup
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:38:9-35
 	android:icon
@@ -593,16 +597,16 @@ ADDED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.
 		ADDED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\.android\build-cache\56c006b921b27867422e2402cbe9723639bcea30\output\AndroidManifest.xml:30:17-67
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:transition:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\dd01ba0eff7459522d40d54e6751a649fcbc35ca\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:25:5-27:34
 	android:value
 		ADDED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:27:9-31

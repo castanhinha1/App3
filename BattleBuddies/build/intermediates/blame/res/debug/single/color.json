@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\color\\selector_marker_text.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\3b01886921d66582e7d04e789435f2496e06f6b5\\output\\res\\color\\selector_marker_text.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\b604ab2963a4674c2b700eed2a769316113c8b0b\\output\\res\\color\\common_google_signin_btn_tint.xml"
     },

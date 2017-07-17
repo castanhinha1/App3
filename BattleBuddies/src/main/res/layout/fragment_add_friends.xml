@@ -8,9 +8,12 @@
     android:background="@color/palette_darkwhite">
 
     <RelativeLayout
+        android:id="@+id/relativelayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/palette_lightwhite">
 
         <LinearLayout android:id="@+id/thumbnail"
             android:layout_width="wrap_content"
@@ -56,6 +59,56 @@
             android:id="@+id/add_friend_details_tv"
             android:text="Details"
             android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativelayout"
+        android:background="@color/palette_lightwhite"
+        android:layout_marginTop="5dp">
+
+        <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+            android:id="@+id/group_choices"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:tbgChildSpacing="auto"
+            app:tbgChildSpacingForLastRow="align"
+            app:tbgRowSpacing="8dp"
+            app:tbgCheckedButton="@+id/choice_a">
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/choice_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Hour"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/choice_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Hours"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/choice_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Day"/>
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/choice_d"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact"/>
+
+        </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
 
     </RelativeLayout>
 

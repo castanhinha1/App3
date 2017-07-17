@@ -4,14 +4,17 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.ParseException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +22,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.nex3z.togglebuttongroup.SingleSelectToggleGroup;
 import com.onegravity.contactpicker.contact.Contact;
 import com.onegravity.contactpicker.contact.ContactDescription;
 import com.onegravity.contactpicker.contact.ContactSortOrder;
 import com.onegravity.contactpicker.core.ContactPickerActivity;
 import com.onegravity.contactpicker.group.Group;
 import com.onegravity.contactpicker.picture.ContactPictureType;
+import com.parse.FindCallback;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.parse.starter.R;
 
 import java.io.IOException;
@@ -33,6 +42,7 @@ import java.util.List;
 import ConfigClasses.MyProfilePictureView;
 
 import static com.parse.starter.R.style.AppTheme;
+import static io.nlopez.smartlocation.location.providers.LocationGooglePlayServicesProvider.REQUEST_CHECK_SETTINGS;
 
 
 /**
@@ -42,10 +52,13 @@ import static com.parse.starter.R.style.AppTheme;
 public class AddFriendsFragment extends Fragment {
 
     private static final int REQUEST_CONTACT = 3007;
+    int lengthOfTime;
     TextView nametv;
     TextView phonetv;
     TextView detailstv;
     MyProfilePictureView profilepictureview;
+    SingleSelectToggleGroup singleSelectToggleGroup;
+    Contact selectedContact;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,7 +66,7 @@ public class AddFriendsFragment extends Fragment {
         getActivity().invalidateOptionsMenu();
         //Toolbar top
         final TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
-        titleTextView.setText("Local Clients");
+        titleTextView.setText("Provide Location");
         ImageButton backButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
         backButton.setVisibility(View.INVISIBLE);
         Button cancelButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
@@ -70,6 +83,8 @@ public class AddFriendsFragment extends Fragment {
         phonetv = (TextView) rootView.findViewById(R.id.add_friend_phonenumber_tv);
         detailstv = (TextView) rootView.findViewById(R.id.add_friend_details_tv);
         profilepictureview = (MyProfilePictureView) rootView.findViewById(R.id.add_friend_photo);
+        singleSelectToggleGroup = (SingleSelectToggleGroup) rootView.findViewById(R.id.group_choices);
+        singleSelectToggleGroup.setOnCheckedChangeListener(new SelectToggleListener());
 
         getContactPickerr();
 
@@ -121,6 +136,8 @@ public class AddFriendsFragment extends Fragment {
     }
 
     public boolean verifyContactUsesApp(Contact contact){
+        boolean isUser;
+        //return isUser;
         return false;
     }
 
@@ -128,7 +145,11 @@ public class AddFriendsFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
+            if (verifyContactUsesApp(selectedContact)) {
 
+            } else{
+                //Send link for user to use app
+            }
         }
     }
 
@@ -136,6 +157,31 @@ public class AddFriendsFragment extends Fragment {
         @Override
         public void onClick(View v) {
             getFragmentManager().popBackStack();
+        }
+    }
+
+    private class SelectToggleListener implements SingleSelectToggleGroup.OnCheckedChangeListener{
+
+        @Override
+        public void onCheckedChanged(SingleSelectToggleGroup group, int checkedId) {
+            switch (checkedId) {
+                case 2131755320:
+                    //1 Hour
+                    lengthOfTime = 0;
+                    break;
+                case 2131755321:
+                    //4 Hours
+                    lengthOfTime = 1;
+                    break;
+                case 2131755322:
+                    //1 Day
+                    lengthOfTime = 2;
+                    break;
+                case 2131755323:
+                    //Emergency Contact
+                    lengthOfTime = 3;
+                    break;
+            }
         }
     }
 
@@ -153,6 +199,7 @@ public class AddFriendsFragment extends Fragment {
                 // process the contacts...
                 try {
                     setContactInView(contact);
+                    selectedContact = contact;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

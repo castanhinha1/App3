@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/trainer_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/palette_darkwhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp">
+
+            <ConfigClasses.MyProfilePictureView
+                android:id="@+id/add_friend_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/com_facebook_profile_picture_blank_square" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_friend_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/add_friend_phonenumber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_friend_name_tv"
+            android:textSize="12sp"
+            android:text="Phone Number"
+            android:layout_toRightOf="@+id/thumbnail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/add_friend_details_tv"
+            android:text="Details"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

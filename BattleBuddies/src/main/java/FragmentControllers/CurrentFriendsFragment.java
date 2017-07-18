@@ -213,16 +213,22 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
             public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
                 mMap.getUiSettings().setZoomControlsEnabled(true);
-
-                // For dropping a marker at a point on the Map
-                LatLng currentUserLocation = new LatLng(currentUser.getGeopoint().getLatitude(), currentUser.getGeopoint().getLongitude());
-
-                // For zooming automatically to the location of the marker
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(currentUserLocation).zoom(12).build();
-                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                LatLng currentUserLocation = null;
+                if (currentUser.getGeopoint() != null) {
+                    // For dropping a marker at a point on the Map
+                    currentUserLocation = new LatLng(currentUser.getGeopoint().getLatitude(), currentUser.getGeopoint().getLongitude());
+                }else {
+                    createLocationRequest();
+                }
+                if (currentUserLocation != null) {
+                    // For zooming automatically to the location of the marker
+                    CameraPosition cameraPosition = new CameraPosition.Builder().target(currentUserLocation).zoom(12).build();
+                    googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                } else {
+                    createLocationRequest();
+                }
             }
         });
-
         createLocationRequest();
         return rootView;
     }

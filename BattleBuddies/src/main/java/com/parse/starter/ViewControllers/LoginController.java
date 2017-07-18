@@ -100,11 +100,6 @@ public class LoginController extends ActionBarActivity {
         }
     }
 
-    public void goToNavigationScreen() {
-        Intent intent = new Intent(getApplicationContext(), NavigationController.class);
-        startActivity(intent);
-    }
-
     private void getUserDetailsFromFB() {
         GraphRequest request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
             @Override
@@ -184,8 +179,10 @@ public class LoginController extends ActionBarActivity {
         currentUser.setFirstName(firstname);
         currentUser.setLastName(lastname);
         if (imageData != null) {
+            Log.i("AppInfo", "Image data not null");
             currentUser.setProfilePicture(imageData);
         } else {
+            Log.i("AppInfo", "Image data null");
             Bitmap blankbitmap = BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.com_facebook_profile_picture_blank_square);
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             blankbitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
@@ -197,12 +194,18 @@ public class LoginController extends ActionBarActivity {
             @Override
             public void done(ParseException e) {
                 if (e == null) {
+                    Log.i("AppInfo", "Going to navigation screen");
                     goToNavigationScreen();
                 } else {
                     Log.i("AppInfo", "Message: "+e.getMessage());
                 }
             }
         });
+    }
+
+    public void goToNavigationScreen() {
+        Intent intent = new Intent(getApplicationContext(), NavigationController.class);
+        startActivity(intent);
     }
 
     @Override

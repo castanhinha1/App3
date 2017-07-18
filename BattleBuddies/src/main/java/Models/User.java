@@ -1,5 +1,6 @@
 package Models;
 
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.location.Location;
@@ -133,10 +134,14 @@ public class User extends ParseUser {
     public Bitmap getProfilePicture(){
         Bitmap bmp = null;
         ParseFile profilePicture = getProfilePictureFile();
-        try {
-            bmp = BitmapFactory.decodeStream(profilePicture.getDataStream());
-        } catch (ParseException e) {
-            e.printStackTrace();
+        if (profilePicture != null) {
+            try {
+                bmp = BitmapFactory.decodeStream(profilePicture.getDataStream());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        } else {
+            bmp = BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.com_facebook_profile_picture_blank_square);
         }
         return bmp;
     }

@@ -9,8 +9,10 @@
 package com.parse.starter.ViewControllers;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -47,6 +49,8 @@ import java.util.List;
 
 import Models.User;
 
+import static android.R.attr.bitmap;
+
 public class LoginController extends ActionBarActivity {
 
     byte[] imageData;
@@ -65,35 +69,35 @@ public class LoginController extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_view);
-
+        if (ParseUser.getCurrentUser() != null) {
+            goToNavigationScreen();
+        }
         usernamefield = (EditText) findViewById(R.id.username);
         passwordfield = (EditText) findViewById(R.id.password);
         facebookbutton = (Button) findViewById(R.id.facebook_button);
-        if (ParseUser.getCurrentUser() != null) {
-            Log.i("AppInfo", "ObjectID: "+ParseUser.getCurrentUser().getObjectId());
-            goToNavigationScreen();
-        }
-        facebookbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginController.this, mPermissions, new LogInCallback() {
-                    @Override
-                    public void done(ParseUser user, ParseException e) {
-                        if (user == null && e != null) {
-                            Log.i("AppInfo", e.getMessage());
-                        } else if (user.isNew()) {
-                            currentUser = (User) ParseUser.getCurrentUser();
-                            currentUser.setTrainerStatus(false);
-                            getUserDetailsFromFB();
-                        } else {
-                            currentUser = (User) ParseUser.getCurrentUser();
-                            getUserDetailsFromParse();
-                        }
-                    }
-                });
-            }
-        });
+        facebookbutton.setOnClickListener(new FacebookButtonClicked());
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
+    }
+
+    private class FacebookButtonClicked implements Button.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginController.this, mPermissions, new LogInCallback() {
+                @Override
+                public void done(ParseUser user, ParseException e) {
+                    if (user == null && e != null) {
+                        Log.i("AppInfo", e.getMessage());
+                    } else if (user.isNew()) {
+                        currentUser = (User) ParseUser.getCurrentUser();
+                        getUserDetailsFromFB();
+                    } else {
+                        currentUser = (User) ParseUser.getCurrentUser();
+                        goToNavigationScreen();
+                    }
+                }
+            });
+        }
     }
 
     public void goToNavigationScreen() {
@@ -160,9 +164,16 @@ public class LoginController extends ActionBarActivity {
             Log.i("AppInfo", e.getMessage());
         }
         //Convert Bitmap to Byte Array for Storage in Parse
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        imageArray = stream.toByteArray();
+        if (bmp != null) {
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            imageArray = stream.toByteArray();
+        } else {
+            Bitmap blankbitmap = BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.com_facebook_profile_picture_blank_square);
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            blankbitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            imageArray = stream.toByteArray();
+        }
         return imageArray;
     }
 
@@ -172,7 +183,15 @@ public class LoginController extends ActionBarActivity {
         currentUser.setLocation(location);
         currentUser.setFirstName(firstname);
         currentUser.setLastName(lastname);
-        currentUser.setProfilePicture(imageData);
+        if (imageData != null) {
+            currentUser.setProfilePicture(imageData);
+        } else {
+            Bitmap blankbitmap = BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.com_facebook_profile_picture_blank_square);
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            blankbitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+            byte[] imageData = stream.toByteArray();
+            currentUser.setProfilePicture(imageData);
+        }
         //Finally save all the user details
         currentUser.saveInBackground(new SaveCallback() {
             @Override
@@ -184,11 +203,6 @@ public class LoginController extends ActionBarActivity {
                 }
             }
         });
-    }
-
-    private void getUserDetailsFromParse() {
-        Toast.makeText(LoginController.this, "Welcome back "+currentUser.getFirstName()+"!", Toast.LENGTH_SHORT).show();
-        goToNavigationScreen();
     }
 
     @Override
@@ -215,25 +229,5 @@ public class LoginController extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-    public void onLoginButtonClick(View view) {
-        //Check to make sure user is not already logged in
-        ParseUser.logInInBackground(String.valueOf(usernamefield.getText()), String.valueOf(passwordfield.getText()), new LogInCallback() {
-
-            @Override
-            public void done(ParseUser user, ParseException e) {
-                if (e == null) {
-                    goToNavigationScreen();
-                } else {
-                    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
-    public void onSignUpButtonClick(View view) {
-        //Move to Sign Up Activity
-        Intent intent = new Intent(this, SignUpController.class);
-        startActivity(intent);
     }
 }

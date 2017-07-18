@@ -91,7 +91,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.parse.starter.ViewControllers.SignUpController" />
         <activity android:name="com.parse.starter.ViewControllers.NavigationController" />
 
         <meta-data

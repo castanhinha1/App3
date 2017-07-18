@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:9:1-84:12
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:9:1-83:12
 	package
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:11:5-32
 		INJECTED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml
@@ -166,7 +166,7 @@ ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\Andr
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:26:22-69
 application
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:36:5-82:19
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:36:5-81:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.5.0] C:\Users\Dylan Castanhinha\.android\build-cache\1cb63630e49237d6be0ef5547a09e62ee61eb82b\output\AndroidManifest.xml:28:5-20
 MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:18:5-28:19
 MERGED from [com.parse:parsefacebookutils-v4-android:1.10.3] C:\Users\Dylan Castanhinha\.android\build-cache\3a2b82366e8715abf927f0ac8da775b6691cfe88\output\AndroidManifest.xml:20:5-20
@@ -303,20 +303,16 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:73:17-77
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:73:27-74
-activity#com.parse.starter.ViewControllers.SignUpController
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:76:9-70
-	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:76:19-67
 activity#com.parse.starter.ViewControllers.NavigationController
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:77:9-74
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:76:9-74
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:77:19-71
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:76:19-71
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:78:9-80:55
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:77:9-79:55
 	android:value
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:80:13-52
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:79:13-52
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:79:13-58
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:78:13-58
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
 ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:5-98
 	android:name

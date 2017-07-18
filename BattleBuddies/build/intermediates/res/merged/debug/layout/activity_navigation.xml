@@ -53,12 +53,13 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginRight="5dp">
 
-                <ConfigClasses.MyProfilePictureView
+
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_picture_navbar"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_gravity="center_vertical">
-                </ConfigClasses.MyProfilePictureView>
+                    android:layout_gravity="center_vertical"
+                    app:civ_border_color="#FF000000"/>
 
             </LinearLayout>
 

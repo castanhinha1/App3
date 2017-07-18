@@ -35,9 +35,9 @@ public class WeightManagementMain extends Application {
 
     // Add your initialization code here
     Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-                    .applicationId("ryansapp18348293fhew9hfs239q83")
-                    .clientKey(null)
-                    .server("https://ryansapp1.herokuapp.com/parse/")
+                    .applicationId("4372hr8vnr2nvwh78h4w8")
+                    .clientKey("gtvu83htw437hbv8745vh45wv")
+                    .server("https://parseapi.back4app.com/")
     .build()
     );
 

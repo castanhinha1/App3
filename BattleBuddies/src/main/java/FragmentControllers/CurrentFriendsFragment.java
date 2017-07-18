@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,6 +26,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.facebook.login.widget.ProfilePictureView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -62,6 +65,7 @@ import java.util.List;
 import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
 import Models.User;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -94,9 +98,10 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     ImageButton rightToolbarbutton;
     //NavBar
     BottomNavigationView bottomNavigationView;
-    MyProfilePictureView myProfilePictureView;
+    CircleImageView myProfilePictureView;
     TextView nameLabel;
     TextView locationLabel;
+    Bitmap profileBitmap;
 
 
 
@@ -182,10 +187,11 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         //NavBar
         bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setOnClickListener(new BottomNavClickListener());
-        myProfilePictureView = (MyProfilePictureView) getActivity().findViewById(R.id.profile_picture_navbar);
+        myProfilePictureView = (CircleImageView) getActivity().findViewById(R.id.profile_picture_navbar);
         nameLabel = (TextView) getActivity().findViewById(R.id.nameLabel);
         locationLabel = (TextView) getActivity().findViewById(R.id.locationLabel);
-        myProfilePictureView.setImageBitmap(myProfilePictureView.getRoundedBitmap(currentUser.getProfilePicture()));
+        //myProfilePictureView.setImageBitmap(myProfilePictureView.getRoundedBitmap(currentUser.getProfilePicture()));
+        new GetPhotoAsync().execute();
         nameLabel.setText(currentUser.getFullName());
         locationLabel.setText(currentUser.getLocation());
 
@@ -233,6 +239,18 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         return rootView;
     }
 
+    class GetPhotoAsync extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            profileBitmap = currentUser.getProfilePicture();
+            return null;
+        }
+        @Override
+        protected void onPostExecute(String s){
+            myProfilePictureView.setImageBitmap(profileBitmap);
+        }
+    }
 
 
     private class BottomNavClickListener implements BottomNavigationView.OnClickListener{
@@ -354,7 +372,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         MarkerOptions markerOptions = new MarkerOptions().position(latLng);
         String titleStr = user.getFullName();  // add these two lines
         markerOptions.title(titleStr);
-        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(myProfilePictureView.getRoundedBitmap(user.getProfilePicture())));
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(user.getProfilePicture()));
         if (marker != null) {
             marker.remove();
             marker = googleMap.addMarker(markerOptions);

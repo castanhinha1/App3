@@ -18,10 +18,10 @@ public class Relation extends ParseObject {
     }
 
     public User getIsFollowed() {
-        return (User) getParseUser("followed");
+        return (User) getParseUser("isFollowed");
     }
     public void setIsFollowed(User value) {
-        put("followed", value);
+        put("isFollowed", value);
     }
 
 }

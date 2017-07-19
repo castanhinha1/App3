@@ -22,12 +22,13 @@
             android:layout_alignParentLeft="true"
             android:layout_marginRight="5dp">
 
-            <ConfigClasses.MyProfilePictureView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/add_friend_photo"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/com_facebook_profile_picture_blank_square" />
+                app:srcCompat="@drawable/com_facebook_profile_picture_blank_square"
+                app:civ_border_color="#FF000000"/>
 
         </LinearLayout>
 

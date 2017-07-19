@@ -38,7 +38,7 @@ import FragmentControllers.EditProfileFragment;
 import FragmentControllers.ProfileFragment;
 import FragmentControllers.SearchForFriends;
 
-public class NavigationController extends AppCompatActivity implements CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
+public class NavigationController extends AppCompatActivity implements SearchForFriends.OnUserSelected, CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
     private static final int GET_PHONE_NUMBER = 3007;
     private Toolbar toolbar;
@@ -92,7 +92,6 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
 
     @Override
     public void onAddUserClicked() {
-        
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         if (findViewById(R.id.fragment_container) != null) {
@@ -115,6 +114,30 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
             fragmentTransaction
                     .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
                     .replace(R.id.fragment_container, searchForFriends)
+                    .addToBackStack("firstFragment")
+                    .commit();
+        }
+    }
+
+    @Override
+    public void onUserSelected(String userId) {
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        if (findViewById(R.id.fragment_container) != null) {
+            if (savedInstanceState1 != null) {
+                return;
+            }
+
+            // Create a new Fragment to be placed in the activity layout
+            AddFriendsFragment addFriendsFragment = new AddFriendsFragment();
+            Bundle arguments = new Bundle();
+            arguments.putString("userid", userId);
+            addFriendsFragment.setArguments(arguments);
+            // Add the fragment to the 'fragment_container' FrameLayout
+            fragmentTransaction
+                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right, R.animator.slide_in_right, R.animator.slide_out_left)
+                    .replace(R.id.fragment_container, addFriendsFragment)
                     .addToBackStack("firstFragment")
                     .commit();
         }
@@ -160,6 +183,8 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
 
         }
     }
+
+
 
 
     private class MenuButtonClickListener implements ImageButton.OnClickListener{

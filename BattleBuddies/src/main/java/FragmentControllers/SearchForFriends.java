@@ -40,6 +40,24 @@ public class SearchForFriends extends Fragment {
     SwipeRefreshLayout swipeRefreshLayout;
     String querySearch = "0";
 
+    OnUserSelected activityCallBack;
+
+    public interface OnUserSelected {
+        public void onUserSelected(String userId);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        setHasOptionsMenu(true);
+        try {
+            activityCallBack = (OnUserSelected) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement OnUserSelected");
+        }
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootview = inflater.inflate(R.layout.fragment_search_for_friends, container, false);
@@ -156,7 +174,7 @@ public class SearchForFriends extends Fragment {
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    activityCallBack.onUserSelected(user.getObjectId());
                 }
             });
             return v;

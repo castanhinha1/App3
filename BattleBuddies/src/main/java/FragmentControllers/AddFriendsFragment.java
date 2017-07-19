@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.nex3z.togglebuttongroup.SingleSelectToggleGroup;
 import com.parse.GetCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -58,10 +59,11 @@ public class AddFriendsFragment extends Fragment {
         final TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText("Provide Location To");
         ImageButton backButton = (ImageButton) getActivity().findViewById(R.id.toolbar_left_button);
-        backButton.setVisibility(View.INVISIBLE);
+        backButton.setImageResource(R.drawable.ic_back_button);
+        backButton.setVisibility(View.VISIBLE);
+        backButton.setOnClickListener(new CancelButtonListener());
         Button cancelButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
-        cancelButton.setText("Cancel");
-        cancelButton.setOnClickListener(new CancelButtonListener());
+        cancelButton.setVisibility(View.INVISIBLE);
         Button sendButton = (Button) getActivity().findViewById(R.id.toolbar_right_button_text);
         sendButton.setVisibility(View.VISIBLE);
         sendButton.setText("Send");
@@ -134,6 +136,10 @@ public class AddFriendsFragment extends Fragment {
                     FollowTable followTable = new FollowTable();
                     followTable.setFollowing(selectedUser);
                     followTable.setIsFollowed(currentUser);
+                    ParseACL acl = new ParseACL();
+                    acl.setPublicReadAccess(true);
+                    acl.setPublicWriteAccess(true);
+                    followTable.setACL(acl);
                     switch (lengthOfTime) {
                         case 0:
                             Calendar cal = Calendar.getInstance(); // creates calendar
@@ -150,7 +156,7 @@ public class AddFriendsFragment extends Fragment {
                         case 2:
                             Calendar cal3 = Calendar.getInstance(); // creates calendar
                             cal3.setTime(new Date()); // sets calendar time/date
-                            cal3.add(Calendar.HOUR_OF_DAY, 24); // adds 4 hour
+                            cal3.add(Calendar.HOUR_OF_DAY, 24); // adds 1 day
                             followTable.setExpirationDate(cal3.getTime());
                             break;
                         case 3:
@@ -160,7 +166,9 @@ public class AddFriendsFragment extends Fragment {
                         @Override
                         public void done(ParseException e) {
                             if (e == null) {
-                                Log.i("AppInfo", "Follow table saved");
+                                //Popback twice to go to home screen
+                                getFragmentManager().popBackStack();
+                                getFragmentManager().popBackStack();
                             } else {
                                 Log.i("AppInfo", e.getMessage());
                             }

@@ -50,6 +50,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
@@ -60,10 +63,13 @@ import com.parse.starter.R;
 import net.cachapa.expandablelayout.ExpandableLayout;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
+import Models.FollowTable;
 import Models.User;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -92,6 +98,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     OnProfileButtonClicked activityCallback2;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
+    ArrayList<String> followingIds;
     //Toolbar
     Toolbar toolbar;
     ImageButton leftToolbarButton;
@@ -142,36 +149,8 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         leftToolbarButton.setVisibility(View.VISIBLE);
         leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());
         rightToolbarbutton = (ImageButton) getActivity().findViewById(R.id.toolbar_right_button);
-        rightToolbarbutton.setImageResource(R.drawable.ic_action_action_search);
-        rightToolbarbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MaterialSearchView searchView = new MaterialSearchView(getActivity());
-                searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
-                    @Override
-                    public void onSearchViewShown() {
+        rightToolbarbutton.setVisibility(View.INVISIBLE);
 
-                    }
-
-                    @Override
-                    public void onSearchViewClosed() {
-
-                    }
-                });
-
-                searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-                    @Override
-                    public boolean onQueryTextSubmit(String query) {
-                        return false;
-                    }
-
-                    @Override
-                    public boolean onQueryTextChange(String newText) {
-                        return false;
-                    }
-                });
-            }
-        });
         //ListView that shows friends sharing location with you
         View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
@@ -254,7 +233,8 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
 
         @Override
         public void onClick(View v) {
-            activityCallback2.onProfileButtonClicked();
+            findPeopleFollowing();
+            //activityCallback2.onProfileButtonClicked();
         }
     }
 
@@ -474,6 +454,27 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         }
     }
 
+    public ArrayList<String> findPeopleFollowing(){
+        final ArrayList<String> followingUserIds = null;
+        ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
+        query.whereNotEqualTo("isFollowed", currentUser);
+        query.whereEqualTo("following", currentUser);
+        query.findInBackground(new FindCallback<FollowTable>() {
+            @Override
+            public void done(List<FollowTable> objects, ParseException e) {
+                if (objects.size() != 0){
+                    for (int i = 0; i < objects.size(); i++){
+                        followingUserIds.add(i, objects.get(i).getFollowing().getObjectId());
+                    }
+                } else {
+                    Log.i("AppInfo", "coming here");
+                    //Blank profile add
+                }
+            }
+        });
+        return followingUserIds;
+    }
+
 
     private class CurrentClients extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener {
         Context context;
@@ -482,9 +483,12 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
                public ParseQuery<User> create() {
                    ParseRelation<User> relation = currentUser.getRelation("client");
                    ParseQuery<User> query = relation.getQuery();
-                   query.whereEqualTo("objectId", false);
+                   //query.whereEqualTo("objectId", false);
+                   query.whereContainedIn("objectId", findPeopleFollowing());
                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
+
                    return query;
+
                }
             });
             addOnQueryLoadListener(this);

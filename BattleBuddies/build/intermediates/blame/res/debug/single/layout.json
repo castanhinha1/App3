@@ -200,6 +200,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_search_for_friends.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\fragment_search_for_friends.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\layout\\messenger_button_send_white_large.xml"
     },
@@ -310,6 +314,10 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\list_layout_search_friends.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\list_layout_search_friends.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cast_mini_controller.xml",

@@ -36,6 +36,7 @@ import FragmentControllers.AddFriendsFragment;
 import FragmentControllers.CurrentFriendsFragment;
 import FragmentControllers.EditProfileFragment;
 import FragmentControllers.ProfileFragment;
+import FragmentControllers.SearchForFriends;
 
 public class NavigationController extends AppCompatActivity implements CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
@@ -99,12 +100,21 @@ public class NavigationController extends AppCompatActivity implements CurrentFr
                 return;
             }
 
-            // Create a new Fragment to be placed in the activity layout
+            /*// Create a new Fragment to be placed in the activity layout
             AddFriendsFragment addFriendsFragment = new AddFriendsFragment();
             // Add the fragment to the 'fragment_container' FrameLayout
             fragmentTransaction
                     .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
                     .replace(R.id.fragment_container, addFriendsFragment)
+                    .addToBackStack("firstFragment")
+                    .commit();*/
+
+            // Create a new Fragment to be placed in the activity layout
+            SearchForFriends searchForFriends = new SearchForFriends();
+            // Add the fragment to the 'fragment_container' FrameLayout
+            fragmentTransaction
+                    .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
+                    .replace(R.id.fragment_container, searchForFriends)
                     .addToBackStack("firstFragment")
                     .commit();
         }

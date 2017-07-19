@@ -1,14 +1,21 @@
 package Models;
 
+import com.parse.Parse;
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
+
+import java.util.Date;
 
 /**
  * Created by Dylan Castanhinha on 4/12/2017.
  */
 
-@ParseClassName("Relation")
-public class Relation extends ParseObject {
+@ParseClassName("FollowTable")
+public class FollowTable extends ParseObject {
+
+    public FollowTable() {
+        super();
+    }
 
     public User getFollowing() {
         return (User) getParseUser("following");
@@ -22,6 +29,13 @@ public class Relation extends ParseObject {
     }
     public void setIsFollowed(User value) {
         put("isFollowed", value);
+    }
+
+    public Date getExpirationDate(){
+        return (Date) get("expirationDate");
+    }
+    public void setExpirationDate(Date value){
+        put("expirationDate", value);
     }
 
 }

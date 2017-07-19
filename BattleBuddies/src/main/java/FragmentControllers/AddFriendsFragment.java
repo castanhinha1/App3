@@ -1,23 +1,8 @@
 package FragmentControllers;
 
-import android.Manifest;
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Fragment;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.provider.MediaStore;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,32 +12,20 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.nex3z.togglebuttongroup.SingleSelectToggleGroup;
-import com.onegravity.contactpicker.contact.Contact;
-import com.onegravity.contactpicker.contact.ContactDescription;
-import com.onegravity.contactpicker.contact.ContactSortOrder;
-import com.onegravity.contactpicker.core.ContactPickerActivity;
-import com.onegravity.contactpicker.group.Group;
-import com.onegravity.contactpicker.picture.ContactPictureType;
-import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
-import com.parse.ParseQueryAdapter;
-import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
-import com.terrakok.phonematter.PhoneFormat;
 
-import java.io.IOException;
-import java.util.List;
+import java.util.Calendar;
+import java.util.Date;
 
-import ConfigClasses.MyProfilePictureView;
-import ConfigClasses.ParseAdapterCustomList;
+import Models.FollowTable;
 import Models.User;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static android.R.attr.format;
 
 
 /**
@@ -69,6 +42,7 @@ public class AddFriendsFragment extends Fragment {
     SingleSelectToggleGroup singleSelectToggleGroup;
     User currentUser;
     User selectedUser;
+    boolean currentlyFollowing;
 
 
 
@@ -102,6 +76,7 @@ public class AddFriendsFragment extends Fragment {
         profilepictureview = (CircleImageView) rootView.findViewById(R.id.add_friend_photo);
         singleSelectToggleGroup = (SingleSelectToggleGroup) rootView.findViewById(R.id.group_choices);
         singleSelectToggleGroup.setOnCheckedChangeListener(new SelectToggleListener());
+        lengthOfTime = 0;
 
         getContactDetails(selectedUserid);
 
@@ -128,23 +103,70 @@ public class AddFriendsFragment extends Fragment {
 
     }
 
+    public boolean areUsersCurrentlyFollowing(){
+        ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
+        query.whereEqualTo("following", selectedUser);
+        query.whereEqualTo("isFollowed", currentUser);
+        query.getFirstInBackground(new GetCallback<FollowTable>() {
+            @Override
+            public void done(FollowTable object, ParseException e) {
+                if (object != null && e == null){
+                    Log.i("AppInfo", "Currently Following: ");
+                    Date date = object.getCreatedAt();
+                    currentlyFollowing = true;
+                } else{
+                    Log.i("AppInfo", "Not following");
+                    currentlyFollowing = false;
+                }
+            }
+        });
+        return currentlyFollowing;
+    }
+
     private class SendButtonClickListener implements Button.OnClickListener {
 
         @Override
         public void onClick(View v) {
             if (selectedUser != null) {
-                ParseRelation<User> relation = currentUser.getRelation("following");
-                relation.add(selectedUser);
-                currentUser.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e == null){
-                            Log.i("AppInfo", "user relation saved");
-                        } else {
-                            Log.i("AppInfo", e.getMessage());
-                        }
+                if (areUsersCurrentlyFollowing()) {
+                    Log.i("AppInfo", "Users are already following eachother");
+                } else {
+                    FollowTable followTable = new FollowTable();
+                    followTable.setFollowing(selectedUser);
+                    followTable.setIsFollowed(currentUser);
+                    switch (lengthOfTime) {
+                        case 0:
+                            Calendar cal = Calendar.getInstance(); // creates calendar
+                            cal.setTime(new Date()); // sets calendar time/date
+                            cal.add(Calendar.HOUR_OF_DAY, 1); // adds one hour
+                            followTable.setExpirationDate(cal.getTime());
+                            break;
+                        case 1:
+                            Calendar cal2 = Calendar.getInstance(); // creates calendar
+                            cal2.setTime(new Date()); // sets calendar time/date
+                            cal2.add(Calendar.HOUR_OF_DAY, 4); // adds 4 hour
+                            followTable.setExpirationDate(cal2.getTime());
+                            break;
+                        case 2:
+                            Calendar cal3 = Calendar.getInstance(); // creates calendar
+                            cal3.setTime(new Date()); // sets calendar time/date
+                            cal3.add(Calendar.HOUR_OF_DAY, 24); // adds 4 hour
+                            followTable.setExpirationDate(cal3.getTime());
+                            break;
+                        case 3:
+                            break;
                     }
-                });
+                    followTable.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                Log.i("AppInfo", "Follow table saved");
+                            } else {
+                                Log.i("AppInfo", e.getMessage());
+                            }
+                        }
+                    });
+                }
             } else {
                 getFragmentManager().popBackStack();
             }

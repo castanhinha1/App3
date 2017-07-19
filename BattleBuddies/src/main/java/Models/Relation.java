@@ -10,18 +10,18 @@ import com.parse.ParseObject;
 @ParseClassName("Relation")
 public class Relation extends ParseObject {
 
-    public User getTrainer() {
-        return (User) getParseUser("trainer");
+    public User getFollowing() {
+        return (User) getParseUser("following");
     }
-    public void setTrainer(User value) {
-        put("trainer", value);
+    public void setFollowing(User value) {
+        put("following", value);
     }
 
-    public User getClient() {
-        return (User) getParseUser("client");
+    public User getIsFollowed() {
+        return (User) getParseUser("followed");
     }
-    public void setClient(User value) {
-        put("client", value);
+    public void setIsFollowed(User value) {
+        put("followed", value);
     }
 
 }

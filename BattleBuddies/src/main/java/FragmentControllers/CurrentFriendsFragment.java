@@ -103,9 +103,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     TextView locationLabel;
     Bitmap profileBitmap;
 
-
-
-
     public interface OnAddNewUserButtonClicked {
         void onAddUserClicked();
     }

@@ -56,12 +56,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_stop_grey600_48.png",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\b604ab2963a4674c2b700eed2a769316113c8b0b\\output\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_white_36.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\bcecf50c94704d9594fc655f503723d73d461ca0\\output\\res\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_white_36.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\powered_by_google_dark.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\95f865517be875a6a3020f35e4a265bd291c91bf\\output\\res\\drawable-hdpi-v4\\powered_by_google_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_white_36.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\bcecf50c94704d9594fc655f503723d73d461ca0\\output\\res\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_white_36.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_plusone_small_off_client.png",

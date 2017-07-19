@@ -93,6 +93,7 @@ MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Casta
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.terrakok.phonematter:phonematter:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\5cf8c79e7cf1263dcb8c47bd5e3cf747101d09a5\output\AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:16:9-45
 	android:targetSdkVersion
@@ -229,6 +230,7 @@ MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Casta
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.terrakok.phonematter:phonematter:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\5cf8c79e7cf1263dcb8c47bd5e3cf747101d09a5\output\AndroidManifest.xml:12:5-20
 	android:label
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:40:9-41
 	android:supportsRtl

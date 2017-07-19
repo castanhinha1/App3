@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,6 +18,7 @@ import android.provider.MediaStore;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,13 +33,23 @@ import com.onegravity.contactpicker.contact.ContactSortOrder;
 import com.onegravity.contactpicker.core.ContactPickerActivity;
 import com.onegravity.contactpicker.group.Group;
 import com.onegravity.contactpicker.picture.ContactPictureType;
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+import com.parse.ParseRelation;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.starter.R;
+import com.terrakok.phonematter.PhoneFormat;
 
 import java.io.IOException;
 import java.util.List;
 
 import ConfigClasses.MyProfilePictureView;
+import Models.User;
 
+import static android.R.attr.format;
 
 
 /**
@@ -54,11 +66,17 @@ public class AddFriendsFragment extends Fragment {
     MyProfilePictureView profilepictureview;
     SingleSelectToggleGroup singleSelectToggleGroup;
     Contact selectedContact;
+    User currentUser;
+    User selectedUser;
+    String phonenumber;
+    PhoneFormat phoneFormat;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_add_friends, container, false);
         getActivity().invalidateOptionsMenu();
+        currentUser = (User) ParseUser.getCurrentUser();
+        phoneFormat = new PhoneFormat("us", getContext());
         //Toolbar top
         final TextView titleTextView = (TextView) getActivity().findViewById(R.id.toolbar_title);
         titleTextView.setText("Provide Location");
@@ -73,7 +91,7 @@ public class AddFriendsFragment extends Fragment {
         //Hide bottom navigation view
         BottomNavigationView bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setVisibility(View.INVISIBLE);
-        //Instanstiate textviews and photo
+        //Instantiate textviews and photo
         nametv = (TextView) rootView.findViewById(R.id.add_friend_name_tv);
         phonetv = (TextView) rootView.findViewById(R.id.add_friend_phonenumber_tv);
         detailstv = (TextView) rootView.findViewById(R.id.add_friend_details_tv);
@@ -104,7 +122,8 @@ public class AddFriendsFragment extends Fragment {
 
     public void setContactInView(Contact contact) throws IOException {
         if (verifyContactUsesApp(contact)){
-            //Load views with information from database
+            //Load views with information from database and get query on user
+            //callSelectedUser();
         } else if (verifyContactUsesApp(contact) == false){
             //Load views with information from contact
             nametv.setText(contact.getDisplayName());
@@ -131,12 +150,48 @@ public class AddFriendsFragment extends Fragment {
         return false;
     }
 
+    public boolean checkIfCurrentlyFollowing(Contact contact){
+        boolean isFollowing;
+        return false;
+    }
+
+    public User callSelectedUser(){
+        String number = selectedContact.getPhone(ContactsContract.CommonDataKinds.Phone.TYPE_MAIN);
+        String formattedNumber = phoneFormat.format(number);
+        Log.i("AppInfo", "Formatted phone number" +formattedNumber);
+        //Query to find user with that phone number
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.whereEqualTo("phonenumber", formattedNumber);
+        query.getFirstInBackground(new GetCallback<ParseUser>() {
+            @Override
+            public void done(ParseUser object, ParseException e) {
+                if (e == null && object != null){
+                    selectedUser = (User) object;
+                } else {
+                    Log.i("AppInfo", e.getMessage());
+                }
+            }
+        });
+        return selectedUser;
+    }
+
     private class SendButtonClickListener implements Button.OnClickListener{
 
         @Override
         public void onClick(View v) {
-            if (verifyContactUsesApp(selectedContact)) {
-
+            if (/*verifyContactUsesApp(selectedContact)*/ true &&  !(checkIfCurrentlyFollowing(selectedContact))) {
+                ParseRelation<User> relation = currentUser.getRelation("isFollowed");
+                relation.add(callSelectedUser());
+                currentUser.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null){
+                            Log.i("AppInfo", "Relation saved!");
+                        } else {
+                            Log.i("AppInfo", e.getMessage());
+                        }
+                    }
+                });
             } else{
                 //Send link for user to use app
             }

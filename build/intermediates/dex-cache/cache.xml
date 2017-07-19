@@ -894,6 +894,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Dylan Castanhinha\.android\build-cache\5cf8c79e7cf1263dcb8c47bd5e3cf747101d09a5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bbd5518fdc11a507425949a365b18eac68188653">
+        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cddf4dda8411dfe7ea072c69a3d7d7e9a4bf7dff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Dylan Castanhinha\.android\build-cache\78cd7bc9261ae954b3bfef8b4823eb2e4ec8fd68\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"

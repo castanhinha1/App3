@@ -1,6 +1,7 @@
 package FragmentControllers;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -10,6 +11,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -111,6 +114,7 @@ public class SearchForFriends extends Fragment {
     private class CancelButtonListener implements Button.OnClickListener {
         @Override
         public void onClick(View v) {
+            hideKeyboard(getContext());
             getFragmentManager().popBackStack();
         }
     }
@@ -179,6 +183,18 @@ public class SearchForFriends extends Fragment {
             });
             return v;
         }
+    }
+
+    public static void hideKeyboard(Context ctx) {
+        InputMethodManager inputManager = (InputMethodManager) ctx
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        // check if no view has focus:
+        View v = ((Activity) ctx).getCurrentFocus();
+        if (v == null)
+            return;
+
+        inputManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 
 }

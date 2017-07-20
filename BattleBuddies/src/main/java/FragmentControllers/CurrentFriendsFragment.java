@@ -21,6 +21,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -91,7 +93,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     MapView mMapView;
 
     //ListView
-    List userids;
+    ArrayList<String> currentFriends;
     TextView labelTV;
     ListView listview;
     CurrentClients adapter;
@@ -101,7 +103,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     OnProfileButtonClicked activityCallback2;
     ExpandableLayout expandableLayoutTop;
     ExpandableLayout expandableLayoutBottom;
-    ArrayList<String> followingIds;
     //Toolbar
     Toolbar toolbar;
     ImageButton leftToolbarButton;
@@ -153,16 +154,15 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         leftToolbarButton.setOnClickListener(new AddNewClientButtonListener());
         rightToolbarbutton = (ImageButton) getActivity().findViewById(R.id.toolbar_right_button);
         rightToolbarbutton.setVisibility(View.INVISIBLE);
-
         //ListView that shows friends sharing location with you
         View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
         listview = (ListView) rootView.findViewById(R.id.current_client_list_view);
         expandableLayoutTop = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_top);
         expandableLayoutBottom = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_bottom);
-        adapter = new CurrentClients(getActivity());
-        listview.setAdapter(adapter);
         swipeContainer.setOnRefreshListener(new SwipeToRefresh());
+        currentFriends = new ArrayList<>();
+        findPeopleFollowing();
         //NavBar
         bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.bottom_navigation_navbar);
         bottomNavigationView.setOnClickListener(new BottomNavClickListener());
@@ -236,8 +236,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
 
         @Override
         public void onClick(View v) {
-            findPeopleFollowing();
-            //activityCallback2.onProfileButtonClicked();
+            activityCallback2.onProfileButtonClicked();
         }
     }
 
@@ -461,21 +460,23 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
         query.whereNotEqualTo("isFollowed", currentUser);
         query.whereEqualTo("following", currentUser);
+        query.include("isFollowed");
         query.findInBackground(new FindCallback<FollowTable>() {
             @Override
             public void done(List<FollowTable> objects, ParseException e) {
                 if (objects.size() != 0){
                     for (int i = 0; i < objects.size(); i++){
-                        User friend = objects.get(i).getIsFollowed();
-                        userids.add(friend.getObjectId());
+                        currentFriends.add(objects.get(i).getIsFollowed().getObjectId());
                     }
+                    adapter = new CurrentClients(getActivity());
+                    listview.setAdapter(adapter);
                 } else {
                     Log.i("AppInfo", "coming here");
                     //Blank profile add
                 }
             }
         });
-        return userids;
+        return currentFriends;
     }
 
 
@@ -483,13 +484,9 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         private CurrentClients(final Context context){
             super(context, new ParseQueryAdapter.QueryFactory<User>(){
                public ParseQuery<User> create() {
-                   /*ParseQuery<FollowTable> query2 = ParseQuery.getQuery(FollowTable.class);
-                   query2.whereNotEqualTo("isFollowed", currentUser);
-                   query2.whereEqualTo("following", currentUser);*/
-
-                   ParseRelation<User> relation = currentUser.getRelation("client");
-                   ParseQuery<User> query = relation.getQuery();
-                   //query.whereContainedIn("objectId", findPeopleFollowing());
+                   ParseQuery<User> query = ParseQuery.getQuery(User.class);
+                   Log.i("AppInfo", "User id: "+currentFriends);
+                   query.whereContainedIn("objectId", currentFriends);
                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
 
                    return query;
@@ -527,6 +524,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
             super.getItemView(user, v, parent);
 
             //Add the title view
+            Log.i("AppInfo", "User: "+user);
             TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
             nameTextView.setText(user.getFullName());
 
@@ -539,8 +537,8 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
             distanceLabel.setText(calculateDistance(user)+" miles");
 
             //Add the image
-            MyProfilePictureView imageView = (MyProfilePictureView) v.findViewById(R.id.imageView3);
-            imageView.setImageBitmap(imageView.getRoundedBitmap(user.getProfilePicture()));
+            CircleImageView imageView = (CircleImageView) v.findViewById(R.id.imageView3);
+            imageView.setImageBitmap(user.getProfilePicture());
 
             //On click listener for selection
             v.setOnClickListener(new View.OnClickListener() {

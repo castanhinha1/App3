@@ -54,6 +54,7 @@ import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
+import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseRelation;
@@ -64,6 +65,7 @@ import net.cachapa.expandablelayout.ExpandableLayout;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -89,6 +91,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     MapView mMapView;
 
     //ListView
+    List userids;
     TextView labelTV;
     ListView listview;
     CurrentClients adapter;
@@ -454,8 +457,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         }
     }
 
-    public ArrayList<String> findPeopleFollowing(){
-        final ArrayList<String> followingUserIds = null;
+    public List findPeopleFollowing(){
         ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
         query.whereNotEqualTo("isFollowed", currentUser);
         query.whereEqualTo("following", currentUser);
@@ -464,7 +466,8 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
             public void done(List<FollowTable> objects, ParseException e) {
                 if (objects.size() != 0){
                     for (int i = 0; i < objects.size(); i++){
-                        followingUserIds.add(i, objects.get(i).getFollowing().getObjectId());
+                        User friend = objects.get(i).getIsFollowed();
+                        userids.add(friend.getObjectId());
                     }
                 } else {
                     Log.i("AppInfo", "coming here");
@@ -472,19 +475,21 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
                 }
             }
         });
-        return followingUserIds;
+        return userids;
     }
 
 
     private class CurrentClients extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener {
-        Context context;
         private CurrentClients(final Context context){
             super(context, new ParseQueryAdapter.QueryFactory<User>(){
                public ParseQuery<User> create() {
+                   /*ParseQuery<FollowTable> query2 = ParseQuery.getQuery(FollowTable.class);
+                   query2.whereNotEqualTo("isFollowed", currentUser);
+                   query2.whereEqualTo("following", currentUser);*/
+
                    ParseRelation<User> relation = currentUser.getRelation("client");
                    ParseQuery<User> query = relation.getQuery();
-                   //query.whereEqualTo("objectId", false);
-                   query.whereContainedIn("objectId", findPeopleFollowing());
+                   //query.whereContainedIn("objectId", findPeopleFollowing());
                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
 
                    return query;

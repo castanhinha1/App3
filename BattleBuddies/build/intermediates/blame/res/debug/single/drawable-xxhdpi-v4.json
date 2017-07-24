@@ -620,6 +620,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\f0c8238938720b20a71cd161dc31ad74db6a1a08\\output\\res\\drawable-xxhdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_connecting_04_light.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable-xxhdpi-v4\\ic_media_route_connecting_04_light.png"
     },

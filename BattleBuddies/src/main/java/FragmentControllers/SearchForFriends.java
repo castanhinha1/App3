@@ -73,6 +73,7 @@ public class SearchForFriends extends Fragment {
         backButton.setVisibility(View.INVISIBLE);
         Button cancelButton = (Button) getActivity().findViewById(R.id.toolbar_left_button_text);
         cancelButton.setText("Cancel");
+        cancelButton.setVisibility(View.VISIBLE);
         cancelButton.setOnClickListener(new CancelButtonListener());
         Button sendButton = (Button) getActivity().findViewById(R.id.toolbar_right_button_text);
         sendButton.setVisibility(View.INVISIBLE);

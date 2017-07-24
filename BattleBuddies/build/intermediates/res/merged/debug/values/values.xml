@@ -137,6 +137,8 @@
     <color name="bb_darkBackgroundColor">#212121</color>
     <color name="bb_inActiveBottomBarItemColor">#747474</color>
     <color name="bb_tabletRightBorderDark">#969696</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
     <color name="blue_grey_800_50p">#E237474F</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -146,6 +148,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="button_text_color">#FFFFFF</color>
     <color name="cast_expanded_controller_ad_container_white_stripe_color">#1AFFFFFF</color>
     <color name="cast_expanded_controller_ad_label_background_color">#2F000000</color>
     <color name="cast_expanded_controller_background_color">#000000</color>
@@ -201,14 +204,23 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="float_transparent">#00000000</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
     <color name="material_blue_grey_800">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
     <color name="material_blue_grey_900">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
     <color name="material_blue_grey_950">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
     <color name="material_deep_teal_500">#ff009688</color>
     <color name="material_grey_100">#fff5f5f5</color>
     <color name="material_grey_300">#ffe0e0e0</color>
@@ -242,6 +254,8 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="search_layover_bg">#50000000</color>
@@ -249,14 +263,18 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="text_color">#575757</color>
     <color name="text_color_primary_dark">#FFFAFAFA</color>
     <color name="text_color_primary_light">#FF212121</color>
     <color name="text_color_secondary_dark">#FF9E9E9E</color>
     <color name="text_color_secondary_light">#FFBDBDBD</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
     <color name="wallet_bright_foreground_holo_light">#ff000000</color>
@@ -268,6 +286,7 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
+    <color name="warning_stroke_color">#F8BB86</color>
     <declare-styleable name="AbsRecyclerViewFastScroller"><attr format="reference" name="rfs_fast_scroller_layout"/><attr format="color|reference" name="rfs_barColor"/><attr format="reference" name="rfs_barBackground"/><attr format="color|reference" name="rfs_handleColor"/><attr format="reference" name="rfs_handleBackground"/></declare-styleable>
     <declare-styleable name="AbsSectionIndicator"><attr format="reference" name="rfs_section_indicator_layout"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
@@ -593,8 +612,10 @@
     <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/><attr name="android:popupAnimationStyle"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
+    <declare-styleable name="ProgressWheel"><attr format="boolean" name="progressIndeterminate"/><attr format="color" name="barColor"/><attr format="color" name="rimColor"/><attr format="dimension" name="rimWidth"/><attr format="float" name="spinSpeed"/><attr format="integer" name="barSpinCycleTime"/><attr format="dimension" name="circleRadius"/><attr format="boolean" name="fillRadius"/><attr format="dimension" name="barWidth"/></declare-styleable>
     <declare-styleable name="RecycleListView"><attr format="dimension" name="paddingBottomNoButtons"/><attr format="dimension" name="paddingTopNoTitle"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
+    <declare-styleable name="Rotate3dAnimation"><attr format="enum" name="rollType"><enum name="x" value="0"/><enum name="y" value="1"/><enum name="z" value="2"/></attr><attr format="float" name="fromDeg"/><attr format="float" name="toDeg"/><attr format="fraction" name="pivotX"/><attr format="fraction" name="pivotY"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
@@ -866,6 +887,7 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="alert_width">290dp</dimen>
     <dimen name="bb_height">56dp</dimen>
     <dimen name="cast_expanded_controller_ad_background_layout_height">350dp</dimen>
     <dimen name="cast_expanded_controller_ad_background_layout_width">-1px</dimen>
@@ -915,6 +937,7 @@
     <dimen name="com_facebook_share_button_padding_top">12dp</dimen>
     <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -1002,6 +1025,7 @@
     <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
     <dimen name="place_autocomplete_progress_size">24dp</dimen>
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
     <dimen name="rage_comic_description_margin_bottom">16dp</dimen>
     <dimen name="rage_comic_description_margin_left">32dp</dimen>
     <dimen name="rage_comic_description_margin_right">24dp</dimen>
@@ -1064,6 +1088,7 @@
         <item quantity="one">(%1$d contact)</item>
         <item quantity="other">(%1$d contacts)</item>
     </plurals>
+    <string name="LOADING">Loading...</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -1179,6 +1204,9 @@
     <string name="cp_no_contacts">No Contacts</string>
     <string name="cp_no_groups">No Groups</string>
     <string name="description_format">%1$s\n\n%2$s</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
     <string name="facebook_app_id">242649189478652</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
@@ -3043,6 +3071,16 @@
     </style>
     <style name="adduserbutton" parent="Widget.AppCompat.ImageButton">
     </style>
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
     <style name="com_facebook_button" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/com_facebook_button_background</item>
         <item name="android:drawablePadding">6dp</item>
@@ -3073,6 +3111,15 @@
         <item name="android:background">@drawable/com_facebook_button_login_silver_background</item>
         <item name="android:drawableLeft">@null</item>
         <item name="android:textColor">#4b5164</item>
+    </style>
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:background">@drawable/blue_button_background</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">@color/button_text_color</item>
     </style>
     <style name="tooltip_bubble_text">
 	    <item name="android:textColor">@android:color/white</item>

@@ -37,6 +37,7 @@ import FragmentControllers.CurrentFriendsFragment;
 import FragmentControllers.EditProfileFragment;
 import FragmentControllers.ProfileFragment;
 import FragmentControllers.SearchForFriends;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class NavigationController extends AppCompatActivity implements SearchForFriends.OnUserSelected, CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
@@ -217,19 +218,23 @@ public class NavigationController extends AppCompatActivity implements SearchFor
     public void onBackPressed() {
         int count = getFragmentManager().getBackStackEntryCount();
         if (count == 0){
-            new AlertDialog.Builder(this)
-                    .setIcon(R.drawable.ic_disclaimer)
-                    .setTitle("Log Out?")
-                    .setMessage("Are you sure you want to log out?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("Are you sure?")
+                    .setCancelText("Cancel")
+                    .setConfirmText("Logout")
+                    .showCancelButton(true)
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
                             ParseUser.getCurrentUser().logOut();
-                            finish();
                         }
-
                     })
-                    .setNegativeButton("No", null)
+                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                            sweetAlertDialog.cancel();
+                        }
+                    })
                     .show();
         } else {
             getFragmentManager().popBackStack();

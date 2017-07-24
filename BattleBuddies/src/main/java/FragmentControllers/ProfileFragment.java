@@ -44,6 +44,9 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.parse.DeleteCallback;
+import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
@@ -55,11 +58,15 @@ import com.parse.starter.R;
 import com.parse.starter.ViewControllers.LoginController;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
+import Models.FollowTable;
 import Models.User;
+import cn.pedant.SweetAlert.SweetAlertDialog;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
@@ -95,6 +102,9 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     //Friends with location ListView
     ListView friendsWithLocationListView;
     FriendsWithLocationAdapter friendsWithLocationAdapter;
+    ArrayList<String> currentFriends;
+    ArrayList<Date> expirationDate;
+    ArrayList<Date> createdAtDate;
 
 
     public interface OnRowSelected{
@@ -143,8 +153,13 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         }
         //Friends with current location listview
         friendsWithLocationListView = (ListView) rootView.findViewById(R.id.profile_friends_with_location_list_view);
-        friendsWithLocationAdapter = new FriendsWithLocationAdapter(getActivity());
-        friendsWithLocationListView.setAdapter(friendsWithLocationAdapter);
+        TextView title = new TextView(getContext());
+        title.setText("Pending Requests");
+        friendsWithLocationListView.addHeaderView(title);
+        currentFriends = new ArrayList<>();
+        expirationDate = new ArrayList<>();
+        createdAtDate = new ArrayList<>();
+        findPeopleFollowing();
 
         //MapView
         mMapView = (MapView) rootView.findViewById(R.id.profileMapViewFragment);
@@ -186,90 +201,26 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
 
         @Override
         public void onClick(View v) {
-            new AlertDialog.Builder(getActivity())
-                    .setIcon(R.drawable.ic_disclaimer)
-                    .setTitle("Log Out?")
-                    .setMessage("Are you sure you want to log out?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("Are you sure?")
+                    .setCancelText("Cancel")
+                    .setConfirmText("Logout")
+                    .showCancelButton(true)
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            currentUser.logOut();
-                            getActivity().finish();
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                            ParseUser.getCurrentUser().logOut();
                         }
                     })
-                    .setNegativeButton("No", null)
+                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                            sweetAlertDialog.cancel();
+                        }
+                    })
                     .show();
         }
     }
-
-
-    public class FriendsWithLocationAdapter extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener{
-        Context context;
-        private FriendsWithLocationAdapter(final Context context){
-            super(context, new ParseQueryAdapter.QueryFactory<User>(){
-                public ParseQuery<User> create() {
-                    ParseRelation<User> relation = currentUser.getRelation("client");
-                    ParseQuery<User> query = relation.getQuery();
-                    query.whereEqualTo("objectId", false);
-                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
-                    return query;
-                }
-            });
-            addOnQueryLoadListener(this);
-        }
-
-
-        @Override
-        public void onLoading() {
-            Log.i("AppInfo", "Loading");
-        }
-
-        @Override
-        public void onLoaded(List objects, Exception e) {
-            Log.i("AppInfo", "Loaded");
-        }
-
-        public String calculateDistance(User user) {
-            double distance = Math.round(user.getGeopoint().distanceInMilesTo(currentUser.getGeopoint()));
-            String distanceInMiles = String.valueOf(distance);
-            return distanceInMiles;
-        }
-
-
-        @Override
-        public View getItemView(final User user, View v, ViewGroup parent){
-            if (v == null){
-                v = View.inflate(getContext(), R.layout.list_layout_current_friends, null);
-            }
-            super.getItemView(user, v, parent);
-
-            //Add the title view
-            TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
-            nameTextView.setText(user.getFullName());
-
-            //Add the Location label
-            TextView location = (TextView) v.findViewById(R.id.current_client_object_id);
-            location.setText(user.getLocation());
-
-            //Add the distance label
-            TextView distanceLabel = (TextView) v.findViewById(R.id.distanceLabel);
-            distanceLabel.setText(calculateDistance(user)+" miles");
-
-            //Add the image
-            MyProfilePictureView imageView = (MyProfilePictureView) v.findViewById(R.id.imageView3);
-            imageView.setImageBitmap(imageView.getRoundedBitmap(user.getProfilePicture()));
-
-            //On click listener for selection
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //Load user info
-                }
-            });
-            return v;
-        }
-    }
-
 
     public class CurrentDetailsAdapter extends ArrayAdapter<User>{
         public CurrentDetailsAdapter(Context context, ArrayList<User> users){
@@ -444,6 +395,156 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     }
 
     //ListView
+
+    public List findPeopleFollowing(){
+        ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
+        query.whereEqualTo("following", currentUser);
+        query.whereEqualTo("requestConfirmed", false);
+        query.findInBackground(new FindCallback<FollowTable>() {
+            @Override
+            public void done(List<FollowTable> objects, ParseException e) {
+                if (objects.size() != 0){
+                    for (int i = 0; i < objects.size(); i++){
+                        currentFriends.add(objects.get(i).getIsFollowed().getObjectId());
+                        expirationDate.add(objects.get(i).getExpirationDate());
+                        createdAtDate.add(objects.get(i).getCreatedAt());
+                    }
+                    friendsWithLocationAdapter = new FriendsWithLocationAdapter(getActivity());
+                    friendsWithLocationListView.setAdapter(friendsWithLocationAdapter);
+                } else {
+                    Log.i("AppInfo", "coming here");
+                    //Blank profile add
+                }
+            }
+        });
+        return currentFriends;
+    }
+
+    public class FriendsWithLocationAdapter extends ParseAdapterCustomList implements ParseQueryAdapter.OnQueryLoadListener{
+        private FriendsWithLocationAdapter(final Context context){
+            super(context, new ParseQueryAdapter.QueryFactory<User>(){
+                public ParseQuery<User> create() {
+                    ParseQuery<User> query = ParseQuery.getQuery(User.class);
+                    Log.i("AppInfo", "User id: "+currentFriends);
+                    query.whereContainedIn("objectId", currentFriends);
+                    query.whereNotEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
+
+                    return query;
+                }
+            });
+            addOnQueryLoadListener(this);
+        }
+
+
+        @Override
+        public void onLoading() {
+            Log.i("AppInfo", "Loading");
+        }
+
+        @Override
+        public void onLoaded(List objects, Exception e) {
+            Log.i("AppInfo", "Loaded");
+        }
+
+        @Override
+        public View getItemView(final User user, View v, ViewGroup parent){
+            if (v == null){
+                v = View.inflate(getContext(), R.layout.list_layout_friend_requests, null);
+            }
+            super.getItemView(user, v, parent);
+
+            //Add the title view
+            TextView nameTextView = (TextView) v.findViewById(R.id.current_client_text_view_name);
+            nameTextView.setText(user.getFullName());
+
+            //Add the Location label
+            TextView location = (TextView) v.findViewById(R.id.current_client_object_id);
+            location.setText(user.getLocation());
+
+            //Add the image
+            CircleImageView imageView = (CircleImageView) v.findViewById(R.id.imageView3);
+            imageView.setImageBitmap(user.getProfilePicture());
+
+            //Add and delete buttons
+            final Button confirmButton = (Button) v.findViewById(R.id.confirmButton);
+            Button deleteButton = (Button) v.findViewById(R.id.deleteButton);
+
+            confirmButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
+                    query.whereEqualTo("isFollowed", user);
+                    query.whereEqualTo("following", currentUser);
+                    query.getFirstInBackground(new GetCallback<FollowTable>() {
+                        @Override
+                        public void done(FollowTable object, ParseException e) {
+                            if (e == null && object != null) {
+                                object.setRequestConfirmed(true);
+                                object.saveInBackground(new SaveCallback() {
+                                    @Override
+                                    public void done(ParseException e) {
+                                        if (e == null){
+                                            getFragmentManager().popBackStack();
+                                        } else {
+                                            Log.i("AppInfo", "not saved");
+                                        }
+                                    }
+                                });
+                            } else {
+                                Log.i("AppInfo", "nothing found");
+
+                            }
+                        }
+                    });
+                }
+            });
+
+            deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("Are you sure?")
+                            .setCancelText("Cancel")
+                            .setConfirmText("Delete")
+                            .showCancelButton(true)
+                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(final SweetAlertDialog sweetAlertDialog) {
+                                    ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
+                                    query.whereEqualTo("isFollowed", user);
+                                    query.whereEqualTo("following", currentUser);
+                                    query.getFirstInBackground(new GetCallback<FollowTable>() {
+                                        @Override
+                                        public void done(FollowTable object, ParseException e) {
+                                            if (e == null && object != null){
+                                                object.deleteInBackground(new DeleteCallback() {
+                                                    @Override
+                                                    public void done(ParseException e) {
+                                                        if (e == null){
+                                                            getFragmentManager().popBackStack();
+                                                        } else {
+                                                            Log.i("AppInfo", "Nothing was deleted");
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        }
+                                    });
+                                }
+                            })
+                            .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                    sweetAlertDialog.cancel();
+                                }
+                            })
+                            .show();
+                }
+            });
+
+            return v;
+        }
+    }
 
     public class BackButtonClickListener implements ImageButton.OnClickListener{
         @Override

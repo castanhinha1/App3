@@ -499,6 +499,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     public List findPeopleFollowing(){
         ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
         query.whereEqualTo("following", currentUser);
+        query.whereEqualTo("requestConfirmed", true);
         query.findInBackground(new FindCallback<FollowTable>() {
             @Override
             public void done(List<FollowTable> objects, ParseException e) {

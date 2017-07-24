@@ -94,12 +94,14 @@
                 android:id="@+id/choice_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:tag="4hour"
                 android:text="4 Hours"/>
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
                 android:id="@+id/choice_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:tag="day"
                 android:text="1 Day"/>
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
@@ -107,6 +109,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:tag="indefinite"
                 android:text="Emergency Contact"/>
 
         </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>

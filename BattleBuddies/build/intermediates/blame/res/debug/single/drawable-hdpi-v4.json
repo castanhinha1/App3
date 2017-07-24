@@ -536,6 +536,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\drawable-hdpi-v4\\ic_apps_white_24dp.png"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\f0c8238938720b20a71cd161dc31ad74db6a1a08\\output\\res\\drawable-hdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_skip_next_white_24.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable-hdpi-v4\\quantum_ic_skip_next_white_24.png"
     },

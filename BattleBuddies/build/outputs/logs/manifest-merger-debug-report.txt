@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:9:1-110:12
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:9:1-111:12
 	package
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:11:5-32
 		INJECTED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml
@@ -80,9 +80,6 @@ MERGED from [com.android.support:transition:25.3.1] C:\Users\Dylan Castanhinha\.
 MERGED from [xyz.danoz:recyclerviewfastscroller:0.1.3] C:\Users\Dylan Castanhinha\.android\build-cache\d444f2208da37d495c1601e5baae24d5e53394f0\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:20:5-43
 MERGED from [com.nex3z:toggle-button-group:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\3b01886921d66582e7d04e789435f2496e06f6b5\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
 MERGED from [com.terrakok.phonematter:phonematter:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\5cf8c79e7cf1263dcb8c47bd5e3cf747101d09a5\output\AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\8cd5299091fb0797e98363c48e9beda69968adc4\output\AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-analytics:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\03c6a04793c5fe948b6cfa99044462f93dfd9228\output\AndroidManifest.xml:17:5-43
@@ -92,11 +89,16 @@ MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha
 MERGED from [com.google.firebase:firebase-common:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\741f67522da689d3c281dad630d45e941ba59f2e\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\0fac6e3c439d0ce75c2f90fa62fa383aca4f26e8\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\3b394cd0657504f2c1303948d463f42cbd686b1a\output\AndroidManifest.xml:17:5-43
+MERGED from [cn.pedant.sweetalert:library:1.3] C:\Users\Dylan Castanhinha\.android\build-cache\4ae279887f5b7276cf679f62b3606c2da348758d\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\f0c8238938720b20a71cd161dc31ad74db6a1a08\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:16:9-45
@@ -211,7 +213,7 @@ MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:35:22-105
 application
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:45:5-108:19
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:45:5-109:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.5.0] C:\Users\Dylan Castanhinha\.android\build-cache\1cb63630e49237d6be0ef5547a09e62ee61eb82b\output\AndroidManifest.xml:28:5-20
 MERGED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:18:5-28:19
 MERGED from [com.parse:parsefacebookutils-v4-android:1.10.3] C:\Users\Dylan Castanhinha\.android\build-cache\3a2b82366e8715abf927f0ac8da775b6691cfe88\output\AndroidManifest.xml:20:5-20
@@ -260,9 +262,6 @@ MERGED from [net.alhazmy13.MediaPicker:libary:2.3.2] C:\Users\Dylan Castanhinha\
 MERGED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:transition:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\dd01ba0eff7459522d40d54e6751a649fcbc35ca\output\AndroidManifest.xml:26:5-20
 MERGED from [com.nex3z:toggle-button-group:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\3b01886921d66582e7d04e789435f2496e06f6b5\output\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:26:5-20
 MERGED from [com.terrakok.phonematter:phonematter:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\5cf8c79e7cf1263dcb8c47bd5e3cf747101d09a5\output\AndroidManifest.xml:12:5-20
 MERGED from [com.google.firebase:firebase-core:10.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\8cd5299091fb0797e98363c48e9beda69968adc4\output\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\03c6a04793c5fe948b6cfa99044462f93dfd9228\output\AndroidManifest.xml:24:5-34:19
@@ -272,146 +271,154 @@ MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha
 MERGED from [com.google.firebase:firebase-common:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\741f67522da689d3c281dad630d45e941ba59f2e\output\AndroidManifest.xml:4:5-7:19
 MERGED from [com.google.android.gms:play-services-tasks:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\0fac6e3c439d0ce75c2f90fa62fa383aca4f26e8\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\3b394cd0657504f2c1303948d463f42cbd686b1a\output\AndroidManifest.xml:19:5-21:19
+MERGED from [cn.pedant.sweetalert:library:1.3] C:\Users\Dylan Castanhinha\.android\build-cache\4ae279887f5b7276cf679f62b3606c2da348758d\output\AndroidManifest.xml:11:5-20
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\f0c8238938720b20a71cd161dc31ad74db6a1a08\output\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:49:9-41
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:50:9-41
 	android:supportsRtl
 		ADDED from [com.nex3z:toggle-button-group:1.0.2] C:\Users\Dylan Castanhinha\.android\build-cache\3b01886921d66582e7d04e789435f2496e06f6b5\output\AndroidManifest.xml:14:9-35
 	android:allowBackup
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:47:9-35
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:48:9-35
 	android:icon
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:48:9-43
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:49:9-43
+		REJECTED from [com.pnikosis:materialish-progress:1.0] C:\Users\Dylan Castanhinha\.android\build-cache\f0c8238938720b20a71cd161dc31ad74db6a1a08\output\AndroidManifest.xml:13:9-45
 	android:theme
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:50:9-65
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:51:9-65
+	tools:replace
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:46:9-51
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:46:9-61
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:47:9-61
 meta-data#com.parse.APPLICATION_ID
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:51:9-53:52
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:52:9-54:52
 	android:value
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:53:13-49
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:54:13-49
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:52:13-52
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:53:13-52
 meta-data#com.parse.CLIENT_KEY
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:54:9-56:56
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:55:9-57:56
 	android:value
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:56:13-53
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:57:13-53
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:55:13-48
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:56:13-48
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:57:9-59:55
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:58:9-60:55
 	android:value
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:59:13-52
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:60:13-52
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:58:13-58
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:59:13-58
 activity#com.onegravity.contactpicker.core.ContactPickerActivity
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:61:9-69:20
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:62:9-70:20
 	android:enabled
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:63:13-35
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:64:13-35
 	android:exported
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:64:13-37
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:62:13-83
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:63:13-83
 intent-filter#android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:65:13-68:29
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:66:13-69:29
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:66:17-76
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:67:17-76
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:66:27-73
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:67:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:67:17-78
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:68:17-78
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:67:27-75
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:68:27-75
 activity#com.facebook.FacebookActivity
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:71:9-75:75
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:72:9-76:75
 	android:label
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:74:13-45
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:75:13-45
 	android:configChanges
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:73:13-96
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:74:13-96
 	android:theme
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:75:13-72
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:76:13-72
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:72:13-57
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:73:13-57
 activity#com.parse.starter.ViewControllers.LoginController
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:76:9-84:20
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:77:9-85:20
 	android:label
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:78:13-45
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:79:13-45
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:77:13-60
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:78:13-60
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:79:13-83:29
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:80:13-84:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:80:17-69
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:81:17-69
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:80:25-66
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:81:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:82:17-77
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:83:17-77
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:82:27-74
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:83:27-74
 activity#com.parse.starter.ViewControllers.NavigationController
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:85:9-74
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:86:9-74
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:85:19-71
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:86:19-71
 meta-data#com.parse.push.gcm_sender_id
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:86:9-87:47
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:87:9-88:47
 	android:value
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:87:13-44
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:88:13-44
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:86:20-63
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:87:20-63
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:88:9-90:55
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:89:9-91:55
 	android:value
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:90:13-52
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:91:13-52
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:89:13-58
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:90:13-58
 service#com.parse.PushService
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:92:9-57
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:93:9-57
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:92:18-54
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:93:18-54
 receiver#com.parse.GcmBroadcastReceiver
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:93:9-99:20
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:94:9-100:20
 	android:permission
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:93:65-125
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:94:65-125
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:93:19-64
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:94:19-64
 intent-filter#com.example.dylancastanhinha.weightmanagement+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:94:13-98:29
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:95:13-99:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:95:17-81
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:96:17-81
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:95:25-78
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:96:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:96:17-86
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:97:17-86
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:96:25-83
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:97:25-83
 category#com.example.dylancastanhinha.weightmanagement
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:97:17-90
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:98:17-90
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:97:27-87
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:98:27-87
 receiver#com.parse.ParsePushBroadcastReceiver
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:100:9-106:20
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:101:9-107:20
 	android:exported
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:100:71-95
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:101:71-95
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:100:19-70
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:101:19-70
 intent-filter#com.parse.push.intent.DELETE+com.parse.push.intent.OPEN+com.parse.push.intent.RECEIVE
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:101:13-105:29
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:102:13-106:29
 action#com.parse.push.intent.RECEIVE
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:102:17-72
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:103:17-72
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:102:25-69
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:103:25-69
 action#com.parse.push.intent.OPEN
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:103:17-69
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:104:17-69
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:103:25-66
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:104:25-66
 action#com.parse.push.intent.DELETE
-ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:104:17-71
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:105:17-71
 	android:name
-		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:104:25-68
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:105:25-68
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
 ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:5-98
 	android:name
@@ -567,13 +574,13 @@ ADDED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.andro
 MERGED from [com.android.support:transition:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\dd01ba0eff7459522d40d54e6751a649fcbc35ca\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8b356b725105712add6a3f2b69f4433fae28afd6\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:25:5-27:34
 	android:value
 		ADDED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:27:9-31

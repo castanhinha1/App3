@@ -38,4 +38,7 @@ public class FollowTable extends ParseObject {
         put("expirationDate", value);
     }
 
+    public boolean getRequestConfirmed(){return (boolean) get("requestConfirmed");}
+    public void setRequestConfirmed(boolean value) { put("requestConfirmed", value);}
+
 }

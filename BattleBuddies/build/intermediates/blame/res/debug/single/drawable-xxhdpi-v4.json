@@ -56,12 +56,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable-xxhdpi-v4\\quantum_ic_keyboard_arrow_down_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_play_dark.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable-xxhdpi-v4\\ic_play_dark.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_play_dark.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable-xxhdpi-v4\\ic_play_dark.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_connecting_09_dark.png",
@@ -80,16 +80,16 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\drawable-xxhdpi-v4\\ic_search_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_connecting_17_dark.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable-xxhdpi-v4\\ic_media_route_connecting_17_dark.png"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_mr_button_disconnected_light.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable-xxhdpi-v4\\ic_mr_button_disconnected_light.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cast_ic_notification_0.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a0fcc0747f879b3a82326bf72ce68cfe8c76e882\\output\\res\\drawable-xxhdpi-v4\\cast_ic_notification_0.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_mr_button_disconnected_light.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable-xxhdpi-v4\\ic_mr_button_disconnected_light.png"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_connecting_17_dark.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable-xxhdpi-v4\\ic_media_route_connecting_17_dark.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_mr_button_connecting_01_dark.png",

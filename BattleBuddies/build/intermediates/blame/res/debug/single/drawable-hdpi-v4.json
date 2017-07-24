@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",

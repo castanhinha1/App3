@@ -136,6 +136,13 @@ public class AddFriendsFragment extends Fragment {
                 new SweetAlertDialog(getActivity())
                         .setTitleText(selectedUser.getFirstName() + " is already following you.")
                         .setConfirmText("Okay")
+                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                            @Override
+                            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                getFragmentManager().popBackStack();
+                                sweetAlertDialog.cancel();
+                            }
+                        })
                         .show();
             }else {
                 new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)

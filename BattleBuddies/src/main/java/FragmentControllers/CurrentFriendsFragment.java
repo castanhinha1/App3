@@ -70,6 +70,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
@@ -93,7 +95,10 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     MapView mMapView;
 
     //ListView
+    String diff;
     ArrayList<String> currentFriends;
+    ArrayList<Date> expirationDate;
+    ArrayList<Date> createdAtDate;
     TextView labelTV;
     ListView listview;
     CurrentClients adapter;
@@ -162,6 +167,8 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         expandableLayoutBottom = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_bottom);
         swipeContainer.setOnRefreshListener(new SwipeToRefresh());
         currentFriends = new ArrayList<>();
+        expirationDate = new ArrayList<>();
+        createdAtDate = new ArrayList<>();
         findPeopleFollowing();
         //NavBar
         bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.bottom_navigation_navbar);
@@ -351,7 +358,11 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         MarkerOptions markerOptions = new MarkerOptions().position(latLng);
         String titleStr = user.getFullName();  // add these two lines
         markerOptions.title(titleStr);
-        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(user.getProfilePicture()));
+        if (user.getProfilePicture() != null) {
+            markerOptions.icon(BitmapDescriptorFactory.fromBitmap(user.getProfilePicture()));
+        } else {
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.com_facebook_profile_picture_blank_square));
+        }
         if (marker != null) {
             marker.remove();
             marker = googleMap.addMarker(markerOptions);
@@ -456,17 +467,46 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         }
     }
 
+    /*public String calculateTimeRemaining(){
+        Timer updateTimer = new Timer();
+
+        updateTimer.schedule(new TimerTask()
+        {
+            public void run()
+            {
+                try
+                {
+                    Date Date1;
+                    Date Date2;
+                    //long mills = Date1.getTime() - Date2.getTime();
+                    Log.v("Data1", ""+Date1.getTime());
+                    Log.v("Data2", ""+Date2.getTime());
+                    int Hours = (int) (mills/(1000 * 60 * 60));
+                    int Mins = (int) (mills/(1000*60)) % 60;
+
+                    diff = Hours + ":" + Mins; // updated value every1 second
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+        }, 0, 1000);
+        return diff;
+    }*/
+
     public List findPeopleFollowing(){
         ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);
-        query.whereNotEqualTo("isFollowed", currentUser);
         query.whereEqualTo("following", currentUser);
-        query.include("isFollowed");
         query.findInBackground(new FindCallback<FollowTable>() {
             @Override
             public void done(List<FollowTable> objects, ParseException e) {
                 if (objects.size() != 0){
                     for (int i = 0; i < objects.size(); i++){
                         currentFriends.add(objects.get(i).getIsFollowed().getObjectId());
+                        expirationDate.add(objects.get(i).getExpirationDate());
+                        createdAtDate.add(objects.get(i).getCreatedAt());
                     }
                     adapter = new CurrentClients(getActivity());
                     listview.setAdapter(adapter);

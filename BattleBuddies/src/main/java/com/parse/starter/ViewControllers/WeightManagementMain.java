@@ -13,6 +13,7 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseFacebookUtils;
+import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
@@ -40,6 +41,11 @@ public class WeightManagementMain extends Application {
                     .server("https://parseapi.back4app.com/")
     .build()
     );
+
+    // This is the installation part
+    ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+    installation.put("GCMSenderId", "521084357311");
+    installation.saveInBackground();
 
     ParseFacebookUtils.initialize(getApplicationContext());
 

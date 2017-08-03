@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.nex3z.togglebuttongroup.SingleSelectToggleGroup;
+import com.onesignal.OneSignal;
 import com.parse.GetCallback;
 import com.parse.ParseACL;
 import com.parse.ParseException;
@@ -19,6 +20,9 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -192,6 +196,22 @@ public class AddFriendsFragment extends Fragment {
                                                 if (e == null) {
                                                     //Popback twice to go to home screen
                                                     sweetAlertDialog.cancel();
+                                                    try {
+                                                        OneSignal.postNotification(new JSONObject("{'contents': {'en':'Test Message'}, 'include_player_ids': ['" + selectedUser.getOneSignalId() + "']}"),
+                                                                new OneSignal.PostNotificationResponseHandler() {
+                                                                    @Override
+                                                                    public void onSuccess(JSONObject response) {
+                                                                        Log.i("OneSignalExample", "postNotification Success: " + response.toString());
+                                                                    }
+
+                                                                    @Override
+                                                                    public void onFailure(JSONObject response) {
+                                                                        Log.e("OneSignalExample", "postNotification Failure: " + response.toString());
+                                                                    }
+                                                                });
+                                                    } catch (JSONException f) {
+                                                        e.printStackTrace();
+                                                    }
                                                     getFragmentManager().popBackStack();
                                                     getFragmentManager().popBackStack();
                                                 } else {

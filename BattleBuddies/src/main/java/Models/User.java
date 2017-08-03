@@ -41,6 +41,13 @@ public class User extends ParseUser {
         put("fullname", value);
     }
 
+    public String getOneSignalId() {
+        return getString("onesignalid");
+    }
+    public void setOneSignalId(String value) {
+        put("onesignalid", value);
+    }
+
     public boolean getTrainerStatus(){
         return getBoolean("trainerstatus");
     }

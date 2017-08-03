@@ -16,10 +16,6 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_on_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_media_route_on_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\drawable\\design_fab_background.xml"
     },
@@ -32,16 +28,16 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_stop.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_mini_controller_stop.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_stop.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_stop.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_play.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_play.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_stop.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_stop.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_stop.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_mini_controller_stop.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
@@ -68,12 +64,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\4ae279887f5b7276cf679f62b3606c2da348758d\\output\\res\\drawable\\success_circle.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\error_center_x.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\4ae279887f5b7276cf679f62b3606c2da348758d\\output\\res\\drawable\\error_center_x.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
@@ -84,12 +80,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_gradient_light.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_mini_controller_gradient_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\goal.png",
@@ -132,16 +128,16 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\wp.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\wp.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_disabled.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable\\com_facebook_button_login_silver_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\wp.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\wp.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -176,12 +172,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_button_light.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind30.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_rewind30.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
@@ -194,10 +190,6 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connected_dark.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_button_connected_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_on_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_media_route_on_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_pause_large.xml",
@@ -220,10 +212,6 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_media_route_mono_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
@@ -236,16 +224,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_group_expand.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_play_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_media_route_connecting_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_vol_type_audiotrack_dark.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_vol_type_audiotrack_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -254,10 +238,6 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_bg_gradient_light.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_expanded_controller_bg_gradient_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_vol_type_audiotrack_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_vol_type_audiotrack_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
@@ -280,32 +260,20 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_group_collapse.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_dialog_material_background_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_dialog_material_background_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_audiotrack_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_audiotrack_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connected_light.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_button_connected_light.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward10.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_forward10.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_dialog_material_background_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_closed_caption.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_closed_caption.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_close_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_close_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_play_dark.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward10.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_forward10.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\collpaseup.png",
@@ -328,12 +296,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_pause.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_rewind30.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_rewind30.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_stop_live_stream.xml",
@@ -370,10 +338,6 @@
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_cast_light.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\border_line.xml",
@@ -428,10 +392,6 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\profile.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_pause_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_pause.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_pause.xml"
     },
@@ -444,12 +404,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\018e52ac890d4c51ca545dd12150e7fbfe736d1d\\output\\res\\drawable\\bb_bottom_bar_top_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_rewind.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_dialog_material_background_light.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_rewind.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\color_cursor_white.xml",
@@ -468,10 +428,6 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_media_route_connecting_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
@@ -488,12 +444,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\js.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_skip_previous.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_skip_previous.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_label_checked.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\3b01886921d66582e7d04e789435f2496e06f6b5\\output\\res\\drawable\\bg_label_checked.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_skip_previous.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_skip_previous.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connecting_light.xml",
@@ -536,20 +492,16 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\border.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_pause_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e5bedf47d98cf511a5f1972587923106c58b2b6c\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_disconnect.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_notification_disconnect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
@@ -584,16 +536,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_expanded_controller_mute.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_label_unchecked.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\3b01886921d66582e7d04e789435f2496e06f6b5\\output\\res\\drawable\\bg_label_unchecked.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_media_play_light.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_media_play_light.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_label_unchecked.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\3b01886921d66582e7d04e789435f2496e06f6b5\\output\\res\\drawable\\bg_label_unchecked.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_mute.xml",
@@ -612,20 +560,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_button_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_expand.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\ic_expand.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_collapse.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\ic_collapse.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connecting_dark.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_button_connecting_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connecting_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\drawable\\mr_button_connecting_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_vol_type_audiotrack_light.xml",
@@ -640,40 +580,32 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\calendar.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\html.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\html.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_skip_prev.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\drawable\\cast_ic_mini_controller_skip_prev.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_close_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_close_dark.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\html.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\html.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\home.png",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable\\home.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable\\com_facebook_button_send_background.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\notification_icon_background.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\daa7b0cb62ae26480535094ea249f575004a87c0\\output\\res\\drawable\\mr_ic_cast_dark.xml"
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_dialog_close_dark.xml",

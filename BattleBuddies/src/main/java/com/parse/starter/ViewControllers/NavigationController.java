@@ -27,7 +27,11 @@ import com.onegravity.contactpicker.contact.ContactDescription;
 import com.onegravity.contactpicker.contact.ContactSortOrder;
 import com.onegravity.contactpicker.core.ContactPickerActivity;
 import com.onegravity.contactpicker.picture.ContactPictureType;
+import com.onesignal.OSPermissionSubscriptionState;
+import com.onesignal.OneSignal;
+import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.starter.R;
 
 import net.alhazmy13.mediapicker.Image.ImagePicker;
@@ -37,6 +41,7 @@ import FragmentControllers.CurrentFriendsFragment;
 import FragmentControllers.EditProfileFragment;
 import FragmentControllers.ProfileFragment;
 import FragmentControllers.SearchForFriends;
+import Models.User;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class NavigationController extends AppCompatActivity implements SearchForFriends.OnUserSelected, CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
@@ -45,12 +50,14 @@ public class NavigationController extends AppCompatActivity implements SearchFor
     private Toolbar toolbar;
     private PopupMenu mPopupMenu;
     Bundle savedInstanceState1;
+    User currentUser;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
         this.savedInstanceState1 = savedInstanceState;
+        currentUser = (User) ParseUser.getCurrentUser();
         //Toolbar (Top)
         toolbar = (Toolbar) findViewById(R.id.custom_toolbar);
         ImageButton menuButton = (ImageButton) findViewById(R.id.toolbar_right_button);
@@ -71,6 +78,21 @@ public class NavigationController extends AppCompatActivity implements SearchFor
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.palette_lightprimarycolor));
+
+        OSPermissionSubscriptionState status = OneSignal.getPermissionSubscriptionState();
+        status.getPermissionStatus().getEnabled();
+        currentUser.setOneSignalId(status.getSubscriptionStatus().getUserId());
+        currentUser.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e == null){
+                    Log.i("AppInfo", "One signal id saved");
+                } else {
+                    Log.i("AppInfo", e.getMessage());
+                }
+            }
+        });
+        Log.i("AppInfo", "ID for one signal: "+status.getSubscriptionStatus().getUserId().toString());
 
     }
 

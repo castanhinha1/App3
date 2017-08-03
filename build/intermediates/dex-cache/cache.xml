@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="cc59220bee73c86ac58bc26c09cdd9ef71fae9cb">
+        sha1="0d6f7b2b0bc1d117a43c97e8c981fac8c55d31cb">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1bc3ad85a85810a155d182699c04d1ce5f004f59\classes.dex" />
     </item>
     <item
@@ -135,6 +135,15 @@
         revision="25.0.1"
         sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_59801850ddac4e792d911b7a108dba1c80c7714c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6cfe119a4d5986e4a93f4d14909f55871a601271">
+        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_56c340aa0916bf9b17e7f0cd10b1326ff7ca8b98\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -567,6 +576,15 @@
         revision="25.0.1"
         sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\BattleBuddy\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c4dbdc1ee2b168b135db4a7edafcdfae139708f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dylan Castanhinha\.android\build-cache\9e19f72f522dfaf503cf772d92aa47868b9a8b93\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e0a6d84a759f2094cbb27afd5ac9cb30275c9">
+        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_96ee7bedd6f9f23e757622b1056c04851fc8ea4c\classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\124b01abe0a0f843de92a8ce2eac66b3c65a5e8d\\output\\res\\layout\\cast_expanded_controller_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_text_input_password_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\layout\\com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -68,16 +68,16 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\fragment_edit_profile.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_add_friends.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\fragment_add_friends.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\mr_controller_volume_item.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\685a287d0766fcbb2d0d69127d19de7abbd82a79\\output\\res\\layout\\mr_controller_volume_item.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_add_friends.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\fragment_add_friends.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\mr_playback_control.xml",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_navigation_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\activity_navigation.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\layout\\activity_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_select_checkbox.xml",
@@ -260,6 +260,10 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\1cb63630e49237d6be0ef5547a09e62ee61eb82b\\output\\res\\layout\\messenger_button_send_white_round.xml"
     },
     {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\onesignal_bgimage_notif_layout.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\28e05dba21ea0abfeb162a10af580a5e87b55231\\output\\res\\layout\\onesignal_bgimage_notif_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\4ae279887f5b7276cf679f62b3606c2da348758d\\output\\res\\layout\\alert_dialog.xml"
     },
@@ -296,12 +300,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\55c2fa94d844542ce1c62ed1fdb21ac54028dd1f\\output\\res\\layout\\suggest_item.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\bb_bottom_bar_item_fixed.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\018e52ac890d4c51ca545dd12150e7fbfe736d1d\\output\\res\\layout\\bb_bottom_bar_item_fixed.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\bb_bottom_bar_item_shifting.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\018e52ac890d4c51ca545dd12150e7fbfe736d1d\\output\\res\\layout\\bb_bottom_bar_item_shifting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\bb_bottom_bar_item_fixed.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\018e52ac890d4c51ca545dd12150e7fbfe736d1d\\output\\res\\layout\\bb_bottom_bar_item_fixed.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\view_marker_button.xml",
@@ -392,12 +396,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\6ff0eed05dd02ebf32c05d20b865dbc24389f073\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\cp_contact_tab_layout.xml",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\a44975a06b5c5669330aba234a7aa60eea44f4b1\\output\\res\\layout\\cp_contact_tab_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\e80b3348a67f0681826205a751faa18245259ece\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",

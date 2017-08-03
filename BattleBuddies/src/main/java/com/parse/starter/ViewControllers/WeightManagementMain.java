@@ -9,7 +9,11 @@
 package com.parse.starter.ViewControllers;
 
 import android.app.Application;
+import android.util.Log;
 
+import com.onesignal.OSPermissionState;
+import com.onesignal.OSPermissionSubscriptionState;
+import com.onesignal.OneSignal;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseFacebookUtils;
@@ -53,6 +57,11 @@ public class WeightManagementMain extends Application {
     // Optionally enable public read access.
     // defaultACL.setPublicReadAccess(true);
     ParseACL.setDefaultACL(defaultACL, true);
+
+    OneSignal.startInit(this)
+            .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+            .unsubscribeWhenNotificationsAreDisabled(true)
+            .init();
 
   }
 }

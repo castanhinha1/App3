@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -48,6 +49,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Models.User;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import static android.R.attr.bitmap;
 
@@ -101,6 +103,10 @@ public class LoginController extends ActionBarActivity {
     }
 
     private void getUserDetailsFromFB() {
+        SweetAlertDialog pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
+        pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+        pDialog.setTitleText("Loading");
+        pDialog.show();
         GraphRequest request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
             @Override
             public void onCompleted(JSONObject object, GraphResponse response) {

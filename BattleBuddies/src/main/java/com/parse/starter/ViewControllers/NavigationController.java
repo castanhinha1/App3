@@ -44,6 +44,8 @@ import FragmentControllers.SearchForFriends;
 import Models.User;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
+import static android.R.attr.value;
+
 public class NavigationController extends AppCompatActivity implements SearchForFriends.OnUserSelected, CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
     private static final int GET_PHONE_NUMBER = 3007;
@@ -207,9 +209,6 @@ public class NavigationController extends AppCompatActivity implements SearchFor
         }
     }
 
-
-
-
     private class MenuButtonClickListener implements ImageButton.OnClickListener{
         @Override
         public void onClick(View view) {
@@ -249,6 +248,9 @@ public class NavigationController extends AppCompatActivity implements SearchFor
                         @Override
                         public void onClick(SweetAlertDialog sweetAlertDialog) {
                             ParseUser.getCurrentUser().logOut();
+                            sweetAlertDialog.cancel();
+                            Intent intent = new Intent(getApplicationContext(), LoginController.class);
+                            startActivity(intent);
                         }
                     })
                     .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
@@ -272,10 +274,6 @@ public class NavigationController extends AppCompatActivity implements SearchFor
             Log.i("AppInfo", "Success!");
 
             Bundle bundle = new Bundle();
-
-            /*Bundle extras = data.getExtras();
-            Bitmap image = (Bitmap) extras.get("data");
-            selectedPicture.setImageBitmap(image);*/
         }
     }
 

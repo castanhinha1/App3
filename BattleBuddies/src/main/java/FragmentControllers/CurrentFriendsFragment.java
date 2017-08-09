@@ -95,7 +95,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     MapView mMapView;
 
     //ListView
-    String diff;
     ArrayList<String> currentFriends;
     ArrayList<Date> expirationDate;
     ArrayList<Date> createdAtDate;
@@ -466,35 +465,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
             activityCallback.onAddUserClicked();
         }
     }
-
-    /*public String calculateTimeRemaining(){
-        Timer updateTimer = new Timer();
-
-        updateTimer.schedule(new TimerTask()
-        {
-            public void run()
-            {
-                try
-                {
-                    Date Date1;
-                    Date Date2;
-                    //long mills = Date1.getTime() - Date2.getTime();
-                    Log.v("Data1", ""+Date1.getTime());
-                    Log.v("Data2", ""+Date2.getTime());
-                    int Hours = (int) (mills/(1000 * 60 * 60));
-                    int Mins = (int) (mills/(1000*60)) % 60;
-
-                    diff = Hours + ":" + Mins; // updated value every1 second
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-
-        }, 0, 1000);
-        return diff;
-    }*/
 
     public List findPeopleFollowing(){
         ParseQuery<FollowTable> query = ParseQuery.getQuery(FollowTable.class);

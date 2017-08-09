@@ -24,8 +24,12 @@ import com.parse.starter.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Scanner;
 
 import Models.FollowTable;
 import Models.User;
@@ -196,22 +200,7 @@ public class AddFriendsFragment extends Fragment {
                                                 if (e == null) {
                                                     //Popback twice to go to home screen
                                                     sweetAlertDialog.cancel();
-                                                    try {
-                                                        OneSignal.postNotification(new JSONObject("{'contents': {'en':'Test Message'}, 'include_player_ids': ['" + selectedUser.getOneSignalId() + "']}"),
-                                                                new OneSignal.PostNotificationResponseHandler() {
-                                                                    @Override
-                                                                    public void onSuccess(JSONObject response) {
-                                                                        Log.i("OneSignalExample", "postNotification Success: " + response.toString());
-                                                                    }
-
-                                                                    @Override
-                                                                    public void onFailure(JSONObject response) {
-                                                                        Log.e("OneSignalExample", "postNotification Failure: " + response.toString());
-                                                                    }
-                                                                });
-                                                    } catch (JSONException f) {
-                                                        e.printStackTrace();
-                                                    }
+                                                    postPushNotificationToUser();
                                                     getFragmentManager().popBackStack();
                                                     getFragmentManager().popBackStack();
                                                 } else {
@@ -236,6 +225,25 @@ public class AddFriendsFragment extends Fragment {
                         })
                         .show();
             }
+        }
+    }
+
+    public void postPushNotificationToUser(){
+        try {
+            OneSignal.postNotification(new JSONObject("{'contents': {'en': \""+ currentUser.getFullName() +" wants you to follow them." +"\"}, 'include_player_ids': ['" + selectedUser.getOneSignalId() + "']}"),
+                    new OneSignal.PostNotificationResponseHandler() {
+                        @Override
+                        public void onSuccess(JSONObject response) {
+                            Log.i("OneSignalExample", "postNotification Success: " + response.toString());
+                        }
+
+                        @Override
+                        public void onFailure(JSONObject response) {
+                            Log.e("OneSignalExample", "postNotification Failure: " + response.toString());
+                        }
+                    });
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 

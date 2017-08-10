@@ -492,7 +492,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
                                 });
                             } else {
                                 Log.i("AppInfo", "nothing found");
-
                             }
                         }
                     });
@@ -521,6 +520,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
                                                     @Override
                                                     public void done(ParseException e) {
                                                         if (e == null){
+                                                            sweetAlertDialog.cancel();
                                                             getFragmentManager().popBackStack();
                                                         } else {
                                                             Log.i("AppInfo", "Nothing was deleted");

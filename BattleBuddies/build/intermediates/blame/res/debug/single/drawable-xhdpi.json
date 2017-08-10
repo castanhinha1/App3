@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_user_location.png"
     },
     {
-        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add_user.png",
-        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_add_user.png"
-    },
-    {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_navigation_arrow_back.png",
         "source": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\55c2fa94d844542ce1c62ed1fdb21ac54028dd1f\\output\\res\\drawable-xhdpi\\ic_action_navigation_arrow_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add_user.png",
+        "source": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\src\\main\\res\\drawable-xhdpi\\ic_add_user.png"
     },
     {
         "merged": "C:\\Users\\Dylan Castanhinha\\Documents\\App1\\BattleBuddies\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_menu_button.png",

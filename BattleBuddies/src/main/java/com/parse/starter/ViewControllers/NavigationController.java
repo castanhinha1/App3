@@ -48,7 +48,6 @@ import static android.R.attr.value;
 
 public class NavigationController extends AppCompatActivity implements SearchForFriends.OnUserSelected, CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
-    private static final int GET_PHONE_NUMBER = 3007;
     private Toolbar toolbar;
     private PopupMenu mPopupMenu;
     Bundle savedInstanceState1;
@@ -58,6 +57,7 @@ public class NavigationController extends AppCompatActivity implements SearchFor
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
         this.savedInstanceState1 = savedInstanceState;
         currentUser = (User) ParseUser.getCurrentUser();
         //Toolbar (Top)
@@ -70,7 +70,17 @@ public class NavigationController extends AppCompatActivity implements SearchFor
         menuButton.setOnClickListener(new MenuButtonClickListener());
         setSupportActionBar(toolbar);
 
-        home(savedInstanceState);
+        //If user clicks popup, take them to appropriate fragment
+        String selectedFragment = getIntent().getStringExtra("notification");
+        Log.i("AppInfo", "String selectedFragment: "+selectedFragment);
+        if (selectedFragment != null) {
+            if (selectedFragment.equals("profilefragment")) {
+                home(savedInstanceState);
+                onProfileButtonClicked();
+            }
+        } else {
+            home(savedInstanceState);
+        }
 
         //Status bar very top
         Window window = this.getWindow();
@@ -94,7 +104,7 @@ public class NavigationController extends AppCompatActivity implements SearchFor
                 }
             }
         });
-        Log.i("AppInfo", "ID for one signal: "+status.getSubscriptionStatus().getUserId().toString());
+
 
     }
 
@@ -123,15 +133,6 @@ public class NavigationController extends AppCompatActivity implements SearchFor
             if (savedInstanceState1 != null) {
                 return;
             }
-
-            /*// Create a new Fragment to be placed in the activity layout
-            AddFriendsFragment addFriendsFragment = new AddFriendsFragment();
-            // Add the fragment to the 'fragment_container' FrameLayout
-            fragmentTransaction
-                    .setCustomAnimations(R.animator.slide_in_up, R.animator.slide_out_up, R.animator.slide_in_down, R.animator.slide_out_down)
-                    .replace(R.id.fragment_container, addFriendsFragment)
-                    .addToBackStack("firstFragment")
-                    .commit();*/
 
             // Create a new Fragment to be placed in the activity layout
             SearchForFriends searchForFriends = new SearchForFriends();

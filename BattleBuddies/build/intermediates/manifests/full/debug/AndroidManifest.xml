@@ -142,6 +142,10 @@
             </intent-filter>
         </receiver>
 
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
         <service
             android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
             android:exported="false" />

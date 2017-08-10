@@ -431,6 +431,12 @@ action#com.parse.push.intent.DELETE
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:105:17-71
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:105:25-68
+meta-data#com.onesignal.NotificationOpened.DEFAULT
+ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:108:9-102
+	android:value
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:108:76-99
+	android:name
+		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:108:20-75
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
 ADDED from [io.nlopez.smartlocation:library:3.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\bd39f74470d83c439a66e9136ea412e80c391f1e\output\AndroidManifest.xml:15:5-98
 	android:name

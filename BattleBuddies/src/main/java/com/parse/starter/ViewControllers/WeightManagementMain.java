@@ -9,6 +9,7 @@
 package com.parse.starter.ViewControllers;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import com.onesignal.OSPermissionState;
@@ -21,15 +22,23 @@ import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import ConfigClasses.OneSignalNotificationOpenedHandler;
 import Models.FollowTable;
 import Models.User;
 
 
 public class WeightManagementMain extends Application {
 
+  private static Context context;
+
+  public static Context getContext() {
+    return context;
+  }
+
   @Override
   public void onCreate() {
     super.onCreate();
+    context = getApplicationContext();
 
     // Enable Local Datastore.
     Parse.enableLocalDatastore(this);
@@ -61,6 +70,7 @@ public class WeightManagementMain extends Application {
     OneSignal.startInit(this)
             .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
             .unsubscribeWhenNotificationsAreDisabled(true)
+            .setNotificationOpenedHandler(new OneSignalNotificationOpenedHandler())
             .init();
 
   }

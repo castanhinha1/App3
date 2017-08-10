@@ -105,7 +105,7 @@
                 <action android:name="com.parse.push.intent.DELETE" />
             </intent-filter>
         </receiver>
-
+        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE" />
     </application>
 
 </manifest>

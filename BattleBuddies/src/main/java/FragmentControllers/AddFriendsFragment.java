@@ -230,7 +230,7 @@ public class AddFriendsFragment extends Fragment {
 
     public void postPushNotificationToUser(){
         try {
-            OneSignal.postNotification(new JSONObject("{'contents': {'en': \""+ currentUser.getFullName() +" wants you to follow them." +"\"}, 'include_player_ids': ['" + selectedUser.getOneSignalId() + "'], 'headings': {'en':'Location Request'}}"),
+            OneSignal.postNotification(new JSONObject("{'contents': {'en': \""+ currentUser.getFullName() +" wants you to follow them." +"\"}, 'include_player_ids': ['" + selectedUser.getOneSignalId() + "'], 'headings': {'en':'Location Request'} , 'data': {'intent':'profile'}}"),
                     new OneSignal.PostNotificationResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject response) {

@@ -55,8 +55,6 @@ public class AddFriendsFragment extends Fragment {
     User selectedUser;
     boolean currentlyFollowing;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_add_friends, container, false);
@@ -85,6 +83,7 @@ public class AddFriendsFragment extends Fragment {
         nametv = (TextView) rootView.findViewById(R.id.add_friend_name_tv);
         phonetv = (TextView) rootView.findViewById(R.id.add_friend_phonenumber_tv);
         detailstv = (TextView) rootView.findViewById(R.id.add_friend_details_tv);
+        detailstv.setText("1 Hour");
         profilepictureview = (CircleImageView) rootView.findViewById(R.id.add_friend_photo);
         singleSelectToggleGroup = (SingleSelectToggleGroup) rootView.findViewById(R.id.group_choices);
         singleSelectToggleGroup.setOnCheckedChangeListener(new SelectToggleListener());
@@ -258,31 +257,37 @@ public class AddFriendsFragment extends Fragment {
 
         @Override
         public void onCheckedChanged(SingleSelectToggleGroup group, int checkedId) {
-            Log.i("AppInfo", String.valueOf(checkedId));
-            switch (checkedId) {
-                case 2131755336:
+            int id = singleSelectToggleGroup.getCheckedId();
+            switch (id) {
+                case R.id.a:
                     //1 Hour
                     lengthOfTime = 0;
                     time = "1 Hour";
-                    Log.i("AppInfo", time);
+                    detailstv.setText("1 Hour");
                     break;
-                case 2131755337:
+                case R.id.b:
                     //4 Hours
                     lengthOfTime = 1;
                     time = "4 Hours";
-                    Log.i("AppInfo", time);
+                    detailstv.setText("4 Hours");
                     break;
-                case 2131755338:
-                    //1 Day
+                case R.id.c:
+                    // 1 Day
                     lengthOfTime = 2;
                     time = "1 Day";
-                    Log.i("AppInfo", time);
+                    detailstv.setText("1 Day");
                     break;
-                case 2131755339:
+                case R.id.d:
                     //Emergency Contact
                     lengthOfTime = 3;
                     time = "Indefinitely";
-                    Log.i("AppInfo", time);
+                    detailstv.setText("Emergency");
+                    break;
+                default:
+                    //1 Hour
+                    lengthOfTime = 0;
+                    time = "1 Hour";
+                    detailstv.setText("1 Hour");
                     break;
             }
         }

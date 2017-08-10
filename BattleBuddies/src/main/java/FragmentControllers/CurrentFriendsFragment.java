@@ -100,6 +100,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     ArrayList<Date> createdAtDate;
     TextView labelTV;
     ListView listview;
+    TextView emptytextview;
     CurrentClients adapter;
     User currentUser;
     SwipeRefreshLayout swipeContainer;
@@ -160,6 +161,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         rightToolbarbutton.setVisibility(View.INVISIBLE);
         //ListView that shows friends sharing location with you
         View rootView = inflater.inflate(R.layout.fragment_current_friends, container, false);
+        emptytextview = (TextView) rootView.findViewById(R.id.emptyTextView);
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
         listview = (ListView) rootView.findViewById(R.id.current_client_list_view);
         expandableLayoutTop = (ExpandableLayout) rootView.findViewById(R.id.expandable_layout_top);
@@ -481,6 +483,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
                     }
                     adapter = new CurrentClients(getActivity());
                     listview.setAdapter(adapter);
+                    listview.setEmptyView(emptytextview);
                 } else {
                     Log.i("AppInfo", "coming here");
                     //Blank profile add

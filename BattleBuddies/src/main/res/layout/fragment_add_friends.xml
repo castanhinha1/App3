@@ -85,32 +85,41 @@
             app:tbgCheckedButton="@+id/choice_a">
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
-                android:id="@+id/choice_a"
+                android:id="@+id/a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1 Hour"/>
+                android:tag="1"
+                android:text="1 Hour"
+                android:textColor="@color/palette_primarytextcolor"
+                app:tbgMarkerColor="@color/palette_primarycolor"/>
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
-                android:id="@+id/choice_b"
+                android:id="@+id/b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tag="4hour"
-                android:text="4 Hours"/>
+                android:tag="2"
+                android:text="4 Hours"
+                android:textColor="@color/palette_primarytextcolor"
+                app:tbgMarkerColor="@color/palette_primarycolor"/>
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
-                android:id="@+id/choice_c"
+                android:id="@+id/c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tag="day"
-                android:text="1 Day"/>
+                android:tag="3"
+                android:text="1 Day"
+                android:textColor="@color/palette_primarytextcolor"
+                app:tbgMarkerColor="@color/palette_primarycolor"/>
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
-                android:id="@+id/choice_d"
+                android:id="@+id/d"
                 android:layout_marginRight="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tag="indefinite"
-                android:text="Emergency Contact"/>
+                android:tag="4"
+                android:text="Emergency Contact"
+                android:textColor="@color/palette_primarytextcolor"
+                app:tbgMarkerColor="@color/palette_primarycolor"/>
 
         </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
 

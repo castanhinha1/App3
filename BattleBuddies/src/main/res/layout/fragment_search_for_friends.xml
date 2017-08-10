@@ -13,6 +13,16 @@
         android:queryHint="Start Typing Friends Name"
         android:id="@+id/search_view_friends"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emptyTextViewSearch"
+        android:text="No Results..."
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/search_view_friends"/>
+
     <android.support.v4.widget.SwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeContainer"
@@ -20,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/search_view_friends">
+        android:layout_below="@id/emptyTextViewSearch">
 
         <ListView
             android:layout_width="fill_parent"

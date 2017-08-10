@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -69,6 +70,7 @@ public class NavigationController extends AppCompatActivity implements SearchFor
         menuInflater.inflate(R.menu.menu_main, mPopupMenu.getMenu());
         menuButton.setOnClickListener(new MenuButtonClickListener());
         setSupportActionBar(toolbar);
+
 
         //If user clicks popup, take them to appropriate fragment
         String selectedFragment = getIntent().getStringExtra("notification");

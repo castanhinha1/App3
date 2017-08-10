@@ -42,6 +42,7 @@ public class SearchForFriends extends Fragment {
     SearchForFriendsAdapter adapter;
     SwipeRefreshLayout swipeRefreshLayout;
     String querySearch = "0";
+    TextView emptylistview;
 
     OnUserSelected activityCallBack;
 
@@ -85,8 +86,10 @@ public class SearchForFriends extends Fragment {
         searchView.setIconified(false);
         searchView.setOnQueryTextListener(new SearchTextChanged());
         //Listview
+        emptylistview = (TextView) rootview.findViewById(R.id.emptyTextViewSearch);
         swipeRefreshLayout = (SwipeRefreshLayout) rootview.findViewById(R.id.swipeContainer);
         listView = (ListView) rootview.findViewById(R.id.search_friends_list_view);
+        listView.setEmptyView(emptylistview);
         adapter = new SearchForFriendsAdapter(getActivity());
         listView.setAdapter(adapter);
         swipeRefreshLayout.setOnRefreshListener(new SwipeToRefresh());

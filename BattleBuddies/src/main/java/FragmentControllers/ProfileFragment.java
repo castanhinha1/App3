@@ -61,6 +61,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import ConfigClasses.LogoutButtonListener;
 import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
 import Models.FollowTable;
@@ -140,7 +141,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         currentUser = (User) ParseUser.getCurrentUser();
         profilepicture = (MyProfilePictureView) rootView.findViewById(R.id.profile_picture);
         logoutButton = (Button) rootView.findViewById(R.id.logoutButton);
-        logoutButton.setOnClickListener(new LogoutButtonListener());
+        logoutButton.setOnClickListener(new LogoutButtonListener(getActivity()));
         buttonState = true;
         profilepicture.setImageBitmap(profilepicture.getRoundedBitmap(currentUser.getProfilePicture()));
         //User Details List View
@@ -195,31 +196,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         createLocationRequest();
 
         return rootView;
-    }
-
-    private class LogoutButtonListener implements Button.OnClickListener{
-
-        @Override
-        public void onClick(View v) {
-            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                    .setTitleText("Are you sure?")
-                    .setCancelText("Cancel")
-                    .setConfirmText("Logout")
-                    .showCancelButton(true)
-                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            ParseUser.getCurrentUser().logOut();
-                        }
-                    })
-                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            sweetAlertDialog.cancel();
-                        }
-                    })
-                    .show();
-        }
     }
 
     public class CurrentDetailsAdapter extends ArrayAdapter<User>{
@@ -383,7 +359,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     @Override
     public void onPause() {
         super.onPause();
-        //LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
     }
 
     @Override

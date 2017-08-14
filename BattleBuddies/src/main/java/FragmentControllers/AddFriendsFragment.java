@@ -53,12 +53,8 @@ import com.parse.starter.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Scanner;
 
 import Models.FollowTable;
 import Models.User;

@@ -1179,6 +1179,25 @@
                         "endOffset": 739
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 7269,
+                    "endColumn": 108,
+                    "endOffset": 7373
+                },
+                "from": {
+                    "file": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\\output\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 108,
+                        "endOffset": 159
+                    }
+                }
             }
         ]
     }

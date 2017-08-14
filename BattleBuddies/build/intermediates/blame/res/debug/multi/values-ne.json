@@ -1185,8 +1185,27 @@
                     "startLine": 64,
                     "startColumn": 4,
                     "startOffset": 7463,
+                    "endColumn": 100,
+                    "endOffset": 7559
+                },
+                "from": {
+                    "file": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\\output\\res\\values-ne\\values-ne.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 100,
+                        "endOffset": 151
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 7564,
                     "endColumn": 112,
-                    "endOffset": 7571
+                    "endOffset": 7672
                 },
                 "from": {
                     "file": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\f2f3ac6a438e2cbb98a879c427a0c89d02bdc44c\\output\\res\\values-ne\\values.xml",

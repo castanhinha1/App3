@@ -62,5 +62,6 @@
     <string msgid="9167523597401839819" name="s4">"ປະຕິເສດ"</string>
     <string msgid="1566682516266724847" name="s5">"ສ້າງນັດໝາຍປະຕິທິນ"</string>
     <string msgid="5996672174517137271" name="s6">"ອະນຸຍາດໃຫ້ໂຄສະນາສ້າງນັດໝາຍປະຕິທິນໄດ້ບໍ?"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"ຊື້ໂດຍໃຊ້ Google"</string>
 </resources>

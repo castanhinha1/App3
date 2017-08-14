@@ -62,4 +62,5 @@
     <string msgid="9167523597401839819" name="s4">"Қабылдамау"</string>
     <string msgid="1566682516266724847" name="s5">"Күнтізбе оқиғасын жасау"</string>
     <string msgid="5996672174517137271" name="s6">"Жарнамаға күнтізбе оқиғасын жасауға рұқсат берілсін бе?"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

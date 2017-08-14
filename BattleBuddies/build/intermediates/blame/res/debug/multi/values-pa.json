@@ -1502,6 +1502,25 @@
                         "endOffset": 762
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 81,
+                    "startColumn": 4,
+                    "startOffset": 8705,
+                    "endColumn": 100,
+                    "endOffset": 8801
+                },
+                "from": {
+                    "file": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\\output\\res\\values-pa\\values-pa.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 100,
+                        "endOffset": 151
+                    }
+                }
             }
         ]
     }

@@ -79,5 +79,6 @@
     <string msgid="9167523597401839819" name="s4">"প্রত্যাখ্যান করুন"</string>
     <string msgid="1566682516266724847" name="s5">"ক্যালেন্ডার ইভেন্ট তৈরি করুন"</string>
     <string msgid="5996672174517137271" name="s6">"বিজ্ঞাপনকে একটি ক্যালেন্ডার ইভেন্ট তৈরি করার অনুমতি দেবেন?"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"৯৯৯+"</string>
     <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"Google ব্যবহার করে কিনুন"</string>
 </resources>

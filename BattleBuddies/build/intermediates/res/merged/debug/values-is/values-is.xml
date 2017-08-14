@@ -62,5 +62,6 @@
     <string msgid="9167523597401839819" name="s4">"Hafna"</string>
     <string msgid="1566682516266724847" name="s5">"Búa til dagatalsviðburð"</string>
     <string msgid="5996672174517137271" name="s6">"Leyfa auglýsingu að búa til dagatalsviðburð?"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"Kaupa með Google"</string>
 </resources>

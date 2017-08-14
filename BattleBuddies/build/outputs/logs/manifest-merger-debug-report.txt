@@ -88,20 +88,20 @@ MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\Dylan Castanhinha\.
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:20:5-43
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:5:5-7:62
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-gcm:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\92543f39d207942794f1b350db24c648be0077e1\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\d4e04d8f402db7642b5525099eebdcb00b6f230e\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-location:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\6773402d14aac5a2b573205f9c8306df67bc9db9\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-base:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\e5bedf47d98cf511a5f1972587923106c58b2b6c\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\0fac6e3c439d0ce75c2f90fa62fa383aca4f26e8\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\3b394cd0657504f2c1303948d463f42cbd686b1a\output\AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:customtabs:24.0.0] C:\Users\Dylan Castanhinha\.android\build-cache\9e19f72f522dfaf503cf772d92aa47868b9a8b93\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-v4:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\d9ec4fee605b8da1218630521d025b687b337eb3\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\73c9d40779bd322fb2fe683a23bc887297a899cd\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\5dc304f2dfe8ffe60c71d9ba537152669f9a8b36\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\e391bfdc21398b6db2e83eafb0a3c60667a2fa74\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\1fdf1003a293ba978fbaf2194cd162f43b90d633\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:customtabs:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\2c80da61148d13abac8be27e623ca306b4d2d79a\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:16:9-45
 	android:targetSdkVersion
@@ -124,7 +124,7 @@ MERGED from [com.google.android.gms:play-services-maps:11.0.1] C:\Users\Dylan Ca
 MERGED from [com.google.firebase:firebase-analytics:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\03c6a04793c5fe948b6cfa99044462f93dfd9228\output\AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\b522f652cfaadcb6ba9e440d23f0fda6cafd1743\output\AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\96e8527b36418057c1f40a9b5d207056202b12a1\output\AndroidManifest.xml:20:5-66
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:17:5-67
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:17:5-67
 MERGED from [com.google.android.gms:play-services-gcm:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\92543f39d207942794f1b350db24c648be0077e1\output\AndroidManifest.xml:21:5-66
 MERGED from [com.google.android.gms:play-services-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\d4e04d8f402db7642b5525099eebdcb00b6f230e\output\AndroidManifest.xml:21:5-66
 	android:name
@@ -141,7 +141,7 @@ MERGED from [com.google.android.gms:play-services-maps:11.0.1] C:\Users\Dylan Ca
 MERGED from [com.google.firebase:firebase-analytics:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\03c6a04793c5fe948b6cfa99044462f93dfd9228\output\AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\b522f652cfaadcb6ba9e440d23f0fda6cafd1743\output\AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\96e8527b36418057c1f40a9b5d207056202b12a1\output\AndroidManifest.xml:19:5-78
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:25:5-79
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:25:5-79
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:19:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -183,17 +183,17 @@ MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.1] C:\User
 MERGED from [com.google.firebase:firebase-analytics:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\03c6a04793c5fe948b6cfa99044462f93dfd9228\output\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\b522f652cfaadcb6ba9e440d23f0fda6cafd1743\output\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\96e8527b36418057c1f40a9b5d207056202b12a1\output\AndroidManifest.xml:21:5-67
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:19:5-68
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:19:5-68
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:27:22-65
 uses-permission#android.permission.VIBRATE
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:28:5-66
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:24:5-66
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:24:5-66
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:28:22-63
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:29:5-81
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:30:5-81
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:30:5-81
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:29:22-78
 uses-permission#android.permission.GET_ACCOUNTS
@@ -203,7 +203,7 @@ ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\Andr
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:31:5-82
 MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\96e8527b36418057c1f40a9b5d207056202b12a1\output\AndroidManifest.xml:22:5-81
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:18:5-82
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:18:5-82
 MERGED from [com.google.android.gms:play-services-gcm:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\92543f39d207942794f1b350db24c648be0077e1\output\AndroidManifest.xml:20:5-81
 MERGED from [com.google.android.gms:play-services-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\d4e04d8f402db7642b5525099eebdcb00b6f230e\output\AndroidManifest.xml:20:5-81
 	android:name
@@ -211,7 +211,7 @@ MERGED from [com.google.android.gms:play-services-iid:11.0.1] C:\Users\Dylan Cas
 permission#com.example.dylancastanhinha.weightmanagement.permission.C2D_MESSAGE
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:33:5-34:47
 MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\96e8527b36418057c1f40a9b5d207056202b12a1\output\AndroidManifest.xml:24:5-109
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:10:5-12:47
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:8:5-10:47
 	android:protectionLevel
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:34:9-44
 	android:name
@@ -219,7 +219,7 @@ MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\
 uses-permission#com.example.dylancastanhinha.weightmanagement.permission.C2D_MESSAGE
 ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:35:5-108
 MERGED from [com.google.firebase:firebase-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\96e8527b36418057c1f40a9b5d207056202b12a1\output\AndroidManifest.xml:26:5-78
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:14:5-79
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:12:5-79
 	android:name
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:35:22-105
 application
@@ -280,20 +280,20 @@ MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\Dylan Castanhinha\.
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:26:5-20
-MERGED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:49:5-91:19
+MERGED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:49:5-97:19
 MERGED from [com.google.android.gms:play-services-gcm:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\92543f39d207942794f1b350db24c648be0077e1\output\AndroidManifest.xml:23:5-19
 MERGED from [com.google.android.gms:play-services-iid:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\d4e04d8f402db7642b5525099eebdcb00b6f230e\output\AndroidManifest.xml:23:5-19
 MERGED from [com.google.android.gms:play-services-location:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\6773402d14aac5a2b573205f9c8306df67bc9db9\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-base:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\e5bedf47d98cf511a5f1972587923106c58b2b6c\output\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-tasks:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\0fac6e3c439d0ce75c2f90fa62fa383aca4f26e8\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\3b394cd0657504f2c1303948d463f42cbd686b1a\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:customtabs:24.0.0] C:\Users\Dylan Castanhinha\.android\build-cache\9e19f72f522dfaf503cf772d92aa47868b9a8b93\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\d9ec4fee605b8da1218630521d025b687b337eb3\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\73c9d40779bd322fb2fe683a23bc887297a899cd\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\5dc304f2dfe8ffe60c71d9ba537152669f9a8b36\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\e391bfdc21398b6db2e83eafb0a3c60667a2fa74\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\1fdf1003a293ba978fbaf2194cd162f43b90d633\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:customtabs:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\2c80da61148d13abac8be27e623ca306b4d2d79a\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\output\AndroidManifest.xml:25:5-29:19
 	android:label
 		ADDED from C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\src\main\AndroidManifest.xml:50:9-41
 	android:supportsRtl
@@ -586,12 +586,12 @@ MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dylan Castanhi
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e80b3348a67f0681826205a751faa18245259ece\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\7498f66b87e5643154ba0787c3c8ab910e133543\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e6250f3388f339e5073bff39c6e83acea8109f73\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\ee943680d996f9507cfb8f18971d773b056c4d84\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\00943b0cba917fe9009a58f3cad56ebbba4bf608\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\8ad21dd6d0ece35b55f07c2f571b186faa5b6a2b\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\590f34bce5edfd55c97d10673bd48d455639dc47\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\0be856c8f101bda04b8996cf7f99cb832b37583d\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\e90b64d975a236d25d4c03f1dc42370214873f4a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\73c9d40779bd322fb2fe683a23bc887297a899cd\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\5dc304f2dfe8ffe60c71d9ba537152669f9a8b36\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\e391bfdc21398b6db2e83eafb0a3c60667a2fa74\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\1fdf1003a293ba978fbaf2194cd162f43b90d633\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:customtabs:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\2c80da61148d13abac8be27e623ca306b4d2d79a\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\output\AndroidManifest.xml:26:9-28:38
 	android:value
 		ADDED from [com.android.support:design:25.3.1] C:\Users\Dylan Castanhinha\.android\build-cache\6ff0eed05dd02ebf32c05d20b865dbc24389f073\output\AndroidManifest.xml:27:9-31
 	android:name
@@ -699,133 +699,145 @@ ADDED from [com.google.firebase:firebase-common:11.0.1] C:\Users\Dylan Castanhin
 	android:name
 		ADDED from [com.google.firebase:firebase-common:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\741f67522da689d3c281dad630d45e941ba59f2e\output\AndroidManifest.xml:6:79-143
 uses-permission#com.sec.android.provider.badge.permission.READ
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:32:5-86
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:32:5-86
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:32:22-83
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:32:22-83
 uses-permission#com.sec.android.provider.badge.permission.WRITE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:33:5-87
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:33:5-87
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:33:22-84
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:33:22-84
 uses-permission#com.htc.launcher.permission.READ_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:34:5-81
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:34:5-81
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:34:22-78
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:34:22-78
 uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:35:5-83
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:35:5-83
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:35:22-80
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:35:22-80
 uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:36:5-88
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:36:5-88
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:36:22-85
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:36:22-85
 uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:37:5-92
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:37:5-92
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:37:22-89
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:37:22-89
 uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:38:5-84
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:38:5-84
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:38:22-81
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:38:22-81
 uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:39:5-83
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:39:5-83
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:39:22-80
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:39:22-80
 uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:40:5-91
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:40:5-91
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:40:22-88
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:40:22-88
 uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:41:5-92
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:41:5-92
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:41:22-89
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:41:22-89
 uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:42:5-93
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:42:5-93
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:42:22-90
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:42:22-90
 uses-permission#android.permission.READ_APP_BADGE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:43:5-73
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:43:5-73
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:43:22-70
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:43:22-70
 uses-permission#com.oppo.launcher.permission.READ_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:44:5-82
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:44:5-82
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:44:22-79
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:44:22-79
 uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:45:5-83
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:45:5-83
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:45:22-80
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:45:22-80
 uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:46:5-88
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:46:5-88
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:46:22-85
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:46:22-85
 uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:47:5-89
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:47:5-89
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:47:22-86
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:47:22-86
 meta-data#onesignal_app_id
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:50:9-52:51
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:50:9-52:51
 	android:value
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:52:13-48
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:52:13-48
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:51:13-44
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:51:13-44
 meta-data#onesignal_google_project_number
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:54:9-56:70
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:54:9-56:70
 	android:value
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:56:13-67
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:56:13-67
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:55:13-59
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:55:13-59
 receiver#com.onesignal.GcmBroadcastReceiver
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:58:9-68:20
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:58:9-68:20
 	android:permission
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:60:13-73
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:60:13-73
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:59:13-62
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:59:13-62
 receiver#com.onesignal.NotificationOpenedReceiver
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:69:9-77
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:69:9-77
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:69:19-74
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:69:19-74
 service#com.onesignal.GcmIntentService
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:71:9-66
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:71:9-66
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:71:18-63
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:71:18-63
+service#com.onesignal.GcmIntentJobService
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:72:9-74:72
+	android:permission
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:74:13-69
+	android:name
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:73:13-61
 service#com.onesignal.SyncService
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:72:9-61
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:75:9-61
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:72:18-58
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:75:18-58
 activity#com.onesignal.PermissionsActivity
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:74:9-76:75
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:77:9-79:75
 	android:theme
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:76:13-72
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:79:13-72
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:75:13-61
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:78:13-61
 service#com.onesignal.NotificationRestoreService
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:78:9-76
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:81:9-76
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:78:18-73
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:81:18-73
+service#com.onesignal.NotificationRestoreJobService
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:82:9-84:72
+	android:permission
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:84:13-69
+	android:name
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:83:13-71
 receiver#com.onesignal.BootUpReceiver
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:80:9-85:20
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:86:9-91:20
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:80:19-62
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:86:19-62
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:81:13-84:29
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:87:13-90:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:82:17-79
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:88:17-79
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:82:25-76
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:88:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:83:17-82
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:89:17-82
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:83:25-79
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:89:25-79
 receiver#com.onesignal.UpgradeReceiver
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:86:9-90:20
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:92:9-96:20
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:86:19-63
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:92:19-63
 intent-filter#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:87:13-89:29
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:93:13-95:29
 action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:88:17-84
+ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:94:17-84
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.5.8] C:\Users\Dylan Castanhinha\.android\build-cache\28e05dba21ea0abfeb162a10af580a5e87b55231\output\AndroidManifest.xml:88:25-81
+		ADDED from [com.onesignal:OneSignal:3.6.0] C:\Users\Dylan Castanhinha\.android\build-cache\a776d028751ac50ee07973dd691cfa8e695870f0\output\AndroidManifest.xml:94:25-81
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:11.0.1] C:\Users\Dylan Castanhinha\.android\build-cache\e5bedf47d98cf511a5f1972587923106c58b2b6c\output\AndroidManifest.xml:19:9-172
 	android:exported

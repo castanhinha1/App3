@@ -1179,6 +1179,25 @@
                         "endOffset": 760
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 7175,
+                    "endColumn": 100,
+                    "endOffset": 7271
+                },
+                "from": {
+                    "file": "C:\\Users\\Dylan Castanhinha\\.android\\build-cache\\b6241b5d022e04b5452a4e7b44d3b7fa9c13ea13\\output\\res\\values-kk\\values-kk.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 100,
+                        "endOffset": 151
+                    }
+                }
             }
         ]
     }

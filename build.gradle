@@ -13,6 +13,7 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://dl.bintray.com/terrakok/terramaven" }
+        maven { url "https://maven.google.com" }
     }
 }
 

@@ -194,9 +194,10 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
                 googleMap = mMap;
                 mMap.getUiSettings().setZoomControlsEnabled(true);
                 LatLng currentUserLocation = null;
-                if (currentUser.getGeopoint() != null) {
+                if (currentUser.getLatitude() != 0) {
                     // For dropping a marker at a point on the Map
-                    currentUserLocation = new LatLng(currentUser.getGeopoint().getLatitude(), currentUser.getGeopoint().getLongitude());
+                    currentUserLocation = new LatLng(currentUser.getLatitude(), currentUser.getLongitude());
+                    placeMarkerOnMap(currentUser);
                 }else {
                     createLocationRequest();
                 }
@@ -342,7 +343,7 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     }
 
     public void placeMarkerOnMap(User user) {
-        LatLng latLng = user.getLatLng();
+        LatLng latLng = new LatLng(user.getLatitude(), user.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions().position(latLng);
         String titleStr = user.getFullName();  // add these two lines
         markerOptions.title(titleStr);

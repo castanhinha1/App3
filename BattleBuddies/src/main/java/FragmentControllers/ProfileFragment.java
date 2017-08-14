@@ -42,8 +42,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.vision.barcode.Barcode;
 import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
@@ -54,6 +58,8 @@ import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
+
+import net.alhazmy13.mediapicker.Image.ImagePicker;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -68,6 +74,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
+import static com.parse.starter.R.id.c;
 
 /**
  * Created by Dylan Castanhinha on 4/12/2017.
@@ -88,6 +95,7 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private static final int REQUEST_CHECK_SETTINGS = 2;
     MapView mMapView;
+    private Marker marker;
 
     //ProfileView
     ListView listview;
@@ -96,7 +104,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     Button logoutButton;
     boolean buttonState;
     Button changePhotoButton;
-    static final int REQUEST_CODE_PICKER = 5095;
 
     //Friends with location ListView
     ListView friendsWithLocationListView;
@@ -185,11 +192,13 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
                 googleMap = mMap;
                 googleMap.getUiSettings().setAllGesturesEnabled(false);
                 // For dropping a marker at a point on the Map
-                LatLng currentUserLocation = new LatLng(currentUser.getGeopoint().getLatitude(), currentUser.getGeopoint().getLongitude());
+                LatLng currentUserLocation = new LatLng(currentUser.getLatitude(), currentUser.getLongitude());
+                Log.i("AppInfo", "Latitude: "+currentUser.getLatitude()+", Longitude: "+ currentUser.getLongitude());
 
                 // For zooming automatically to the location of the marker
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(currentUserLocation).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                placeMarkerOnMap(currentUser);
             }
         });
 
@@ -201,7 +210,15 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     public class ChangePhotoButtonListener implements ImageButton.OnClickListener{
         @Override
         public void onClick(View v) {
-
+            new ImagePicker.Builder(getActivity())
+                    .mode(ImagePicker.Mode.CAMERA_AND_GALLERY)
+                    .compressLevel(ImagePicker.ComperesLevel.MEDIUM)
+                    .directory(ImagePicker.Directory.DEFAULT)
+                    .extension(ImagePicker.Extension.PNG)
+                    .scale(600, 600)
+                    .allowMultipleImages(false)
+                    .enableDebuggingMode(true)
+                    .build();
         }
     }
 
@@ -241,6 +258,30 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     }
 
     //MapView Methods
+
+    public void placeMarkerOnMap(User user) {
+        LatLng latLng = new LatLng(user.getLatitude(), user.getLongitude());
+        MarkerOptions markerOptions = new MarkerOptions().position(latLng);
+        String titleStr = user.getFullName();  // add these two lines
+        markerOptions.title(titleStr);
+        if (user.getProfilePicture() != null) {
+            markerOptions.icon(BitmapDescriptorFactory.fromBitmap(user.getProfilePicture()));
+        } else {
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.com_facebook_profile_picture_blank_square));
+        }
+        if (marker != null) {
+            marker.remove();
+            marker = googleMap.addMarker(markerOptions);
+            marker.showInfoWindow();
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
+                    (latLng, 12));
+        } else {
+            marker = googleMap.addMarker(markerOptions);
+            marker.showInfoWindow();
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom
+                    (latLng, 12));
+        }
+    }
     private void setUpMap() {
         if (ActivityCompat.checkSelfPermission(getActivity(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -360,6 +401,10 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
                 mLocationUpdateState = true;
                 startLocationUpdates();
             }
+        }
+        if (requestCode == ImagePicker.IMAGE_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
+            List<String> mPaths = (List<String>) data.getSerializableExtra(ImagePicker.EXTRA_IMAGE_PATH);
+            Log.i("AppInfo", "Image picked!");
         }
     }
 

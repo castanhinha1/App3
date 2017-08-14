@@ -89,6 +89,13 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"فتح على الهاتف"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"تسجل الدخول"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"‏تسجيل الدخول عبر Google"</string>
+    <string name="media_picker_camera">الكاميرا</string>
+    <string name="media_picker_cancel">إلغاء</string>
+    <string name="media_picker_gallery">مستعرض الصور</string>
+    <string name="media_picker_ok">موافق</string>
+    <string name="media_picker_select_from">حدد مصدر الصورة</string>
+    <string name="media_picker_some_permission_is_denied">بعض الصلاحيات لم يوافق عليها!</string>
+    <string name="media_picker_you_need_to_grant_access_to">يجب الموافقة على الصلاحيات</string>
     <string name="messenger_send_button_text">إرسال</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"زر الإرسال"</string>
     <string msgid="5088427771788648085" name="mr_cast_button_connected">"زر الإرسال. تم الاتصال"</string>

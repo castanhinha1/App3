@@ -25,6 +25,13 @@ import com.parse.SaveCallback;
 import com.parse.starter.R;
 
 
+import net.alhazmy13.mediapicker.Image.ImagePicker;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.List;
+
 import FragmentControllers.AddFriendsFragment;
 import FragmentControllers.CurrentFriendsFragment;
 import FragmentControllers.EditProfileFragment;
@@ -260,6 +267,33 @@ public class NavigationController extends AppCompatActivity implements SearchFor
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == ImagePicker.IMAGE_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
+            List<String> mPaths = (List<String>) data.getSerializableExtra(ImagePicker.EXTRA_IMAGE_PATH);
+            try {
+                currentUser.setProfilePicture(serialize(data.getSerializableExtra(ImagePicker.EXTRA_IMAGE_PATH)));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            currentUser.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e == null){
+                        Log.i("AppInfo", "saved!");
+                    } else {
+                        Log.i("AppInfo", e.getMessage());
+                    }
+                }
+            });
+        }
+
+
+    }
+
+    public static byte[] serialize(Object obj) throws IOException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        ObjectOutputStream os = new ObjectOutputStream(out);
+        os.writeObject(obj);
+        return out.toByteArray();
     }
 
 }

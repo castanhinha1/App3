@@ -48,12 +48,6 @@ public class User extends ParseUser {
         put("onesignalid", value);
     }
 
-    public boolean getTrainerStatus(){
-        return getBoolean("trainerstatus");
-    }
-    public void setTrainerStatus(boolean value){
-        put("trainerstatus", value);
-    }
 
     public String getLocation(){
         return getString("location");
@@ -71,6 +65,14 @@ public class User extends ParseUser {
         put("geopoint", value);
     }
 
+    public double getLatitude() { return getDouble("latitude");}
+
+    public void setLatitude(double value) { put("latitude", value);}
+
+    public double getLongitude() { return getDouble("longitude");}
+
+    public void setLongitude(double value) { put("longitude", value);}
+
     public String getFirstName(){
         return getString("firstname");
     }
@@ -84,12 +86,6 @@ public class User extends ParseUser {
         put("lastname", value);
     }
 
-    public String getCalories(){
-        return getString("calories");
-    }
-    public void setCalories(String value){
-        put("calories", value);
-    }
 
     public String getSex(){
         return getString("sex");
@@ -102,30 +98,6 @@ public class User extends ParseUser {
     }
     public void setAge(String value){
         put("age", value);
-    }
-    public String getWeight(){
-        return getString("weight");
-    }
-    public void setWeight(String value){
-        put("weight", value);
-    }
-    public String getBodyFat(){
-        return getString("bodyfat");
-    }
-    public void setBodyFat(String value){
-        put("bodyfat", value);
-    }
-    public String getHeight(){
-        return getString("height");
-    }
-    public void setHeight(String value){
-        put("height", value);
-    }
-    public User getTrainer(){
-        return (User) getParseUser("trainer");
-    }
-    public void setTrainer(User value) {
-        put("trainer", value);
     }
     public ParseRelation<User> getClients() {
         return getRelation("client");

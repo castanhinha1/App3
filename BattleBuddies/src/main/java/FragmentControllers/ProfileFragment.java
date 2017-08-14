@@ -51,11 +51,9 @@ import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
-import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
-import com.parse.starter.ViewControllers.LoginController;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -70,8 +68,6 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
-import static com.parse.starter.R.id.swipeContainer;
 
 /**
  * Created by Dylan Castanhinha on 4/12/2017.
@@ -99,6 +95,8 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     CurrentDetailsAdapter adapter;
     Button logoutButton;
     boolean buttonState;
+    Button changePhotoButton;
+    static final int REQUEST_CODE_PICKER = 5095;
 
     //Friends with location ListView
     ListView friendsWithLocationListView;
@@ -144,6 +142,8 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         logoutButton.setOnClickListener(new LogoutButtonListener(getActivity()));
         buttonState = true;
         profilepicture.setImageBitmap(profilepicture.getRoundedBitmap(currentUser.getProfilePicture()));
+        changePhotoButton = (Button) rootView.findViewById(R.id.change_photo_button);
+        changePhotoButton.setOnClickListener(new ChangePhotoButtonListener());
         //User Details List View
         ArrayList<User> users = new ArrayList<User>();
         listview = (ListView) rootView.findViewById(R.id.profile_details_list_view);
@@ -196,6 +196,13 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
         createLocationRequest();
 
         return rootView;
+    }
+
+    public class ChangePhotoButtonListener implements ImageButton.OnClickListener{
+        @Override
+        public void onClick(View v) {
+
+        }
     }
 
     public class CurrentDetailsAdapter extends ArrayAdapter<User>{

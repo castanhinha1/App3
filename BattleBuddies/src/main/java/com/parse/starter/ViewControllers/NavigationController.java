@@ -1,20 +1,13 @@
 package com.parse.starter.ViewControllers;
 
-import android.Manifest;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,10 +17,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-import com.onegravity.contactpicker.contact.ContactDescription;
-import com.onegravity.contactpicker.contact.ContactSortOrder;
-import com.onegravity.contactpicker.core.ContactPickerActivity;
-import com.onegravity.contactpicker.picture.ContactPictureType;
 import com.onesignal.OSPermissionSubscriptionState;
 import com.onesignal.OneSignal;
 import com.parse.ParseException;
@@ -35,7 +24,6 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
 
-import net.alhazmy13.mediapicker.Image.ImagePicker;
 
 import FragmentControllers.AddFriendsFragment;
 import FragmentControllers.CurrentFriendsFragment;
@@ -45,7 +33,6 @@ import FragmentControllers.SearchForFriends;
 import Models.User;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
-import static android.R.attr.value;
 
 public class NavigationController extends AppCompatActivity implements SearchForFriends.OnUserSelected, CurrentFriendsFragment.OnAddNewUserButtonClicked, CurrentFriendsFragment.OnProfileButtonClicked, ProfileFragment.OnRowSelected {
 
@@ -273,11 +260,6 @@ public class NavigationController extends AppCompatActivity implements SearchFor
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == ImagePicker.IMAGE_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
-            Log.i("AppInfo", "Success!");
-
-            Bundle bundle = new Bundle();
-        }
     }
 
 }

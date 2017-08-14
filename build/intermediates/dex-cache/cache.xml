@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="e6c36464ce68d11545930a6508ab33e7966406a3">
+        sha1="2f433214ea32b054cb05bf287343d09dcba33703">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1bc3ad85a85810a155d182699c04d1ce5f004f59\classes.dex" />
     </item>
     <item
@@ -486,15 +486,6 @@
         revision="25.0.1"
         sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
         <dex dex="C:\Users\Dylan Castanhinha\Documents\BattleBuddy\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d1170e3a974617f9ac5ba7ecf56aa8caee538eb0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Dylan Castanhinha\.android\build-cache\56c006b921b27867422e2402cbe9723639bcea30\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="97d30eaece88b9987a6225b6a656dec201429b48">
-        <dex dex="C:\Users\Dylan Castanhinha\Documents\App1\BattleBuddies\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1caa2c07af04a0a2bd2d9bfe1666d9b9f0ba6a8e\classes.dex" />
     </item>
     <item
         is-multidex="true"

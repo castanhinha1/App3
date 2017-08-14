@@ -21,14 +21,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.facebook.login.widget.ProfilePictureView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -51,15 +48,11 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
-import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
@@ -67,13 +60,9 @@ import net.cachapa.expandablelayout.ExpandableLayout;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import ConfigClasses.MyProfilePictureView;
 import ConfigClasses.ParseAdapterCustomList;
 import Models.FollowTable;
 import Models.User;
@@ -98,7 +87,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
     ArrayList<String> currentFriends;
     ArrayList<Date> expirationDate;
     ArrayList<Date> createdAtDate;
-    TextView labelTV;
     ListView listview;
     TextView emptytextview;
     CurrentClients adapter;
@@ -177,7 +165,6 @@ public class CurrentFriendsFragment extends Fragment implements GoogleApiClient.
         myProfilePictureView = (CircleImageView) getActivity().findViewById(R.id.profile_picture_navbar);
         nameLabel = (TextView) getActivity().findViewById(R.id.nameLabel);
         locationLabel = (TextView) getActivity().findViewById(R.id.locationLabel);
-        //myProfilePictureView.setImageBitmap(myProfilePictureView.getRoundedBitmap(currentUser.getProfilePicture()));
         new GetPhotoAsync().execute();
         nameLabel.setText(currentUser.getFullName());
         locationLabel.setText(currentUser.getLocation());
